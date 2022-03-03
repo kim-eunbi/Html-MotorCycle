@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
 
@@ -35,13 +35,10 @@
                 <div class="headerLogin">
                     <ul class="nav justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./Login.html">로그인</a>
+                            <a class="nav-link" aria-current="page" href="./SignUp.html">로그인/회원가입</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">회원가입</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">마이페이지</a>
+                            <a class="nav-link" aria-current="page" href="./MyPage.html">마이페이지</a>
                         </li>
                     </ul>
                 </div>
@@ -50,7 +47,7 @@
                 <div class="search">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="#">motorcycle</a>
+                            <a class="navbar-brand" href="">motorcycle</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +57,7 @@
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">내바이크팔기</a>
+                                        <a class="nav-link" aria-current="page" href="./UploadPage.html">내바이크팔기</a>
                                     </li>
 
                                     <li class="nav-item">
@@ -166,7 +163,10 @@
                                     <p class="card-text">1000원</p>
                                     <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                                     <br />
-                                    <button type="button" class="btn btn-outline-dark btn-sm">상세정보</button>
+                                    <button type="button" class="btn btn-outline-dark btn-sm"
+                                        onclick="location.href='./DetailPage.html' ">
+                                        상세정보
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -297,7 +297,8 @@
                 </div>
             </div>
             <div class="ItemButton">
-                <button type="button" class="btn btn-dark">VIEW ALL ITEM</button>
+                <button type="button" onclick="location.href='./ItemListPage.html' " class="btn btn-dark">VIEW ALL
+                    ITEM</button>
             </div>
 
             <!-- 하단 슬라이드 -->
@@ -330,211 +331,173 @@
             <!-- 바이크 고르는 꿀팁 -->
             <div class="Tip">
                 <div class="row">
-                    <div class=" col-lg-6 col-md-6 col-sm-12 col-xs-12"
-                        style="background-color:lightgrey; padding:150px;">
-                        <p style="font-size:30px; font-weight: bold;">바이크 고르는
+                    <div class=" col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="background-color:#1F2428; padding-top:50px">
+                </div>
+            </div>
+    </div>
+
+
+
+
+
+    <!-- Item Card -->
+    <div class="ItemTitle">
+        <p class="font-weight-bold " style="font-size: 40px;"> Neeew Item </p>
+    </div>
+
+    <div class="ItemCard">
+        <div class="container">
+
+            <!-- Card deck -->
+            <div class="card-deck row">
+
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <!-- Card -->
+                    <div class="card">
+
+                        <!--Card image-->
+                        <div class="view overlay" style="width:100%; height: 350px; ">
+                            <div style="height:100%;  ">
+
+                                <img style="height: 100%;" class="card-img-top" src="./image/34.PNG"
+                                    alt="Card image cap">
+
+                            </div>
+
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body" style=" height: auto;">
+                            <!--Title-->
+                            <h4 class="card-title">오로바이파라여</h4>
+                            <!--Text-->
+                            <p class="card-text">1000원</p>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                             <br />
-                            꾸우우울팁!
-                        </p>
-
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"
-                        style="background-color:#1F2428; padding-top:50px">
-                        <div class="row">
-                            <div class="col-lg-1"></div>
-                            <div class="col-lg-8">
-                                <div class="balloon" style="background:#fff; padding: 10px;">
-                                    호구안당하려면 꼭알아야하는~
-                                </div>
-                            </div>
-                            <div class="col-lg-3"></div>
-                        </div>
-                        <br />
-                        <br />
-                        <div class="row">
-                            <div class="col-lg-3"></div>
-                            <div class="col-lg-8">
-                                <div class="balloon" style="background:#fff; padding: 10px;">
-                                    이건 알고 구매하려는거니?
-                                </div>
-                            </div>
-                            <div class="col-lg-3"></div>
-                        </div>
-                        <br />
-                        <br />
-                        <div class="row">
-                            <div class="col-lg-1"></div>
-                            <div class="col-lg-8">
-                                <div class="balloon" style="background:#fff; padding: 10px;">
-                                    요즘 가격은 이렇데~
-                                </div>
-                            </div>
-                            <div class="col-lg-3"></div>
+                            <button type="button" class="btn btn-outline-dark btn-sm">상세정보</button>
                         </div>
                     </div>
                 </div>
-            </div>
 
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <!-- Card -->
+                    <div class="card">
 
+                        <!--Card image-->
+                        <div class="view overlay" style="width:100%; height: 350px; ">
+                            <div style="height:100%;  ">
 
+                                <img style="height: 100%;" class="card-img-top" src="./image/66.PNG"
+                                    alt="Card image cap">
 
-
-            <!-- Item Card -->
-            <div class="ItemTitle">
-                <p class="font-weight-bold " style="font-size: 40px;"> Neeew Item </p>
-            </div>
-
-            <div class="ItemCard">
-                <div class="container">
-
-                    <!-- Card deck -->
-                    <div class="card-deck row">
-
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <!-- Card -->
-                            <div class="card">
-
-                                <!--Card image-->
-                                <div class="view overlay" style="width:100%; height: 350px; ">
-                                    <div style="height:100%;  ">
-
-                                        <img style="height: 100%;" class="card-img-top" src="./image/34.PNG"
-                                            alt="Card image cap">
-
-                                    </div>
-
-                                </div>
-
-                                <!--Card content-->
-                                <div class="card-body" style=" height: auto;">
-                                    <!--Title-->
-                                    <h4 class="card-title">오로바이파라여</h4>
-                                    <!--Text-->
-                                    <p class="card-text">1000원</p>
-                                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                                    <br />
-                                    <button type="button" class="btn btn-outline-dark btn-sm">상세정보</button>
-                                </div>
                             </div>
+
                         </div>
 
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <!-- Card -->
-                            <div class="card">
-
-                                <!--Card image-->
-                                <div class="view overlay" style="width:100%; height: 350px; ">
-                                    <div style="height:100%;  ">
-
-                                        <img style="height: 100%;" class="card-img-top" src="./image/66.PNG"
-                                            alt="Card image cap">
-
-                                    </div>
-
-                                </div>
-
-                                <!--Card content-->
-                                <div class="card-body" style=" height: auto;">
-                                    <!--Title-->
-                                    <h4 class="card-title">오로바이파라여</h4>
-                                    <!--Text-->
-                                    <p class="card-text">1000원</p>
-                                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                                    <br />
-                                    <button type="button" class="btn btn-outline-dark btn-sm">상세정보</button>
-                                </div>
-                            </div>
+                        <!--Card content-->
+                        <div class="card-body" style=" height: auto;">
+                            <!--Title-->
+                            <h4 class="card-title">오로바이파라여</h4>
+                            <!--Text-->
+                            <p class="card-text">1000원</p>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <br />
+                            <button type="button" class="btn btn-outline-dark btn-sm">상세정보</button>
                         </div>
-
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <!-- Card -->
-                            <div class="card">
-
-                                <!--Card image-->
-                                <div class="view overlay" style="width:100%; height: 350px; ">
-                                    <div style="height:100%;  ">
-
-                                        <img style="height: 100%;" class="card-img-top" src="./image/5454.PNG"
-                                            alt="Card image cap">
-
-                                    </div>
-
-                                </div>
-
-                                <!--Card content-->
-                                <div class="card-body" style=" height: auto;">
-                                    <!--Title-->
-                                    <h4 class="card-title">오로바이파라여</h4>
-                                    <!--Text-->
-                                    <p class="card-text">1000원</p>
-                                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                                    <br />
-                                    <button type="button" class="btn btn-outline-dark btn-sm">상세정보</button>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <!-- Card -->
+                    <div class="card">
+
+                        <!--Card image-->
+                        <div class="view overlay" style="width:100%; height: 350px; ">
+                            <div style="height:100%;  ">
+
+                                <img style="height: 100%;" class="card-img-top" src="./image/5454.PNG"
+                                    alt="Card image cap">
+
+                            </div>
+
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body" style=" height: auto;">
+                            <!--Title-->
+                            <h4 class="card-title">오로바이파라여</h4>
+                            <!--Text-->
+                            <p class="card-text">1000원</p>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <br />
+                            <button type="button" class="btn btn-outline-dark btn-sm">상세정보</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="ItemButton">
-                <button type="button" class="btn btn-dark">VIEW ALL ITEM</button>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <div id="footer">
-            <div class="container">
-                <footer class="row row-cols-5 py-5  border-top bg-dark text-center text-white">
-                    <div class="col">
-                        <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none ">
-                            <p class="text-white">오로바이사세여</p>
-                        </a>
-                        <p class="text-muted">&copy; 2022</p>
-                    </div>
-
-                    <div class="col">
-
-                    </div>
-
-                    <div class="col">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                        </ul>
-                    </div>
-
-                </footer>
-            </div>
-
         </div>
+    </div>
+    <div class="ItemButton">
+        <button type="button" class="btn btn-dark">VIEW ALL ITEM</button>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer">
+        <div class="container">
+            <footer class="row row-cols-5 py-5  border-top bg-dark text-center text-white">
+                <div class="col">
+                    <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none ">
+                        <p class="text-white">오로바이사세여</p>
+                    </a>
+                    <p class="text-muted">&copy; 2022</p>
+                </div>
+
+                <div class="col">
+
+                </div>
+
+                <div class="col">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+            </footer>
+        </div>
+
+    </div>
 </body>
 
 </html>
