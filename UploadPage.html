@@ -23,121 +23,636 @@
     <!-- 업로드페이지사용 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
+
+    <script src="dist/js/bootstrap-imageupload.js"></script>
+
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/common.css">
-    <script src="./UploadPage.js"></script>
+
+
     <title>업로드페이지</title>
 </head>
 
 
 <body>
-
-
-    <!-- 헤더 -->
-    <header>
-        <div class="headerNav">
-            <!-- 로그인 회원가입 마이페이지 -->
-            <div class="headerLogin">
-                <ul class="nav justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./SignUp.html">로그인/회원가입</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./MyPage.html">마이페이지</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- 로고, 메세지, 검색창 -->
-            <div class="search">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="./index.html">motorcycle</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                                <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="./UploadPage.html">내바이크팔기</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link disabled">Disabled</a>
-                                </li>
-                            </ul>
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-search" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                                    </svg></button>
-                            </form>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-
-
-        <!-- 메뉴바 -->
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">메뉴1</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">메뉴2</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-            </li>
-        </ul>
-    </header>
-
-
-
     <!-- 업로드페이지 -->
     <div class="UploadPageWrap ">
         <div class="form-wrap col-lg-7 col-md-6 col-sm-12 col-xs-12">
-            <div class="form-group" style="
-            padding: 0 30px;
-        ">
-                <label for="">바이크등록🏍️</label>
-                <input class="form-control" type="text" placeholder="바이크이름을 적어주세요" aria-label="default input example">
-                <div class="field">
-                    <h3>바이크의 이미지를 상세하게 올려주세요</h3>
-                    <input type="file" class="form-control" id="files" name="files[]" multiple />
+            <div class="form-group" style="padding: 20px 30px; background:#fff">
+                <label class="UploadTitle">🏍️바이크판매등록🏍️</label>
+                <!-- 이미지업로드 -->
+                <div class="container" style="margin-bottom:35px;">
+                    <div class="row">
+                        <div class="row col-lg-12">
+                            <div class="col-lg-6">
+                                <div class="col-lg-12"
+                                    style="border:5px solid #ddd; border-radius: 10px; padding:10px;">
+                                    <img src="./image/22.PNG" alt="" style="height:250px;">
+                                    <p>메인에 표시할 사진을 업로드 해주세요</p>
+                                    <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                    <button type="button" class="btn btn-outline-secondary">수정</button>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 uploadImg">
+                                        <img src="./image/2323.PNG" alt="">
+                                        <p>머플러</p>
+                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">수정</button>
+                                    </div>
+                                    <div class="col-lg-6 uploadImg">
+                                        <img src="./image/무제-2-01.png" alt="">
+                                        <p>시트</p>
+                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">수정</button>
+                                    </div>
+                                    <div class="col-lg-6 uploadImg">
+                                        <img src="./image/무제-2-01.png" alt="">
+                                        <p>계기판</p>
+                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">수정</button>
+                                    </div>
+                                    <div class="col-lg-6 uploadImg">
+                                        <img src="./image/무제-2-01.png" alt="">
+                                        <p>앞면</p>
+                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">수정</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6" style="
+                            display: flex; flex-direction: column; justify-content: flex-end; ">
+                                <div class="row">
+                                    <div class="imgtext"
+                                        style="text-align: left; margin-left:20px; margin-bottom:10px;">
+                                        <p>1.해당되는 곳에 맞춰 사진을 넣어주세요.</p>
+                                        <p>2. 메인사진은 업로드시 제일 처음에 보이는 사진입니다.</p>
+                                        <p>3. 해상도가 높은 사진을 올려주세요.</p>
+                                    </div>
+                                    <div class="col-lg-6 uploadImg">
+                                        <img src="./image/2323.PNG" alt="">
+                                        <p>우측면</p>
+                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">수정</button>
+                                    </div>
+                                    <div class="col-lg-6 uploadImg">
+                                        <img src="./image/무제-2-01.png" alt="">
+                                        <p>좌측면</p>
+                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">수정</button>
+                                    </div>
+                                    <div class="col-lg-6 uploadImg">
+                                        <img src="./image/무제-2-01.png" alt="">
+                                        <p>후면</p>
+                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">수정</button>
+                                    </div>
+                                    <div class="col-lg-6 uploadImg">
+                                        <img src="./image/무제-2-01.png" alt="">
+                                        <p>핸들</p>
+                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">수정</button>
+                                    </div>
+                                    <div class="col-lg-6 uploadImg">
+                                        <img src="./image/무제-2-01.png" alt="">
+                                        <p>엔진</p>
+                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">수정</button>
+                                    </div>
+                                    <div class="col-lg-6 uploadImg">
+                                        <img src="./image/무제-2-01.png" alt="">
+                                        <p>타이어</p>
+                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">수정</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div style="border: 1px solid black; margin:30px 0;"></div>
+                    <p style="color:red;">👉사진을 올리신후 자세한 사항은 아래쪽에 작성해주세요!👈</p>
                 </div>
-                <div class="container" style="padding: 0;">
-                    <textarea class="form-control col-sm-5" rows="12"
-                        placeholder="바이크 제조사, 주행거리 등 상세한 설명을 적어주세요 "></textarea>
+                <!-- 이미지업로드 끝 -->
+
+
+                <!-- 상세사항작성 시작 -->
+                <div class="container" style="margin:0px 0;">
+                    <input class="form-control" type="text" placeholder="제목을 적어주세요." aria-label="default input example">
+                    <div class="input-group mb-3">
+                        <input type="file" class="form-control">
+                        <label class="input-group-text" for="inputGroupFile02">🏍️동영상업로드</label>
+                    </div>
+                    <div class="row" style="text-align: left;">
+
+                        <!-- 판매자정보 -->
+                        <div class="col-lg-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">🏍️판매자정보</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="table-active">이름</td>
+                                        <td>몰라도댐</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-active">연락처</td>
+                                        <td>몰라도댐</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-active">판매지역</td>
+                                        <td class="row">
+                                            <select class="form-select col" aria-label="Default select example">
+                                                <option selected>시(도)선택</option>
+                                                <option value="1">서울특별시</option>
+                                                <option value="2">인천광역시</option>
+                                                <option value="3">대전광역시</option>
+                                                <option value="4">광주광역시</option>
+                                                <option value="5">대구광역시</option>
+                                                <option value="6">울산광역시</option>
+                                                <option value="7">부산광역시</option>
+                                                <option value="8">경기도</option>
+                                                <option value="9">강원도</option>
+                                                <option value="10">충청북도</option>
+                                                <option value="11">충청남도</option>
+                                                <option value="12">전라북도</option>
+                                                <option value="13">전라남도</option>
+                                                <option value="14">경상북도</option>
+                                                <option value="15">충청북도</option>
+                                                <option value="16">경상남도</option>
+                                                <option value="17">제주도</option>
+                                            </select>
+                                            <select class="form-select col" aria-label="Default select example">
+                                                <option selected>시,구(군)선택</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-active">통화가능시간</td>
+                                        <td class="row">
+                                            <select class="form-select col">
+                                                <option selected>오전 00시</option>
+                                                <option value="1">06:00</option>
+                                                <option value="2">07:00</option>
+                                                <option value="3">08:00</option>
+                                                <option value="4">09:00</option>
+                                                <option value="5">10:00</option>
+                                                <option value="6">11:00</option>
+                                                <option value="7">12:00</option>
+                                                <option value="8">13:00</option>
+                                                <option value="9">14:00</option>
+                                                <option value="10">15:00</option>
+                                                <option value="11">16:00</option>
+                                                <option value="12">17:00</option>
+                                                <option value="13">18:00</option>
+                                                <option value="14">19:00</option>
+                                                <option value="15">20:00</option>
+                                                <option value="16">21:00</option>
+                                                <option value="17">22:00</option>
+                                                <option value="18">23:00</option>
+                                                <option value="19">24:00</option>
+                                            </select>
+                                            <select class="form-select col">
+                                                <option selected>오전 00분</option>
+                                                <option value="1">00분</option>
+                                                <option value="2">10분</option>
+                                                <option value="3">20분</option>
+                                                <option value="4">30분</option>
+                                                <option value="5">40분</option>
+                                                <option value="6">50분</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 매물정보 -->
+                        <div class="col-lg-6">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">🏍️매물정보</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="table-active">제조회사</td>
+                                        <td>
+                                            <select class="form-select col">
+                                                <option selected>제조사선택</option>
+                                                <option value="1">야마하</option>
+                                                <option value="2">혼다</option>
+                                                <option value="3">가와사키</option>
+                                                <option value="4">스즈키</option>
+                                                <option value="5">할리데이비슨</option>
+                                                <option value="6">트라이엄스</option>
+                                                <option value="7">인디안</option>
+                                                <option value="8">KTM</option>
+                                                <option value="9">두카티</option>
+                                                <option value="10">캔암</option>
+                                                <option value="11">BMW</option>
+                                                <option value="12">베넬리</option>
+                                                <option value="13">아프릴리아</option>
+                                                <option value="14">모토구찌</option>
+                                                <option value="15">로열엔필드</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-active">모델</td>
+                                        <td>
+                                            <select class="form-select col">
+                                                <option selected>모델</option>
+                                                <option value="1">야마하</option>
+                                                <option value="2">혼다</option>
+                                                <option value="3">가와사키</option>
+                                                <option value="4">스즈키</option>
+                                                <option value="5">할리데이비슨</option>
+                                                <option value="6">트라이엄스</option>
+                                                <option value="7">인디안</option>
+                                                <option value="8">KTM</option>
+                                                <option value="9">두카티</option>
+                                                <option value="10">캔암</option>
+                                                <option value="11">BMW</option>
+                                                <option value="12">베넬리</option>
+                                                <option value="13">아프릴리아</option>
+                                                <option value="14">모토구찌</option>
+                                                <option value="15">로열엔필드</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-active">제조년도</td>
+                                        <td>
+                                            <select class="form-select col">
+                                                <option selected>제조년도선택</option>
+                                                <option value="1">1995</option>
+                                                <option value="2">1996</option>
+                                                <option value="3">1997</option>
+                                                <option value="4">1998</option>
+                                                <option value="5">1999</option>
+                                                <option value="6">2000</option>
+                                                <option value="7">2001</option>
+                                                <option value="8">2002</option>
+                                                <option value="9">2003</option>
+                                                <option value="10">2004</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-active">주행거리</td>
+                                        <td class="row">
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <select class="form-select">
+                                                    <option selected>Km</option>
+                                                    <option>Km</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-active">색상</td>
+                                        <td>몰라도댐</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-active">기어방식</td>
+                                        <td>
+                                            <select class="form-select col">
+                                                <option selected>자동</option>
+                                                <option value="1">자동</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 매물정보2 -->
+                        <div class="col-lg-6">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><br /></th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="table-active">배기량</td>
+                                        <td class="row">
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <select class="form-select">
+                                                    <option selected>cc</option>
+                                                    <option>cc</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-active">대차/교환</td>
+                                        <td>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" checked>
+                                                <label class="form-check-label">Option 1</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">Option 2</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-active">가격절충</td>
+                                        <td>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" checked>
+                                                <label class="form-check-label">Option 1</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">Option 2</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-active">배송료</td>
+                                        <td>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" checked>
+                                                <label class="form-check-label">Option 1</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">Option 2</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">Option 2</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-active">튜닝유무</td>
+                                        <td>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" checked>
+                                                <label class="form-check-label">Option 2</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">Option 2</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-active">사고유무</td>
+                                        <td>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" checked>
+                                                <label class="form-check-label">Option 2</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">Option 2</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-active">A/S</td>
+                                        <td>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" checked>
+                                                <label class="form-check-label">Option 2</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">Option 2</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                <h3>판매가능지역을 선택해주세요</h3>
-                <select class="form-select" aria-label="Default select example">
 
-                    <option selected>판매가능지역</option>
-                    <option value="1">서울</option>
-                    <option value="2">경기</option>
-                    <option value="3">강원</option>
-                    <option value="2">충북</option>
-                    <option value="3">전북</option>
-                    <option value="2">전남</option>
-                    <option value="3">경북</option>
-                    <option value="3">경남</option>
 
-                </select>
+                <div class="container">
+                    <div class="row" style="text-align: left;">
+                        <!-- 판매가격 -->
+                        <div class="col-lg-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">🏍️판매가격</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="table-active">판매가격</td>
+                                        <td class="row">
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control"
+                                                    aria-label="Amount (to the nearest dollar)">
+                                                <span class="input-group-text">원</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="container">
+                    <div class="row" style="text-align: left;">
+                        <!-- 옵션정보 -->
+                        <div class="col-lg-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">🏍️옵션정보</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="table-active">편의옵션</td>
+                                        <td>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">열선</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">파워put</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">가방류</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">오디오</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">경보기</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">안개등</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-active">성능옵션</td>
+                                        <td>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">배기 튜닝</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">흡기 튜닝</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">엔진 튜닝</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">새시 튜닝</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">브레이크 튜닝</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">서스펜션 튜닝</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-active">외관옵션</td>
+                                        <td>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">크롬파츠</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">카본파츠</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">커스텀도색</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">보호가드</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">LED</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">스크린/페어링</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="container">
+                    <div class="row" style="text-align: left;">
+                        <!-- 바이크 서류 -->
+                        <div class="col-lg-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">🏍️바이크 서류</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="table-active">서류</td>
+                                        <td>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">사용신고 필증</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">사용폐지 증명서</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">제작증명서</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">서류없음</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row" style="text-align: left;">
+                        <!-- 판매가격 -->
+                        <div class="col-lg-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">🏍️설명 및 추가정보</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <textarea class="form-control col-md-12" rows="12"
+                                                placeholder="바이크 제조사, 주행거리 등 상세한 설명을 적어주세요 "></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <button class="btn btn-dark" type="submit">바이크등록</button>
+                    <button class="btn btn-dark" style="padding: 10px;" type="submit">바이크등록</button>
                 </div>
-
             </div>
         </div>
     </div>

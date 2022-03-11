@@ -1,19 +1,64 @@
 .selector-for-some-widget {
   box-sizing:content-box;
   }
+
+  /* @media screen and (min-width: 1408px)
+  .container:not(.is-max-desktop):not(.is-max-widescreen) {
+      /* max-width: 1344px; */
+   
+      @media screen and (min-width: 1408px){
+        .container:not(.is-max-desktop):not(.is-max-widescreen) {
+          max-width: 1110px;
+      }
+      }
+      
+
+      body {padding-top: 136px;}
+  .wrap {
+    position:relative;
+    
+  }
   
-  header {
+
+
+  .ItemCard p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+
+.ItemCard .card-title {
+  font-size:20px;
+}
+
+.ItemCard .card-body {
+  /* flex: 1 1 auto; */
+  padding: 10px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+header {
   width:100%;
+  position: fixed; 
   background:#1d1d1d;
   justify-content:center;
   align-items:center;
   display:flex;
   flex-direction:column;
+	position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 99999;
   }
-  
+
   .headerNav {
   width:100%;
   background:#1d1d1d;
+
   }
   
   .headerLogin {
@@ -24,7 +69,8 @@
   }
   
   .headerLogin ul {
-  width:1140px;
+    width:1110px;
+      max-width: 1200px;
   }
   
   .headerLogin nav {
@@ -37,16 +83,46 @@
   display:flex;
   justify-content:center;
   }
+
+
   
   .headerNav .search .navbar {
-  width:1140px;
+  width:1110px;
   background:#1d1d1d!important;
   }
   
   .headerNav .search .dropdown-menu a {
   color:#000;
   }
-  
+
+
+  .quickmenu {
+    position:absolute;
+    width:150px;
+    top:50%;
+    float: left;
+    margin-top:-20px;
+    right:20px;
+    background:#fff;
+    z-index: 999;
+    border-radius: 50%;
+    overflow: hidden;
+    border:1px solid #ddd;
+    box-shadow: 3px 3px 3px #1d1d1d;
+  }
+  .quickmenu ul {
+    position:relative;
+    width:100%;
+    float: left;
+    display:inline-block;
+    display:inline;
+  }
+  .quickmenu ul li a img{
+    width:100%;
+    height:100%;
+  }
+ 
+ 
   section {
   display:flex;
   flex-direction:column;
@@ -56,17 +132,19 @@
   height:auto;
   display:flex;
   justify-content:center;
-  margin:80px 0 100px;
+  margin:30px 0 50px 0px;
   }
   
   .ItemTitle {
-  margin-top:100px;
+  margin:50px 0 50px 0;
   display:flex;
   justify-content:center;
+
   }
   
   .Tip {
-  background:#FFD700;
+  background:#3b3b3b;
+  height:400px;
   }
   
   .Tip img {
@@ -92,8 +170,7 @@
   
   .ItemCard .card {
   width:100%;
-  margin-bottom:23px;
-  height:500px;
+  margin-bottom:20px;
   display:flex;
   justify-content:center;
   }
@@ -258,45 +335,206 @@
   background: #fefcfc;
   text-align: center;
 }
-.UploadPageWrap .form-wrap label {
+.UploadPageWrap  .UploadTitle {
   font-size:30px;
   font-weight: bold;
-  padding:30px;
-}
-.UploadPageWrap input[type="file"] {
-  display: block;
+  padding: 30px;
 }
 
-.UploadPageWrap .imageThumb {
-  max-height: 75px;
-  border: 2px solid;
-  padding: 1px;
-  cursor: pointer;
-}
-
-.UploadPageWrap .pip {
-  display: inline-block;
-  margin: 10px 10px 0 0;
-}
-
-.UploadPageWrap .remove {
-  display: block;
-  background: #444;
-  border: 1px solid black;
-  color: white;
-  text-align: center;
-  cursor: pointer;
-}
 
 .UploadPageWrap .remove:hover {
   background: white;
   color: black;
 }
+
 .UploadPageWrap h3 {
   text-align: left;
-  margin:10px 0;
-  color:rgb(17, 93, 255)
+  margin: 10px 0;
+  font-size:medium
 }
-.UploadPageWrap button {
-  margin:30px
+
+.UploadPageWrap .btnSubmit {
+  margin: 30px;
+  padding:10px;
 }
+
+.UploadPageWrap .uploadImg {
+  border:1px solid #ddd;
+  border-radius: 10px;
+  padding:10px 10px;
+}
+.UploadPageWrap .uploadImg img {
+  height:150px;
+}
+
+
+.row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+.btn-outline-secondary {padding: 0 10px;}
+
+.UploadPageWrap .detailimg {
+  display: flex;
+}
+
+.UploadPageWrap .form-check-inline {
+  margin-top:0px;
+}
+
+.UploadPageWrap table {
+       margin-bottom: 20px;
+   
+}
+
+
+
+.UploadPageWrap .table thead td, .table thead th {
+  border-width: 0 0 0px;
+  color: #363636;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.DetailPage .card-body {
+  text-align: left;
+}
+
+.DetailPage .comment-add {
+  width: 100%;
+  margin-bottom: 20px;
+
+
+}
+
+
+.DetailPage .comment-add>textarea {
+  margin: 0;
+  padding: 10px;
+  display: table-cell;
+  width: calc(100% - 102px);
+  min-height: 100px;
+  vertical-align: top;
+  resize: vertical;
+}
+
+.DetailPage .comment-add>button {
+  margin: 0;
+  padding: 0;
+  display: table-cell;
+  width: 80px;
+  height: 100%;
+  vertical-align: top;
+}
+
+
+.DetailPage div.comment-edit>p {
+  white-space: pre-line;
+}
+
+.DetailPage div.comment-edit>div {
+  display: none;
+}
+
+.DetailPage div.comment-edit>div>form {
+  width: 100%;
+  margin-bottom: 10px;
+  display: table;
+  height: 100px;
+}
+
+.DetailPage div.comment-edit>div>form>textarea {
+  margin: 0;
+  padding: 10px;
+  display: table-cell;
+  width: calc(100% - 102px);
+  min-height: 100px;
+  vertical-align: top;
+  resize: vertical;
+}
+
+.DetailPage div.comment-edit>div>form>button {
+  margin: 0;
+  padding: 0;
+  display: table-cell;
+  width: 80px;
+  height: 100%;
+  vertical-align: top;
+}
+
+.DetailPage button {
+  border: none;
+  color: #fff;
+  background-color: #3b3b3b;
+  margin-right: 5px;
+}
+
+.DetailPage .comment-edit-btn-close {
+  display: none;
+}
+
+
+.DetailPage .comment-item {
+  border-top: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+.DetailPage .comment-item>img {
+  margin-right: 10px;
+  padding: 0;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  vertical-align: top;
+ 
+}
+
+.DetailPage .comment-item>div:first-of-type {
+  display: inline-block;
+  width: calc(100% - 70px);
+  vertical-align: top;
+
+}
+
+.DetailPage .comment-item>div:first-of-type>p {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+
+.DetailPage .comment-delete-modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4);
+
+}
+
+.DetailPage .comment-delete-modal>div {
+  width: 300px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.DetailPage img {cursor:pointer;}

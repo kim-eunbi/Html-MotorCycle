@@ -25,601 +25,88 @@
 
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/common.css">
-    <script src="./DetailPage.js"></script>
+    <script src="./js/DetailPage.js"></script>
     <title>상세페이지</title>
 </head>
-<style>
-    .picZoomer {
-        position: relative;
-        /*margin-left: 40px;
-    padding: 15px;*/
-    }
 
-    .picZoomer-pic-wp {
-        position: relative;
-        overflow: hidden;
-        text-align: center;
-    }
 
-    .picZoomer-pic-wp:hover .picZoomer-cursor {
-        display: block;
-    }
 
-    .picZoomer-zoom-pic {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-
-
-    .picZoomer-zoom-wp {
-        display: none;
-        position: absolute;
-        z-index: 999;
-        overflow: hidden;
-        border: 1px solid #eee;
-        height: 460px;
-        margin-top: -19px;
-    }
-
-    .picZoomer-cursor {
-        display: none;
-        cursor: crosshair;
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 50%;
-        border: 1px solid #eee;
-        background-color: rgba(0, 0, 0, .1);
-    }
-
-    .picZoomCursor-ico {
-        width: 23px;
-        height: 23px;
-        position: absolute;
-        top: 40px;
-        left: 40px;
-        background: url(images/zoom-ico.png) left top no-repeat;
-    }
-
-    .my_img {
-        vertical-align: middle;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        height: 100%;
-    }
-
-    .piclist li {
-        display: inline-block;
-        width: 90px;
-        height: 114px;
-        border: 1px solid #eee;
-    }
-
-    .piclist li img {
-        width: 97%;
-        height: auto;
-    }
-
-    /* custom style */
-    .picZoomer-pic-wp,
-    .picZoomer-zoom-wp {
-        border: 1px solid #eee;
-    }
-
-
-
-    .section-bg {
-        background-color: #fff1e0;
-    }
-
-    section {
-        padding: 60px 0;
-    }
-
-    .row-sm .col-md-6 {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    /*===pic-Zoom===*/
-    ._boxzoom .zoom-thumb {
-        width: 90px;
-        display: inline-block;
-        vertical-align: top;
-        margin-top: 0px;
-    }
-
-    ._boxzoom .zoom-thumb ul.piclist {
-        padding-left: 0px;
-        top: 0px;
-    }
-
-    ._boxzoom ._product-images {
-        width: 80%;
-        display: inline-block;
-    }
-
-    ._boxzoom ._product-images .picZoomer {
-        width: 100%;
-    }
-
-    ._boxzoom ._product-images .picZoomer .picZoomer-pic-wp img {
-        left: 0px;
-    }
-
-    ._boxzoom ._product-images .picZoomer img.my_img {
-        width: 100%;
-    }
-
-    .piclist li img {
-        height: 100px;
-        object-fit: cover;
-    }
-
-    /*======products-details=====*/
-    ._product-detail-content {
-        background: #fff;
-        padding: 15px;
-        border: 1px solid lightgray;
-    }
-
-    ._product-detail-content p._p-name {
-        color: black;
-        font-size: 20px;
-        border-bottom: 1px solid lightgray;
-        padding-bottom: 12px;
-    }
-
-    .p-list span {
-        margin-right: 15px;
-    }
-
-    .p-list span.price {
-        font-size: 25px;
-        color: #318234;
-    }
-
-    ._p-qty>span {
-        color: black;
-        margin-right: 15px;
-        font-weight: 500;
-    }
-
-    ._p-qty .value-button {
-        display: inline-flex;
-        border: 0px solid #ddd;
-        margin: 0px;
-        width: 30px;
-        height: 35px;
-        justify-content: center;
-        align-items: center;
-        background: #fd7f34;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        color: #fff;
-    }
-
-    ._p-qty .value-button {
-        border: 0px solid #fe0000;
-        height: 35px;
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    ._p-qty input#number {
-        text-align: center;
-        border: none;
-        border-top: 1px solid #fe0000;
-        border-bottom: 1px solid #fe0000;
-        margin: 0px;
-        width: 50px;
-        height: 35px;
-        font-size: 14px;
-        box-sizing: border-box;
-    }
-
-    ._p-add-cart {
-        margin-left: 0px;
-        margin-bottom: 15px;
-    }
-
-    .p-list {
-        margin-bottom: 10px;
-    }
-
-    ._p-features>span {
-        display: block;
-        font-size: 16px;
-        color: #000;
-        font-weight: 500;
-    }
-
-    ._p-add-cart .buy-btn {
-        background-color: #fd7f34;
-        color: #fff;
-    }
-
-    ._p-add-cart .btn {
-        text-transform: capitalize;
-        padding: 6px 20px;
-        /* width: 200px; */
-        border-radius: 52px;
-    }
-
-    ._p-add-cart .btn {
-        margin: 0px 8px;
-    }
-
-    /*=========Recent-post==========*/
-    .title_bx h3.title {
-        font-size: 22px;
-        text-transform: capitalize;
-        position: relative;
-        color: #fd7f34;
-        font-weight: 700;
-        line-height: 1.2em;
-    }
-
-    .title_bx h3.title:before {
-        content: "";
-        height: 2px;
-        width: 20%;
-        position: absolute;
-        left: 0px;
-        z-index: 1;
-        top: 40px;
-        background-color: #fd7f34;
-    }
-
-    .title_bx h3.title:after {
-        content: "";
-        height: 2px;
-        width: 100%;
-        position: absolute;
-        left: 0px;
-        top: 40px;
-        background-color: #ffc107;
-    }
-
-    .common_wd .owl-nav .owl-prev,
-    .common_wd .owl-nav .owl-next {
-        background-color: #fd7f34 !important;
-        display: block;
-        height: 30px;
-        width: 30px;
-        text-align: center;
-        border-radius: 0px !important;
-    }
-
-    .owl-nav .owl-next {
-        right: -10px;
-    }
-
-    .owl-nav .owl-prev,
-    .owl-nav .owl-next {
-        top: 50%;
-        position: absolute;
-    }
-
-    .common_wd .owl-nav .owl-prev i,
-    .common_wd .owl-nav .owl-next i {
-        color: #fff;
-        font-size: 14px !important;
-        position: relative;
-        top: -1px;
-    }
-
-    .common_wd .owl-nav {
-        position: absolute;
-        top: -21%;
-        right: 4px;
-        width: 65px;
-    }
-
-    .owl-nav .owl-prev i,
-    .owl-nav .owl-next i {
-        left: 0px;
-    }
-
-    ._p-qty .decrease_ {
-        position: relative;
-        right: -5px;
-        top: 3px;
-    }
-
-    ._p-qty .increase_ {
-        position: relative;
-        top: 3px;
-        left: -5px;
-    }
-
-    /*========box========*/
-    .sq_box {
-        padding-bottom: 5px;
-        border-bottom: solid 2px #fd7f34;
-        background-color: #fff;
-        text-align: center;
-        padding: 15px 10px;
-        margin-bottom: 20px;
-        border-radius: 4px;
-    }
-
-    .item .sq_box span.wishlist {
-        right: 5px !important;
-    }
-
-    .sq_box span.wishlist {
-        position: absolute;
-        top: 10px;
-        right: 20px;
-    }
-
-    .sq_box span {
-        font-size: 14px;
-        font-weight: 600;
-        margin: 0px 10px;
-    }
-
-    .sq_box span.wishlist i {
-        color: #adb5bd;
-        font-size: 20px;
-    }
-
-    .sq_box h4 {
-        font-size: 18px;
-        text-align: center;
-        font-weight: 500;
-        color: #343a40;
-        margin-top: 10px;
-        margin-bottom: 10px !important;
-    }
-
-    .sq_box .price-box {
-        margin-bottom: 15px !important;
-    }
-
-    .sq_box .btn {
-        border-radius: 50px;
-        padding: 5px 13px;
-        font-size: 15px;
-        color: #fff;
-        background-color: #fd7f34;
-        font-weight: 600;
-    }
-
-    .sq_box .price-box span.price {
-        text-decoration: line-through;
-        color: #6c757d;
-    }
-
-    .sq_box span {
-        font-size: 14px;
-        font-weight: 600;
-        margin: 0px 10px;
-    }
-
-    .sq_box .price-box span.offer-price {
-        color: #28a745;
-    }
-
-    .sq_box img {
-        object-fit: cover;
-        height: 150px !important;
-        margin-top: 20px;
-    }
-
-    .sq_box span.wishlist i:hover {
-        color: #fd7f34;
-    }
-</style>
-
-<body>
-
-
-    <!-- 헤더 -->
-    <header>
-        <div class="headerNav">
-            <!-- 로그인 회원가입 마이페이지 -->
-            <div class="headerLogin">
-                <ul class="nav justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./SignUp.html">로그인/회원가입</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./MyPage.html">마이페이지</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- 로고, 메세지, 검색창 -->
-            <div class="search">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="./index.html">motorcycle</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                                <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="./UploadPage.html">내바이크팔기</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link disabled">Disabled</a>
-                                </li>
-                            </ul>
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-search" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                                    </svg></button>
-                            </form>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-
-
-        <!-- 메뉴바 -->
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">메뉴1</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">메뉴2</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-            </li>
-        </ul>
-    </header>
-
-
-
-    <!-- 상세페이지 -->
-
-    <body style=" width:100%; height:100%;">
-        <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12" style=" margin: 2.6% auto; background:gold">
-            <div class="container">
-                <div class="row">
-                    <section id="services" class="services section-bg">
-                        <div class="container-fluid">
-                            <div class="row row-sm">
-                                <div class="col-md-6 _boxzoom">
-                                    <div class="zoom-thumb">
-                                        <ul class="piclist">
-                                            <li><img src="./image/111.PNG" alt=""></li>
-                                            <li><img src="./image/2323.PNG" alt=""></li>
-                                            <li><img src="./image/34.PNG" alt=""></li>
-                                            <li><img src="./image/5454.PNG" alt=""></li>
-                                        </ul>
-                                    </div>
-                                    <div class="_product-images">
-                                        <div class="picZoomer">
-                                            <img class="my_img" src="./image/66.PNG" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="_product-detail-content">
-                                        <p class="_p-name">오로바이파라연</p>
-                                        <div class="_p-price-box">
-                                            <div class="p-list">
-                                                <span class="price"> 1000원 </span>
-                                            </div>
-
-                                            <form action="" method="post" accept-charset="utf-8">
-                                                <ul class="spe_ul"></ul>
-                                                <div class="_p-qty-and-cart">
-                                                    <div class="_p-add-cart">
-                                                        <button class="btn-theme btn buy-btn" tabindex="0">
-                                                            <i class="fa fa-phone"></i> 판매자에게 연락하기
-                                                        </button>
-                                                        <button class="btn-theme btn buy-btn" tabindex="0">
-                                                            찜❤️
-                                                        </button>
-                                                        <input type="hidden" name="pid" value="18" />
-                                                        <input type="hidden" name="price" value="850" />
-                                                        <input type="hidden" name="url" value="" />
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- 댓글 -->
-                    <div class="container py-4">
-                        <div class="col-md-10 col-lg-8 m-auto">
-                            <div class="bg-white rounded-3 shadow-sm p-4 mb-4">
-                                <!-- New Comment //-->
-                                <div class="d-flex">
-                                    <img class="rounded-circle me-3" style="width:3rem;height:3rem;"
-                                        src="https://via.placeholder.com/128/fe669e/ffcbde.png?text=S" />
-                                    <div class="flex-grow-1">
-                                        <div class="hstack gap-2 mb-1">
-                                            <a href="#" class="fw-bold link-dark">Studio KonKon</a>
-                                        </div>
-                                        <div class="form-floating mb-3">
-                                            <textarea class="form-control w-100" placeholder="Leave a comment here"
-                                                id="my-comment" style="height:7rem;"></textarea>
-                                            <label for="my-comment">Leave a comment here</label>
-                                        </div>
-                                        <div class="hstack justify-content-end gap-2">
-                                            <button
-                                                class="btn btn-sm btn-link link-secondary text-uppercase">cancel</button>
-                                            <button class="btn btn-sm btn-primary text-uppercase">comment</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-white rounded-3 shadow-sm p-4">
-
-                                <h4 class="mb-4">7 Comments</h4>
-
-                                <!-- Comment #1 //-->
-                                <div class="">
-                                    <div class="py-3">
-                                        <div class="d-flex comment">
-                                            <img class="rounded-circle comment-img"
-                                                src="https://via.placeholder.com/128/fe669e/ffcbde.png?text=S" />
-                                            <div class="flex-grow-1 ms-3">
-                                                <div class="mb-1"><a href="#" class="fw-bold link-dark me-1">Studio
-                                                        KonKon</a> <span class="text-muted text-nowrap">2 days
-                                                        ago</span></div>
-                                                <div class="mb-2">Lorem ipsum dolor sit amet, ut qui commodo sensibus,
-                                                    id utinam inermis constituto vim. In nam dolorum interesset, per
-                                                    fierent ponderum ea. Eos aperiri feugiat democritum ne.</div>
-                                                <div class="hstack align-items-center mb-2">
-                                                    <a class="link-primary me-2" href="#"><i
-                                                            class="zmdi zmdi-thumb-up"></i></a>
-                                                    <span class="me-3 small">55</span>
-                                                    <a class="link-secondary me-4" href="#"><i
-                                                            class="zmdi zmdi-thumb-down"></i></a>
-                                                    <a class="link-secondary small" href="#">REPLY</a>
-                                                    <a class="link-danger small ms-3" href="#">DELETE</a>
-                                                </div>
-                                                <a class="fw-bold d-flex align-items-center" href="#">
-                                                    <i class="zmdi zmdi-chevron-down fs-4 me-3"></i>
-                                                    <span>Hide Replies</span>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-                                </div>
-
-                            </div>
-                        </div>
+<body class="DetailPage">
+    <div class="container" style="margin:0 auto;     max-width: 1200px;">
+        <!-- <p>현재 로그인 사용자</p>
+        <p id="user_info">
+            user_id : <input value="1" disabled="">
+            user_name : <input value="식빵" disabled="">
+            now_date : <input value="2021-05-10" disabled="">
+        </p> -->
+
+        <hr />
+        <div class="card mb-8">
+            <div class="row g-0">
+                <div class="column">
+                    <img src="./image/22.PNG" class="img-fluid rounded-start" alt="...">
+                    <img src="./image/111.PNG" class="img-thumbnail col-lg-2 col-sm-1 col-md-2 col-xs-0.5 "
+                        style="border:1px solid #ddd " alt="...">
+                    <img src="./image/111.PNG" class="img-thumbnail col-lg-2 col-sm-1 col-md-2 col-xs-1"
+                        style="border:1px solid #ddd" alt="...">
+                    <img src="./image/111.PNG" class="img-thumbnail col-lg-2 col-sm-1 col-md-2 col-xs-1"
+                        style="border:1px solid #ddd" alt="...">
+                    <img src="./image/111.PNG" class="img-thumbnail col-lg-2 col-sm-1 col-md-2 col-xs-1"
+                        style="border:1px solid #ddd" alt="...">
+                </div>
+                <div class="col-md-7" style="margin-left:40px; padding:0 1rem;">
+                    <div class="card-body">
+                        <p class="card-text"><small class="text-muted">경로>경로>경로</small></p>
+                        <h3 class="card-title" style="font-size:30px; font-weight:bold">오토바이팔기</h3>
+                        <hr style="background-color: black;">
+                        <p class="card-text">오토바이 설명부분</p>
+                        <p class="card-text">오토바이 설명부분</p>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+
+
+        <hr style="background-color: black;">
+        <button>❤️좋아요</button>
+        <button>💬댓글 <span>123</span></button>
+
+
+        <!-- 댓글 시작부분 -->
+        <div class="comment-add flex-column">
+            <br />
+            <textarea class="card mb-8"></textarea>
+            <button class="btn btn-dark">등록</button>
+
+        </div> <!-- //댓글등록 -->
+
+        <div class="comment-list">
+
+        </div> <!-- //댓글 목록 -->
+
+
+        <div class="comment-delete-modal" style="display: none;">
+            <div>
+                <h6>댓글 삭제</h6>
+                <input type="hidden" value="" />
+
+                <p>
+                    <span></span>
+                    댓글을 삭제?
+                </p>
+                <hr />
+                <button>Y</button>
+                <button>N</button>
+            </div>
+        </div><!-- //삭제모달 -->
+
+
+    </div> <!-- //container -->
+
+    <script>
+
+
+    </script>
+</body>
 
 </html>
