@@ -13,11 +13,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
 
-    <!-- Bulma -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"> -->
     <!-- 폰트어썸 CDN -->
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 
     <!-- js 경로 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -38,7 +38,7 @@
     <div id="wrap">
         <!-- 헤더 -->
         <header>
-            <div class="headerNav ">
+            <div class="headerNav">
                 <!-- 로그인 회원가입 마이페이지 -->
                 <div class="headerLogin">
                     <ul class="nav justify-content-end">
@@ -50,11 +50,12 @@
                         </li>
                     </ul>
                 </div>
+
                 <!-- 로고, 메세지, 검색창 -->
                 <div class="search">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="">motorcycle</a>
+                            <a class="navbar-brand" href="./index.html">motorcycle</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -62,11 +63,6 @@
                             </button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                                    <!-- <li class="nav-item">
-                                        <a class="nav-link" aria-current="page" href="./UploadPage.html">내바이크팔기</a>
-                                    </li> -->
-
                                     <li class="nav-item">
                                         <a class="nav-link disabled">Disabled</a>
                                     </li>
@@ -91,16 +87,16 @@
             <!-- 메뉴바 -->
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">판매목록</a>
+                    <a class="nav-link active" aria-current="page" href="#">메뉴1</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">오토바이</a>
+                    <a class="nav-link" href="#">메뉴2</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">오토바이</a>
+                    <a class="nav-link" href="#">Link</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled">핸드폰입점</a>
+                    <a class="nav-link disabled">Disabled</a>
                 </li>
             </ul>
         </header>
@@ -151,63 +147,87 @@
         </div>
 
 
-        <section>
-            <!-- Item Card -->
+        <section class="HotItem">
+            <!-- 핫아이템 시작부분-->
             <div class="ItemTitle">
                 <p class="font-weight-bold " style="font-size: 40px;">Hoooot Item</p>
             </div>
             <div class="container">
                 <div class="row" style="display:flex; justify-content:space-between">
                     <div class="card" style="width: 16rem;">
-                        <img src="./image/5454.PNG" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">오토바이팔거에요</p>
-                        </div>
+                        <a href="./DetailPage.html">
+                            <img src="./image/5454.PNG" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">오토바이팔거에요</p>
+                                <p class="card-text">얼마일까요</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="card" style="width: 16rem;">
-                        <img src="./image/12.PNG" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">오토바이팔거에요</p>
-                        </div>
+                        <a href="./DetailPage.html">
+                            <img src="./image/5454.PNG" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">오토바이팔거에요</p>
+                                <p class="card-text">얼마일까요</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="card" style="width: 16rem;">
-                        <img src="./image/12.PNG" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">오토바이팔거에요</p>
-                        </div>
+                        <a href="./DetailPage.html">
+                            <img src="./image/5454.PNG" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">오토바이팔거에요</p>
+                                <p class="card-text">얼마일까요</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="card" style="width: 16rem;">
-                        <img src="./image/12.PNG" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">오토바이팔거에요</p>
-                        </div>
+                        <a href="./DetailPage.html">
+                            <img src="./image/5454.PNG" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">오토바이팔거에요</p>
+                                <p class="card-text">얼마일까요</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <br />
-                <div class="row" style=" display:flex; justify-content:space-between">
+                <div class="row" style="display:flex; justify-content:space-between">
                     <div class="card" style="width: 16rem;">
-                        <img src="./image/5454.PNG" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">오토바이팔거에요</p>
-                        </div>
+                        <a href="./DetailPage.html">
+                            <img src="./image/5454.PNG" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">오토바이팔거에요</p>
+                                <p class="card-text">얼마일까요</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="card" style="width: 16rem;">
-                        <img src="./image/12.PNG" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">오토바이팔거에요</p>
-                        </div>
+                        <a href="./DetailPage.html">
+                            <img src="./image/5454.PNG" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">오토바이팔거에요</p>
+                                <p class="card-text">얼마일까요</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="card" style="width: 16rem;">
-                        <img src="./image/12.PNG" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">오토바이팔거에요</p>
-                        </div>
+                        <a href="./DetailPage.html">
+                            <img src="./image/2323.PNG" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">오토바이팔거에요</p>
+                                <p class="card-text">얼마일까요</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="card" style="width: 16rem;">
-                        <img src="./image/12.PNG" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">오토바이팔거에요</p>
-                        </div>
+                        <a href="./DetailPage.html">
+                            <img src="./image/5454.PNG" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">오토바이팔거에요</p>
+                                <p class="card-text">얼마일까요 궁금하면 눌렁</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="ItemButton">

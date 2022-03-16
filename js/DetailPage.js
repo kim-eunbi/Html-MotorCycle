@@ -7,6 +7,7 @@ $(document).ready(function () {
     // 현재 댓글 배열
     var list = [
         { 'id': '7', 'user_id': '5', 'user_name': '오렌지', 'comment': '오렌지 식빵 맛있다', 'reg_date': '2021-05-07', 'edit_date': '2021-05-07' },
+
     ];
 
     var html = '';
@@ -23,9 +24,9 @@ $(document).ready(function () {
         html += '<p>' + list[i].reg_date + '</p>';
 
         if (user_id == list[i].user_id) {
-            html += '<button class="comment-del-btn btn btn-dark">삭제</button>';
-            html += '<button class="comment-edit-btn btn btn-dark">수정</button>';
-            html += '<button class="comment-edit-btn-close btn btn-dark">수정 닫기</button>';
+            html += '<button class="comment-del-btn">삭제</button>';
+            html += '<button class="comment-edit-btn">수정</button>';
+            html += '<button class="comment-edit-btn-close">수정 닫기</button>';
         }
 
         html += '<div class="comment-edit">';
