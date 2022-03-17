@@ -1,3 +1,5 @@
+// 댓글 스크립트
+
 $(document).ready(function () {
     // 로그인 사용자 정보 가져오기
     var user_id = $('#user_info > input:nth-of-type(1)').val();
