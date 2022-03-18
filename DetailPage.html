@@ -114,11 +114,15 @@
                 <p class="h2 text-success" style="margin-right:100px;"><strong>2,160만원</strong></p>
                 <div class="row">
                     <div class="d-flex">
-                        <button type="button"
+                        <button type="button" style="border:1px solid #ddd;"
+                            class=" btn btn-primary d-flex flex-column justify-content-center align-items-center">
+                            <p style="margin-top:10px;"><small>판매완료</small></p>
+                        </button>
+                        <button type="button" style="border:1px solid #ddd;"
                             class=" btn btn-primary d-flex flex-column justify-content-center align-items-center">
                             <p style="margin-top:10px;"><small>수정</small></p>
                         </button>
-                        <button type="button"
+                        <button type="button" style="border:1px solid #ddd;"
                             class="btn btn-primary d-flex flex-column justify-content-center align-items-center">
 
                             <p style="margin-top:10px;"><small>삭제</small></p>
@@ -170,38 +174,9 @@
     </div>
 
 
-    <div class="col-lg-12" style="background:#ddd; height:auto; padding:30px 0; margin:50px 0 50px 0">
-        <div class="container" style="margin:0 auto; max-width: 1100px;">
-            <div class="row col-lg-12 d-flex justify-content-between">
-                <div class="row col-lg-4">
-                    <div class="DetailCard d-flex flex-column justify-content-end"
-                        style="border:1px solid #ddd; background:#fff; border-radius: 5px;">
-                        <p>판매자이름 : 기믄비</p>
-                        <p>전화번호 : 공일공일이삼사오육칠팔</p>
-                        <p>상담가능시간 : 수원시 여러분</p>
-                    </div>
-
-                </div>
-                <div class="col-lg-8 d-flex" style=" padding:0px 0 0 10px;">
-                    <div class="col-lg-10 DetailCard d-flex justify-content-start"
-                        style="border:1px solid #ddd; background:#fff; border-radius: 5px;">
-                        <div>
-                            <p>판매지역 : 광교 이의동</p>
-                            <p>제조년도 : 1980년 </p>
-                            <p>주행거리 : 20000Km</p>
-                        </div>
-                        <div>
-                            <p>판매지역 : 광교 이의동</p>
-                            <p>제조년도 : 1980년 </p>
-                            <p>주행거리 : 20000Km</p>
-                        </div>
-                    </div>
-                    <button type="button"
-                        class="col-lg-2 btn btn-dark d-flex flex-column justify-content-center align-items-center">
-                        <i class="bi bi-emoji-laughing"></i> 상담신청
-                    </button>
-                </div>
-            </div>
+    <div class="col-lg-12" style="background:#ddd; height:auto; padding:50px 0; margin-top:50px;">
+        <div class="container " style="margin:0 auto; max-width: 1100px; text-align: center;">
+            <p class="h4"><strong>상세정보</strong></p>
         </div>
     </div>
 
@@ -357,10 +332,33 @@
                     </div>
                 </div>
                 <!-- 이미지업로드 끝 -->
-
-
+                <div class="container">
+                    <div class="row" style="text-align: left;">
+                        <!-- 판매가격 -->
+                        <div class="col-lg-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">🏍️설명 및 추가정보</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <textarea
+                                                class="form-control d-flex justify-content-center align-items-center col-lg-12"
+                                                rows="12" style="resize:none; border:none;"
+                                                placeholder=" 바이크 제조사, 주행거리 등 상세한 설명을 적어주세요 "></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
                 <!-- 상세사항작성 시작 -->
-                <div class="container" style="margin:0px 0;">
+                <div class=" container" style="margin:0px 0;">
                     <!-- <div class="input-group mb-3">
                         <input type="file" class="form-control">
                         <label class="input-group-text" for="inputGroupFile02">🏍️동영상업로드</label>
@@ -445,6 +443,12 @@
 
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td class="table-active">AS</td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -492,7 +496,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="table-active">배송료</td>
+                                        <td class="table-active">기타</td>
                                         <td>
                                             <!-- <div class="form-check form-check-inline">
                                                 <input type="checkbox" class="form-check-input">
@@ -534,27 +538,23 @@
                                             </div> -->
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td class="table-active">기타</td>
+                                        <td>
+                                            <!-- <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">무</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">유</label>
+                                            </div> -->
+                                        </td>
+                                    </tr>
 
                                 </tbody>
                             </table>
                         </div>
-                        <table>
-                            <tbody>
-                                <tr class="col-lg-12">
-                                    <td class="table-active">A/S</td>
-                                    <td>
-                                        <!-- <div class="form-check form-check-inline">
-                                            <input type="checkbox" class="form-check-input">
-                                            <label class="form-check-label">가능</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input type="checkbox" class="form-check-input">
-                                            <label class="form-check-label">불가능</label>
-                                        </div> -->
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
 
@@ -730,11 +730,14 @@
 
 
         <!-- 댓글 시작부분 -->
-        <div class="comment-add">
-            <textarea></textarea>
-            <button>등록</button>
-        </div> <!-- //댓글등록 -->
+        <div class="comment-add" style="background:gold; width:100%;">
+            <textarea style=" width:1100px;"></textarea>
 
+        </div> <!-- //댓글등록 -->
+        <div class="row">
+            <button class="col-lg-2" style="background:red; padding:5px 20px;">등록</button>
+            <button class="col-lg-2" style="background:red; padding:5px 20px;">비공개</button>
+        </div>
         <div class="comment-list">
 
         </div> <!-- //댓글 목록 -->
@@ -757,9 +760,7 @@
 
         <!-- 글쓰기,목록,위로올라가기 -->
         <div class="container" style="margin:0 auto; max-width: 1100px;">
-            <button type="button" class="btn btn-primary position-relative">
-                판매등록
-            </button>
+
             <button type="button" class="btn btn-primary position-relative">
                 <a href="./ItemListPage.html">목록
             </button>
