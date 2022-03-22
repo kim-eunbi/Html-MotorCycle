@@ -87,7 +87,7 @@ header {
   .headerLogin nav {
   background:#fff;
   width:100%;
-  background:tomato;
+  
   }
   .navbar {
     position: relative;
@@ -356,11 +356,36 @@ header {
   text-align: center;
   /* width:1100px; */
 }
+
 .UploadPageWrap  .UploadTitle {
   font-size:30px;
   font-weight: bold;
   padding: 30px;
 }
+
+.UploadPageWrap  .table-active {
+  background:#333436;
+  color:#fff;
+  padding:15px;
+  width:200px;
+  height:40px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #232324;
+  border-color: #333436;
+}
+ .btn-primary:hover {
+  color: #fff;
+  background-color: #333436;
+  border-color: #333436;
+}
+
+.UploadPageWrap table tbody tr {
+  height:50px; margin: 0 auto;
+}
+
+
 
 
 .UploadPageWrap .remove:hover {
@@ -406,7 +431,7 @@ header {
 }
 
 .UploadPageWrap .form-check-inline {
-  margin-top:0px;
+  margin-top:7px;
 }
 
 .UploadPageWrap table {
@@ -678,20 +703,16 @@ div.comment-edit>div>form>button {
   }
 .ItemList table img {width:140px;}
 
-.ItemList table tbody td:nth-child(3) {
- margin:30px 0;
- padding:50px;
-}
-.ItemList table tbody td:nth-child(4) {
-  margin:30px 0;
-  padding:50px;
+
+.ItemList table tbody td {
+padding-top:50px;
  }
 
  .ItemList .ItemCard .container ul {
  margin-bottom:30px;
  border-bottom: 1px solid #ddd;
  }
-
+ 
  .ItemList .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   color: #fff;
   background-color: #1F2428;
