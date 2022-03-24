@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/common.css">
 
-    <title>회원가입</title>
+    <title>아이디비번 찾기</title>
 
 
 </head>
@@ -97,82 +97,42 @@
         </ul>
     </header>
 
-    <!-- 회원가입 -->
-    <div class="signUpwrap">
-        <div class="form-wrap">
-            <div class="button-wrap">
-                <div id="btn"></div>
-                <button type="button" class="togglebtn" onclick="login()">로그인</button>
-                <button type="button" class="togglebtn" onclick="register()">회원가입</button>
+    <!-- 아이디 비번찾기 -->
+    <div class="IdFindwrap">
+        <div class="form-wrap d-flex flex-column align-items-center">
+            <div class="IdFindTitle">
+                아이디/비밀번호찾기
             </div>
-            <div class="social-icons">
-                <img style="width: 80px;" src="./image/logo-01.png" alt="logo">
+            <span>본인인증 후 아이디를 확인 하실 수 있습니다.</span>
+            <p class="fw-normal">본인인증 후 비밀번호변경이 가능합니다.</p>
+            <p></p>
+            <div class="IdPwd col-lg-11">
+                <p>아이디찾기</p>
+                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"><i class="bi bi-person-badge"></i>본인인증</button>
             </div>
-            <form id="login" action="" class="input-group">
-                <input type="text" class="input-field" placeholder="아이디" style="padding-left:10px;" required>
-                <input type="password" class="input-field" placeholder="비밀번호" style="padding-left:10px;" required>
-                <div class="form-check form-check-inline ">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked>
-                    <label class="form-check-label" for="inlineCheckbox1">아이디기억</label>
-                </div>
+            <div class="IdPwd col-lg-11">
+                <p>비밀번호찾기</p>
+                <button type="button" class="btn btn-outline-dark"><i class="bi bi-person-badge"></i>본인인증</button>
+            </div>
 
-                <div class="d-grid gap-2 col-12 mx-auto">
-                    <button class="btn btn-dark" type="submit">로그인</button>
+            <p>
+                <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    비밀번호 변경
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample" style="width:100%;">
+                <div class="card card-body">
+                    <input type="password" class="input-field" placeholder="비밀번호" required>
+                    <input type="password" class="input-field" placeholder="비밀번호확인" required>
+                    <button type="button" class="btn btn-outline-dark" style="margin-top:7px;">확인</button>
                 </div>
-
-                <div class="d-grid gap-2 col-7 mx-auto">
-                    <button type="button" onclick="location.href='IdFind.html'" class="IdFind btn btn-light"
-                        style="background:#ddd;">아이디 /비밀번호찾기</button>
-                </div>
-            </form>
-            <form id="register" action="" class="input-group">
-                <input type="text" class="input-field" placeholder="이름을 적어주세요" required>
-                <input type="text" class="input-field" placeholder="닉네임을 적어주세요" required>
-                <input type="email" class="input-field" placeholder="이메일을 적어주세요" required>
-                <input type="id" class="input-field" placeholder="아이디" required>
-                <input type="password" class="input-field" placeholder="비밀번호" required>
-                <input type="password" class="input-field" placeholder="비밀번호확인" required>
-
-                <input type="tel" class="input-field" placeholder="전화번호" required>
-                <input type="button" class="" name="name" value="인증번호전송">
-
-                <input type="tel" class="input-field" placeholder="인증번호를 입력해주세요" required>
-                <input type="button" class="" name="name" value="인증번호확인">
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked>
-                    <label class="form-check-label" for="inlineCheckbox1">메일수신 동의</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" checked>
-                    <label class="form-check-label" for="inlineCheckbox2">메세지수신 동의</label>
-                </div>
-                <div class="d-grid gap-2 col-12 mx-auto">
-                    <button class="btn btn-dark" type="submit">회원가입</button>
-                </div>
-
-            </form>
+            </div>
         </div>
     </div>
 
-    <script>
-        var x = document.getElementById("login");
-        var y = document.getElementById("register");
-        var z = document.getElementById("btn");
 
-
-        function login() {
-            x.style.left = "42px";
-            y.style.left = "460px";
-            z.style.left = "0";
-        }
-
-        function register() {
-            x.style.left = "-400px";
-            y.style.left = "42px";
-            z.style.left = "110px";
-        }
-    </script>
 </body>
 
 </html>

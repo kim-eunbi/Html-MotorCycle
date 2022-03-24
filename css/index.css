@@ -732,11 +732,14 @@ padding-top:50px;
   color: #818181;
   text-decoration: none;
 }
+.headerLogin .nav-link:hover {
+  color:#000;
+}
 
 .nav-link:hover {
   display: block;
   padding: 0.5rem 1rem;
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -770,12 +773,114 @@ padding-top:50px;
 /* 마이페이지 스타일 */
 .myPagewrap {
   width: 1100px;
-  height: 1000px;
   position: relative;
   margin: 2.6% auto;
-  padding: 5px;
-  overflow: hidden;
-  box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
-  background: #fefcfc;}
+  padding: 0 0 383px 0;
+  box-shadow: 0 30px 28px rgb(0 0 0 / 25%), 0 20px 10px rgb(0 0 0 / 22%);
+  background: #fff;
+}
+
+.myPagewrap .profile {
+  padding-left:0px;
+  padding-top:20px;
+}
+ 
+.myPagewrap .profile p {
+  padding-top:20px;
+}
 
 
+.myPagewrap .profile_Img {
+  width:100px; height:100px; overflow:hidden; border-radius: 50%;
+  border:1px solid #3b3b3b;
+}
+.myPagewrap .profile .profile_Img img {
+  width:100px;
+}
+.myPagewrap .myPageMenu {
+  padding-bottom: 20px;
+}
+
+.myPagewrap .myPageMenu h5 {
+  background:#1F2428;
+  color:#fff;
+  padding:10px;
+}
+.myPagewrap .myPageMenu ul li {
+  color:#1d1d1d;
+  padding-top:5px;
+}
+.myPagewrap .myPageMenu ul li a {
+  color:#1d1d1d;
+  padding-left:10px;
+}
+.myPagewrap .myPageMenu ul li a:hover {
+  font-weight: bold;
+}
+
+.myPagewrap .myPageList {
+  height:200px;
+  padding:0 0 0 10px;
+  margin-left:30px
+
+}
+
+.myPagewrap .myPageList p {
+  font-weight: bold;
+  padding:13px 0 0 10px;
+}
+.myPagewrap .myPageList_List {padding-right:20px;}
+.myPagewrap .myPageList_List img {width:130px;}
+.myPagewrap .myPageList_List p {color:#818181;}
+
+.myPagewrap .myPageTitle {
+  margin:50px 0 50px 0;
+  display:flex;
+  justify-content:center;
+
+}
+
+
+.nav-link:focus, .nav-link:hover {
+  color: #fff;
+}
+
+.IdFindTitle {margin: 30px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+  .IdFindwrap .form-wrap {
+    width: 460px;
+    height: 730px;
+    position: relative;
+    margin: 2.6% auto;
+    padding: 5px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background:#fefcfc;
+  }
+
+  .IdFindwrap {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+  .IdFindwrap .input-group {
+    top: 210px;
+    position: absolute;
+    width: 380px;
+    transition: .5s;
+    margin: 0;
+    border: 0;
+}
+
+.IdFindwrap .IdPwd {
+  border:1px solid #ddd;
+  text-align: center;
+  padding:  30px;
+  margin-bottom:30px;
+}

@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/common.css">
 
-    <title>마이페이지</title>
+    <title>개인정보수정</title>
 
 
 </head>
@@ -96,12 +96,15 @@
             </li>
         </ul>
     </header>
-    <!-- 마이페이지 -->
 
+
+    <!-- 개인정보수정페이지 -->
     <div class="myPagewrap">
-        <div class="myPageTitle">
-            <p class="font-weight-bold " style="font-size: 40px;">My Page</p>
+        <div class="myPageTitle" style="display: flex; flex-direction: column; align-items: center;">
+            <p class="font-weight-bold " style="font-size: 40px;">개인정보 수정</p>
+            <span>회원님의 개인정보를 수정하실 수 있습니다.</span>
         </div>
+
         <div class="row">
             <div class="profile col-lg-2 d-flex flex-column align-items-center">
                 <h4>Hello</h4>
@@ -109,7 +112,6 @@
                     <img src="./image/logo-01.png" alt="">
                 </div>
                 <p>회원 닉네임</p>
-
                 <div class="myPageMenu col-lg-12 d-flex flex-column align-items-left">
                     <h5>MENU</h5>
                     <ul>
@@ -125,86 +127,100 @@
 
             <div class="myPageList col-lg-9">
 
-                <div style="width:100%; height:250px; ">
+
+                <div style="width:100%; height:250px;">
                     <div class="d-flex justify-content-between" style="border-top:2px solid #232324">
-                        <p><i class="bi bi-cart-check-fill"></i> 판매내역</p>
-                        <button class="btn">more ></button>
+                        <p><i class="bi bi-person-circle"></i> 나의 정보관리</p>
                     </div>
-                    <div class="d-flex" style="padding-left:20px; padding-top:16px;">
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
+                    <div class="container">
+                        <div class="input-form-backgroud row">
+                            <div class="input-form col-md-12 mx-auto">
+                                <form class="validation-form" novalidate>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="name">이름</label>
+                                            <div class="form-control">김은비</div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="nickname">닉네임</label>
+                                            <input type="text" class="form-control" id="nickname" placeholder=""
+                                                value="" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone">전화번호</label>
+                                        <input type="phone" class="form-control" id="email" placeholder="000-0000-0000"
+                                            required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email">이메일</label>
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="you@example.com" required>
+                                        <div class="invalid-feedback">
+                                            이메일을 입력해주세요.
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="email">우편번호</label>
+                                        <div class="d-flex">
+                                            <input type="text" class="form-control" style="width:50%;" name="zip"
+                                                style=" height:26px;" />
+                                            <button class="btn btn-outline-dark" type="button"
+                                                onclick="openZipSearch()">검색</button>
+                                        </div><br>
+                                        <label for="email">주소</label>
+                                        <input class="form-control" type="text" name="addr1" style="height:30px;"
+                                            readonly />
+                                        <label for="email">상세주소</label>
+                                        <input class="form-control" type="text" name="addr2" style="height:30px;" />
+                                    </div>
+
+                                    <label for="address"> 이메일/SMS
+                                        수신여부</label><br />
+                                    <div class="form-check form-check-inline">
+
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                            value="option1" checked>
+                                        <label class="form-check-label" for="inlineCheckbox1">메일수신 동의</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                            value="option2" checked>
+                                        <label class="form-check-label" for="inlineCheckbox2">메세지수신 동의</label>
+                                    </div>
+
+                                    <hr class="mb-4">
+
+                                    <div class="mb-4"></div>
+                                    <div class="col-lg-12">
+                                        <button style=" padding:5px 40px;" class="btn btn-primary btn-block"
+                                            type="submit">수정 완료</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
+
                     </div>
+
                 </div>
-
-
-                <!-- 구매내역이 없을때 -->
-                <div style="width:100%; height:250px; ">
-                    <div class="d-flex justify-content-between" style="border-top:2px solid #232324">
-                        <p><i class="bi bi-cart-fill"></i> 구매내역</p>
-                    </div>
-                    <div class="d-flex flex-column align-items-center">
-                        <p>구매내역이 없습니다</p>
-                        <button type="button" class="btn btn-warning text-center">구매하러가기 ></button>
-                    </div>
-
-                </div>
-
-                <!-- 구매내역이 있을때 -->
-                <div style="width:100%; height:250px; ">
-                    <div class="d-flex justify-content-between" style="border-top:2px solid #232324">
-                        <p><i class="bi bi-heart-fill"></i> 좋아요 목록</p>
-                        <button class="btn">more ></button>
-                    </div>
-
-
-                    <div class="d-flex" style="padding-left:20px; padding-top:16px;">
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
-                    </div>
-                </div>
-
 
             </div>
-
-
         </div>
     </div>
 </body>
+<!-- 주소검색기능 스크립트 -->
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+    function openZipSearch() {
+        new daum.Postcode({
+            oncomplete: function (data) {
+                $('[name=zip]').val(data.zonecode); // 우편번호 (5자리)
+                $('[name=addr1]').val(data.address);
+                $('[name=addr2]').val(data.buildingName);
+            }
+        }).open();
+    }
+</script>
 
 </html>
