@@ -31,6 +31,107 @@
 
 </head>
 
+
+<style>
+    /* 팝업 스타일 */
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+
+        /* 숨기기 */
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .show {
+        opacity: 1;
+        z-index: 1000;
+        transition: all .5s;
+    }
+
+    .window {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+
+        /* 임시 지정 */
+        width: 100px;
+        height: 100px;
+
+        /* 초기에 약간 아래에 배치 */
+        transform: translate(-50%, -40%);
+    }
+
+    .show .popup {
+        transform: translate(-50%, -50%);
+        transition: all .5s;
+    }
+
+
+
+
+    .background_id {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+
+        /* 숨기기 */
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .show_id {
+        opacity: 1;
+        z-index: 1000;
+        transition: all .5s;
+    }
+
+    .window_id {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .popup_id {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+
+        /* 임시 지정 */
+        width: 100px;
+        height: 100px;
+
+        /* 초기에 약간 아래에 배치 */
+        transform: translate(-50%, -40%);
+    }
+
+    .show_id .popup_id {
+        transform: translate(-50%, -50%);
+        transition: all .5s;
+    }
+</style>
+
 <body>
 
     <!-- header -->
@@ -40,7 +141,7 @@
             <div class="headerLogin">
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./SignUp.html">로그인/회원가입</a>
+                        <a class="nav-link" aria-current="page" href="./Login.html">로그인/회원가입</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="./MyPage.html">마이페이지</a>
@@ -104,34 +205,109 @@
                 아이디/비밀번호찾기
             </div>
             <span>본인인증 후 아이디를 확인 하실 수 있습니다.</span>
-            <p class="fw-normal">본인인증 후 비밀번호변경이 가능합니다.</p>
+            <p class="fw-normal">아이디입력 후 본인인증 하시면 비밀번호변경이 가능합니다.</p>
             <p></p>
             <div class="IdPwd col-lg-11">
                 <p>아이디찾기</p>
-                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"><i class="bi bi-person-badge"></i>본인인증</button>
-            </div>
-            <div class="IdPwd col-lg-11">
-                <p>비밀번호찾기</p>
-                <button type="button" class="btn btn-outline-dark"><i class="bi bi-person-badge"></i>본인인증</button>
-            </div>
+                <div class="row">
+                    <button type="button" class="btn btn-outline-dark " data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"><i class="bi bi-person-badge"></i>휴대폰인증</button>
+                    <button type="button" id="show_id" class="btn btn-outline-success " data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">본인인증 완료시 팝업</button>
 
-            <p>
-                <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
-                    aria-expanded="false" aria-controls="collapseExample">
-                    비밀번호 변경
-                </button>
-            </p>
-            <div class="collapse" id="collapseExample" style="width:100%;">
-                <div class="card card-body">
-                    <input type="password" class="input-field" placeholder="비밀번호" required>
-                    <input type="password" class="input-field" placeholder="비밀번호확인" required>
-                    <button type="button" class="btn btn-outline-dark" style="margin-top:7px;">확인</button>
+                    <div class="background_id">
+                        <div class="window_id">
+                            <div class="popup_id">
+                                <button class="close_id">팝업닫기</button>
+                                <p>아이디찾기s556</p>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
+
+
+
+            <!-- 비밀번호 찾기 -->
+            <div class="IdPwd col-lg-11">
+                <p>비밀번호찾기</p>
+                <div class="row">
+                    <input type="text" placeholder="아이디입력">
+                    <button type="button" class="btn btn-outline-dark"><i class="bi bi-person-badge"></i>휴대폰인증</button>
+                    <button type="button" id="show" class="btn btn-outline-success " data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">비번본인인증 완료시 팝업</button>
+
+
+                    <div class="background">
+                        <div class="window">
+                            <div class="popup">
+                                <button id="close">팝업닫기</button>
+                                <p>1234556</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div>
+
+
+                        <div class="modal" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Modal body text goes here.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 col-10 mx-auto" style="margin-top:30px;">
+                    <button class="btn btn-dark" onclick="location.href='Login.html'" type="submit">로그인으로
+                        돌아가기</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <script>
+            function show() {
+                document.querySelector(".background").className = "background show";
+            }
+            function close() {
+                document.querySelector(".background").className = "background";
+            }
+            document.querySelector("#show").addEventListener('click', show);
+            document.querySelector("#close").addEventListener('click', close);
+        </script>
+
+        <script>
+            function show() {
+                document.querySelector(".background_id").className = "background show";
+            }
+            function close_id() {
+                document.querySelector(".background_id").className = "background";
+            }
+            document.querySelector("#show_id").addEventListener('click', show);
+            document.querySelector(".close_id").addEventListener('click', close_id);
+        </script>
 
 </body>
 

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+
+        /* 숨기기 */
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .show {
+        opacity: 1;
+        z-index: 1000;
+        transition: all .5s;
+    }
+
+    .window {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+
+        /* 임시 지정 */
+        width: 100px;
+        height: 100px;
+
+        /* 초기에 약간 아래에 배치 */
+        transform: translate(-50%, -40%);
+    }
+
+    .show .popup {
+        transform: translate(-50%, -50%);
+        transition: all .5s;
+    }
+
+
+
+    .background2 {
+        position: fixed;
+        top: 20%;
+        left: 20%;
+        width: 300px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+
+        /* 숨기기 */
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .show2 {
+        opacity: 1;
+        z-index: 1000;
+        transition: all .5s;
+    }
+
+    .window2 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .popup2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+
+        /* 임시 지정 */
+        width: 100px;
+        height: 100px;
+
+        /* 초기에 약간 아래에 배치 */
+        transform: translate(-50%, -40%);
+    }
+
+    .show2 .popup2 {
+        transform: translate(-50%, -50%);
+        transition: all .5s;
+    }
+</style>
+
+<body>
+    <button id="show">팝업열기</button>
+    <div class="background">
+        <div class="window">
+            <div class="popup">
+                <button id="close">팝업닫기</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="show2">팝업열기</button>
+    <div class="background2">
+        <div class="window2">
+            <div class="popup2">
+                <button id="close2">팝업닫기</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    function show() {
+        document.querySelector(".background").className = "background show";
+    }
+
+    function close() {
+        document.querySelector(".background").className = "background";
+    }
+
+    document.querySelector("#show").addEventListener('click', show);
+    document.querySelector("#close").addEventListener('click', close);
+
+
+
+    function show2() {
+        document.querySelector(".background2").className = "background show2";
+    }
+
+    function close2() {
+        document.querySelector(".background2").className = "background2";
+    }
+
+    document.querySelector("#show2").addEventListener('click', show2);
+    document.querySelector("#close2").addEventListener('click', close2);
+</script>
+
+</html>

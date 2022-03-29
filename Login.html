@@ -103,32 +103,23 @@
             <div class="social-icons">
                 <img src="./image/logo-01.png" alt="logo">
             </div>
-            <form id="register" action="" class="input-group">
-                <input type="text" class="input-field" placeholder="이름을 적어주세요" required>
-                <input type="text" class="input-field" placeholder="닉네임을 적어주세요" required>
-                <input type="email" class="input-field" placeholder="이메일을 적어주세요" required>
-                <input type="id" class="input-field" placeholder="아이디" required>
-                <input type="password" class="input-field" placeholder="비밀번호" required>
-                <input type="password" class="input-field" placeholder="비밀번호확인" required>
-
-                <input type="tel" class="input-field" placeholder="전화번호" required>
-                <input type="button" class="" name="name" value="인증번호전송">
-
-                <input type="tel" class="input-field" placeholder="인증번호를 입력해주세요" required>
-                <input type="button" class="" name="name" value="인증번호확인">
-
-                <div class="form-check form-check-inline">
+            <form id="login" action="" class="input-group">
+                <input type="text" class="input-field" placeholder="아이디" style="padding-left:10px;" required>
+                <input type="password" class="input-field" placeholder="비밀번호" style="padding-left:10px;" required>
+                <div class="form-check form-check-inline ">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked>
-                    <label class="form-check-label" for="inlineCheckbox1">메일수신 동의</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" checked>
-                    <label class="form-check-label" for="inlineCheckbox2">메세지수신 동의</label>
+                    <label class="form-check-label" for="inlineCheckbox1">아이디기억</label>
                 </div>
                 <div class="d-grid gap-2 col-12 mx-auto">
-                    <button class="btn btn-dark" type="submit">회원가입</button>
+                    <button class="btn btn-dark" type="submit">로그인</button>
                 </div>
+                <div class="d-grid gap-2 col-7 mx-auto">
+                    <button type="button" onclick="location.href='SignUp.html'" class="IdFind btn btn-light"
+                        style="background:#ddd;">회원가입</button>
+                    <button type="button" onclick="location.href='IdFind.html'" class="IdFind btn btn-light"
+                        style="background:#ddd;">아이디 /비밀번호찾기</button>
 
+                </div>
             </form>
         </div>
     </div>

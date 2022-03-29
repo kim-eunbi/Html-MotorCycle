@@ -8,7 +8,7 @@ $(document).ready(function () {
 
     // 현재 댓글 배열
     var list = [
-        { 'id': '7', 'user_id': '5', 'user_name': '오렌지', 'comment': '오렌지 식빵 맛있다', 'reg_date': '2021-05-07', 'edit_date': '2021-05-07' },
+        { 'id': '7', 'user_id': '5', 'user_name': '그게바로나다!', 'comment': '이오토바이 어디서 사셨나요', 'reg_date': '2022-03-28', 'edit_date': '2022-03-28' },
 
     ];
 

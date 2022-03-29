@@ -29,7 +29,7 @@
     <script src="./js/scrollTop.js"></script>
 
 
-    <title>상세페이지</title>
+    <title>상세페이지_원본</title>
 </head>
 
 <body class="DetailPage" id="section1">
@@ -40,7 +40,7 @@
             <div class="headerLogin">
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./SignUp.html">로그인/회원가입</a>
+                        <a class="nav-link" aria-current="page" href="./Login.html">로그인/회원가입</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="./MyPage.html">마이페이지</a>
@@ -378,23 +378,19 @@
                                 <tbody>
                                     <tr>
                                         <td class="table-active" style="width:200px;">이름</td>
-                                        <td>몰라도댐</td>
+                                        <td>{{name}}</td>
                                     </tr>
                                     <tr>
                                         <td class="table-active">연락처</td>
-                                        <td>몰라도댐</td>
+                                        <td>{{tel}}</td>
                                     </tr>
                                     <tr>
                                         <td class="table-active">판매지역</td>
-                                        <td>
-
-                                        </td>
+                                        <td>{{zone1}} {{zone2}}</td>
                                     </tr>
                                     <tr>
                                         <td class="table-active">통화가능시간</td>
-                                        <td>
-
-                                        </td>
+                                        <td>{{coll1}} ~ {{coll2}} </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -424,32 +420,23 @@
                                     </tr>
                                     <tr>
                                         <td class="table-active">제조년도</td>
-                                        <td>
-
-                                        </td>
+                                        <td>{{Year}}</td>
                                     </tr>
                                     <tr>
                                         <td class="table-active">주행거리</td>
-                                        <td>
-
-                                        </td>
+                                        <td>{{run}}</td>
                                     </tr>
                                     <tr>
                                         <td class="table-active">색상</td>
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td class="table-active">기어방식</td>
+                                        <td class="table-active">A/S</td>
                                         <td>
 
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="table-active">AS</td>
-                                        <td>
 
-                                        </td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -466,9 +453,7 @@
                                 <tbody>
                                     <tr>
                                         <td class="table-active" style="width:200px;">배기량</td>
-                                        <td>
-
-                                        </td>
+                                        <td>{{cc}}</td>
                                     </tr>
                                     <tr>
                                         <td class="table-active">대차/교환</td>
@@ -497,7 +482,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="table-active">기타</td>
+                                        <td class="table-active">기어방식</td>
                                         <td>
                                             <!-- <div class="form-check form-check-inline">
                                                 <input type="checkbox" class="form-check-input">
@@ -539,19 +524,7 @@
                                             </div> -->
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="table-active">기타</td>
-                                        <td>
-                                            <!-- <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">무</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">유</label>
-                                            </div> -->
-                                        </td>
-                                    </tr>
+
 
                                 </tbody>
                             </table>
@@ -708,6 +681,40 @@
                         </div>
                     </div>
                 </div>
+
+
+                <div class="container">
+                    <div class="row" style="text-align: left;">
+                        <!-- 바이크 서류 -->
+                        <div class="col-lg-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">🏍️판매가격</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="table-active" style="width:200px;">판매상태</td>
+                                        <td>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" checked>
+                                                <label class="form-check-label">판매중</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">판매완료</label>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -719,7 +726,7 @@
         <hr style="background-color: black;">
         <!-- <button>💬댓글 <span>123</span></button> -->
         <button type="button" class="btn btn-primary position-relative">
-            ❤️좋아요
+            ❤️장바구니
         </button>
         <button type="button" class="btn btn-primary position-relative">
             💬댓글
@@ -731,14 +738,11 @@
 
 
         <!-- 댓글 시작부분 -->
-        <div class="comment-add" style="background:gold; width:100%;">
-            <textarea style=" width:1100px;"></textarea>
-
+        <div class="comment-add">
+            <textarea></textarea>
+            <button class="addBtn">등록</button>
         </div> <!-- //댓글등록 -->
-        <div class="row">
-            <button class="col-lg-2" style="background:red; padding:5px 20px;">등록</button>
-            <button class="col-lg-2" style="background:red; padding:5px 20px;">비공개</button>
-        </div>
+
         <div class="comment-list">
 
         </div> <!-- //댓글 목록 -->
@@ -770,6 +774,7 @@
                 <span><a href=""><i class="bi bi-chevron-double-up" style="font-size: 50px;"></i></a></span>
             </div>
         </div>
+    </div>
 </body>
 
 </html>

@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/common.css">
 
-    <title>회원가입</title>
+    <title>비번변경 팝업</title>
 
 
 </head>
@@ -97,43 +97,42 @@
         </ul>
     </header>
 
-    <!-- 로그인 -->
-    <div class="signUpwrap">
-        <div class="form-wrap">
-            <div class="social-icons">
-                <img src="./image/logo-01.png" alt="logo">
+
+    <!-- 아이디 비번찾기 -->
+    <div class="IdFindwrap">
+        <div class="form-wrap d-flex flex-column align-items-center">
+            <div class="IdFindTitle">
+                아이디/비밀번호찾기
             </div>
-            <form id="register" action="" class="input-group">
-                <input type="text" class="input-field" placeholder="이름을 적어주세요" required>
-                <input type="text" class="input-field" placeholder="닉네임을 적어주세요" required>
-                <input type="email" class="input-field" placeholder="이메일을 적어주세요" required>
-                <input type="id" class="input-field" placeholder="아이디" required>
-                <input type="password" class="input-field" placeholder="비밀번호" required>
-                <input type="password" class="input-field" placeholder="비밀번호확인" required>
-
-                <input type="tel" class="input-field" placeholder="전화번호" required>
-                <input type="button" class="" name="name" value="인증번호전송">
-
-                <input type="tel" class="input-field" placeholder="인증번호를 입력해주세요" required>
-                <input type="button" class="" name="name" value="인증번호확인">
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked>
-                    <label class="form-check-label" for="inlineCheckbox1">메일수신 동의</label>
+            <!-- Button trigger modal -->
+            <p>본인인증 후 본인인증 완료버튼누르면 모달창이 나옵니다.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                비밀번호 본인인증 완료
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">비밀번호</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <p>변경할 비밀번호를 입력해 주세요.</p>
+                                <input type="password" class="input-field" placeholder="변경할 비밀번호" required>
+                                <input type="password" class="input-field" placeholder="변경할 비밀번호확인" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" onclick="location.href='Login.html'" class="btn btn-secondary"
+                                data-bs-dismiss="modal">변경완료</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" checked>
-                    <label class="form-check-label" for="inlineCheckbox2">메세지수신 동의</label>
-                </div>
-                <div class="d-grid gap-2 col-12 mx-auto">
-                    <button class="btn btn-dark" type="submit">회원가입</button>
-                </div>
-
-            </form>
+            </div>
         </div>
     </div>
-
-
 </body>
 
 </html>
