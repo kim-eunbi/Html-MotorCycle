@@ -24,6 +24,8 @@
 
     <!-- css 경로 -->
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index599.css">
+    <link rel="stylesheet" href="./css/index768.css">
     <link rel="stylesheet" href="./css/common.css">
 
     <title>아이디비번 찾기</title>
@@ -32,105 +34,7 @@
 </head>
 
 
-<style>
-    /* 팝업 스타일 */
-    .background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.3);
-        z-index: 1000;
 
-        /* 숨기기 */
-        z-index: -1;
-        opacity: 0;
-    }
-
-    .show {
-        opacity: 1;
-        z-index: 1000;
-        transition: all .5s;
-    }
-
-    .window {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-
-    .popup {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #ffffff;
-        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
-
-        /* 임시 지정 */
-        width: 100px;
-        height: 100px;
-
-        /* 초기에 약간 아래에 배치 */
-        transform: translate(-50%, -40%);
-    }
-
-    .show .popup {
-        transform: translate(-50%, -50%);
-        transition: all .5s;
-    }
-
-
-
-
-    .background_id {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.3);
-        z-index: 1000;
-
-        /* 숨기기 */
-        z-index: -1;
-        opacity: 0;
-    }
-
-    .show_id {
-        opacity: 1;
-        z-index: 1000;
-        transition: all .5s;
-    }
-
-    .window_id {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-
-    .popup_id {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #ffffff;
-        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
-
-        /* 임시 지정 */
-        width: 100px;
-        height: 100px;
-
-        /* 초기에 약간 아래에 배치 */
-        transform: translate(-50%, -40%);
-    }
-
-    .show_id .popup_id {
-        transform: translate(-50%, -50%);
-        transition: all .5s;
-    }
-</style>
 
 <body>
 
@@ -151,28 +55,31 @@
 
             <!-- 로고, 메세지, 검색창 -->
             <div class="search">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="./index.html">motorcycle</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
+                            data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
+                            aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                            <ul class="navbar-nav me-auto mb-2 mb-md-0">
                                 <li class="nav-item">
-                                    <a class="nav-link disabled">Disabled</a>
+                                    <a class="nav-link active" aria-current="page" href="#"></a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled"></a>
+                                </li>
+
                             </ul>
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-search" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                                    </svg></button>
+                            <form>
+                                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
                             </form>
                         </div>
                     </div>
@@ -182,7 +89,7 @@
 
 
         <!-- 메뉴바 -->
-        <ul class="nav justify-content-center">
+        <ul class="nav headerMenu justify-content-center">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">메뉴1</a>
             </li>
@@ -192,9 +99,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-            </li>
+
         </ul>
     </header>
 
@@ -212,21 +117,23 @@
                 <div class="row">
                     <button type="button" class="btn btn-outline-dark " data-bs-toggle="modal"
                         data-bs-target="#exampleModal"><i class="bi bi-person-badge"></i>휴대폰인증</button>
-                    <button type="button" id="show_id" class="btn btn-outline-success " data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">본인인증 완료시 팝업</button>
 
-                    <div class="background_id">
-                        <div class="window_id">
-                            <div class="popup_id">
-                                <button class="close_id">팝업닫기</button>
-                                <p>아이디찾기s556</p>
-                            </div>
-                            <div>
+
+                    <button type="button" class="btn2 btn-outline-success " data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">본인인증 완료시 팝업</button>
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="modal-body">
+                                회원님의 아이디는 <span>rladmsql1234</span> 입니다.
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
+
+
 
 
 
@@ -237,43 +144,23 @@
                 <div class="row">
                     <input type="text" placeholder="아이디입력">
                     <button type="button" class="btn btn-outline-dark"><i class="bi bi-person-badge"></i>휴대폰인증</button>
-                    <button type="button" id="show" class="btn btn-outline-success " data-bs-toggle="modal"
+                    <button type="button" id="btn" class="btn2 btn-outline-success " data-bs-toggle="modal"
                         data-bs-target="#exampleModal">비번본인인증 완료시 팝업</button>
-
-
-                    <div class="background">
-                        <div class="window">
-                            <div class="popup">
-                                <button id="close">팝업닫기</button>
-                                <p>1234556</p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div>
-
-
-                        <div class="modal" tabindex="-1">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title">Modal title</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Modal body text goes here.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <p>변경할 비밀번호를 입력해 주세요.</p>
+                                    <input type="password" class="input-field" placeholder="변경할 비밀번호" required>
+                                    <input type="password" class="input-field" placeholder="변경할 비밀번호확인" required>
                                 </div>
                             </div>
+                            <div class="modal-footer">
+                                <button type="button" onclick="location.href='Login.html'" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">변경완료</button>
+                            </div>
                         </div>
-
                     </div>
                 </div>
 
@@ -284,31 +171,42 @@
             </div>
 
         </div>
+    </div>
 
 
 
-        <script>
-            function show() {
-                document.querySelector(".background").className = "background show";
-            }
-            function close() {
-                document.querySelector(".background").className = "background";
-            }
-            document.querySelector("#show").addEventListener('click', show);
-            document.querySelector("#close").addEventListener('click', close);
-        </script>
-
-        <script>
-            function show() {
-                document.querySelector(".background_id").className = "background show";
-            }
-            function close_id() {
-                document.querySelector(".background_id").className = "background";
-            }
-            document.querySelector("#show_id").addEventListener('click', show);
-            document.querySelector(".close_id").addEventListener('click', close_id);
-        </script>
 
 </body>
+<script>
+    let modals = document.getElementsByClassName("modal");
+    let btns = document.getElementsByClassName("btn2");
+    let closes = document.getElementsByClassName("close");
+    let funcs = [];
+
+    function Modal(num) {
+        return function () {
+            btns[num].onclick = function () {
+                modals[num].style.display = "block";
+                console.log(num);
+            };
+            closes[num].onclick = function () {
+                modals[num].style.display = "none";
+            };
+        };
+    }
+
+    for (let i = 0; i < btns.length; i++) {
+        funcs[i] = Modal(i);
+    }
+    for (let j = 0; j < btns.length; j++) {
+        funcs[j]();
+    }
+    // 영역 밖을 클릭하면 모달 닫기
+    window.onclick = function (event) {
+        if (event.target.className == "modal") {
+            event.target.style.display = "none";
+        }
+    };
+</script>
 
 </html>

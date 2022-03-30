@@ -24,7 +24,6 @@
     <script src="./js/moveScroll.js"></script>
 
     <!-- css 경로 -->
-    <link rel="stylesheet" href="./css/mobile.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/index599.css">
     <link rel="stylesheet" href="./css/index768.css">
@@ -56,29 +55,31 @@
 
                 <!-- 로고, 메세지, 검색창 -->
                 <div class="search">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                    <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
                         <div class="container-fluid">
                             <a class="navbar-brand" href="./index.html">motorcycle</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                data-bs-target="#navbarsExample04" aria-controls="navbarsExample04"
                                 aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <div class="collapse navbar-collapse" id="navbarsExample04">
+                                <ul class="navbar-nav me-auto mb-2 mb-md-0">
                                     <li class="nav-item">
-                                        <a class="nav-link disabled">Disabled</a>
+                                        <a class="nav-link active" aria-current="page" href="#"></a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled"></a>
+                                    </li>
+
                                 </ul>
-                                <form class="d-flex">
-                                    <input class="form-control me-2" type="search" placeholder="Search"
-                                        aria-label="Search">
-                                    <button class="btn btn-outline-success" type="submit"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                            <path
-                                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                                        </svg></button>
+                                <form>
+                                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
                                 </form>
                             </div>
                         </div>
@@ -88,7 +89,7 @@
 
 
             <!-- 메뉴바 -->
-            <ul class="nav justify-content-center">
+            <ul class="nav headerMenu justify-content-center">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">메뉴1</a>
                 </li>
@@ -177,7 +178,7 @@
                         <a href="./DetailPage.html">
                             <img src="./image/5454.PNG" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <p class="card-text">오토바이팔거에요</p>1
+                                <p class="card-text">오토바이팔거에요</p>
                                 <p class="card-text">얼마일까요</p>
                             </div>
                         </a>

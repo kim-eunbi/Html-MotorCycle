@@ -25,6 +25,8 @@
 
     <!-- css 경로 -->
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index599.css">
+    <link rel="stylesheet" href="./css/index768.css">
     <link rel="stylesheet" href="./css/common.css">
     <title>판매품목리스트</title>
 </head>
@@ -35,6 +37,7 @@
 
 
 <body>
+
     <div id="wrap">
         <!-- 헤더 -->
         <header>
@@ -50,27 +53,34 @@
                         </li>
                     </ul>
                 </div>
+
                 <!-- 로고, 메세지, 검색창 -->
                 <div class="search">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                    <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
                         <div class="container-fluid">
                             <a class="navbar-brand" href="./index.html">motorcycle</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                data-bs-target="#navbarsExample04" aria-controls="navbarsExample04"
                                 aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <div class="collapse navbar-collapse" id="navbarsExample04">
+                                <ul class="navbar-nav me-auto mb-2 mb-md-0">
                                     <li class="nav-item">
-                                        <a class="nav-link disabled">Disabled</a>
+                                        <a class="nav-link active" aria-current="page" href="#"></a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled"></a>
+                                    </li>
+
                                 </ul>
-                                <form class="d-flex">
-                                    <input class="form-control me-2" type="search" placeholder="Search"
-                                        aria-label="Search">
-                                    <button class="btn btn-outline-success" type="submit"><i
-                                            class="bi bi-search"></i></button>
+                                <form>
+                                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
                                 </form>
                             </div>
                         </div>
@@ -80,7 +90,7 @@
 
 
             <!-- 메뉴바 -->
-            <ul class="nav justify-content-center">
+            <ul class="nav headerMenu justify-content-center">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">메뉴1</a>
                 </li>
@@ -90,9 +100,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
+
             </ul>
         </header>
 

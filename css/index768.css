@@ -1,899 +1,949 @@
 
 @media screen and (min-width: 600px){
       
-.selector-for-some-widget {
+  .selector-for-some-widget {
     box-sizing:content-box;
     }
+    .container:not(.is-max-desktop):not(.is-max-widescreen) {
+      max-width: 1110px;}
+
+    body {padding-top: 136px;}
+.wrap {
+  position:relative;
   
-  
-        
-        .container:not(.is-max-desktop):not(.is-max-widescreen) {
-          max-width: 1110px;}
-  
-        body {padding-top: 136px;}
-    .wrap {
-      position:relative;
-      
-    }
-    
-  
-  .main .card {width:16rem;}
-  .main .row {display: flex; justify-content: space-between;}
-  
-  header {
-    width:100%;
-    position: fixed; 
-    background:#1d1d1d;
-    justify-content:center;
-    align-items:center;
-    display:flex;
-    flex-direction:column;
-     position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    z-index: 99999;
-    }
-    .HotItem .card img {
-      height:190px;
-    }
-    .HotItem .card:hover {
-      background:rgb(245, 245, 245);
-      box-shadow : 0 0 10px rgb(218, 218, 218);
-    }
-  
-    .HotItem .card a {
-      height:100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      color: #000;
-      text-decoration: none;
-    }
-  
-    .headerNav {
-    width:100%;
-    background:#1d1d1d;
-    }
-  
-    .headerNav .form-control {
-      border-radius: 20px;
-    }
-    .headerNav .btn-outline-success {
-      border-radius: 30px;
-      background:#fff;
-      color:#1d1d1d;
-      border:#1d1d1d;
-    }
-    .headerNav .btn-outline-success:hover {
-      color: #000;
-      background-color: #fff;
-      border-color: #000;
-  }
-    .headerLogin {
-    background:#fff;
-    width:100%;
-    display:flex;
-    justify-content:center;
-    }
-    
-    .headerLogin ul {
-      width:1110px;
-        max-width: 1200px;
-    }
-    
-    .headerLogin nav {
-    background:#fff;
-    width:100%;
-    
-    }
-    .navbar {
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-  }
-    .headerNav .search {
-    width:100%;
-    display:flex;
-    justify-content:center;
-  
-    height:80px;
-    }
-  
-  
-    
-    .headerNav .search .navbar {
-    width:1110px;
-    background:#1d1d1d!important;
-    background:tomato;
-  
-    }
-    
-    .headerNav .search .dropdown-menu a {
-    color:#000;
-    }
-  
-  
-    .quickmenu {
-      position:absolute;
-      width:150px;
-      top:50%;
-      float: left;
-      margin-top:-20px;
-      right:20px;
-      background:#fff;
-      z-index: 999;
-      border-radius: 50%;
-      overflow: hidden;
-      border:1px solid #ddd;
-      box-shadow: 3px 3px 3px #1d1d1d;
-      display: block;
-    }
-    .quickmenu ul {
-      position:relative;
-      width:100%;
-      float: left;
-      display:inline-block;
-      display:inline;
-    }
-    .quickmenu ul li a img{
-      width:100%;
-      height:100%;
-    }
-   
-    .slider {margin-top:20px;}
-   
-    section {
-    display:flex;
-    flex-direction:column;
-    }
-    
-    .ItemButton {
-    height:auto;
-    display:flex;
-    justify-content:center;
-    margin:30px 0 50px 0px;
-    }
-    
-    .ItemTitle {
-    margin:50px 0 50px 0;
-    display:flex;
-    justify-content:center;
-  
-    }
-    
-  
-  
-    .main .card {width: 16rem;}
-    .Tip {
-    background:#3b3b3b;
-    height:400px;
-    }
-    
-    .Tip img {
-    height:100%;
-    }
-    
-    .b-example-divider {
-    height:3rem;
-    background-color:rgba(0,0,0,.1);
-    border:solid rgba(0,0,0,.15);
-    box-shadow:inset 0 .5em 1.5em rgba(0,0,0,.1), inset 0 .125em .5em rgba(0,0,0,.15);
-    border-width:1px 0;
-    }
-    
-    .bi {
-    vertical-align:-.125em;
-    fill:currentColor;
-    }
-    
-    .card-body {
-    text-align:center;
-    }
-    
-   
-    
-    #footer {
-    background-color:#1F2428;
-    width:100%;
-    }
-    
-    .headerNav .search .navbar a,.headerNav .search .nav-link:hover {
-    color:#fff;
-    }
-  
-  .nav-link a {color:#343a40}
-  .nav-link a:hover {color:#343a40}
-  
-  
-  /* 회원가입 css */
-  .signUpwrap {
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-  }
-  .signUpwrap .form-wrap {
-    width: 460px;
-    height: 730px;
-    position: relative;
-    margin: 2.6% auto;
-    padding: 5px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    background:#fefcfc;
-  }
-  
-  .signUpwrap .togglebtn {
-    padding: 10px 30px;
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-    outline: none;
-    position: relative;
-    color:#fff;
-  }
-  .signUpwrap #btn {
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 130px;
-    height: 100%;
-    background: #343a40;
-    border-radius: 30px;
-    transition: .5s;
-   
-  }
-  .signUpwrap .social-icons {
-    margin-top: 80px;
-    text-align: center;
-  }
-  .signUpwrap .social-icons img {
-    width: 100px ;
-    cursor: pointer;
-  }
-  .signUpwrap .input-group {
-    top: 210px;
-    position: absolute;
-    width: 380px;
-    transition: .5s;
-    margin:0;
-    border:0;
-  }
-  .signUpwrap .input-field {
-    width: 100%;
-    padding: 10px 0;
-    border: none;
-    border-bottom: 1px solid #999;
-    outline: none;
-    background: transparent;
-  }
-  .signUpwrap .submit {
-    width: 85%;
-    padding: 10px 30px;
-    cursor: pointer;
-    display: block;
-    margin: 15px auto;
-    background: #343a40;
-    border: 0;
-    outline: none;
-    border-radius: 30px;
-    color:#fff;
-  }
-  .signUpwrap .checkbox {
-    margin: 30px 10px 30px 0;
-  }
-  
-  .signUpwrap #login {
-    left: 42px;
-  }
-  .signUpwrap #register {
-    left: 40px;
-  }
-  
-  
-  
-  .signUpwrap input[type=button]{
-    width: 30%;
-    background-color: lightgray;
-    border:none;
-    background-color: #343a40;
-    font-size:1em;
-    color:#fff;
-    outline:none;
-    display:inline;
-    height:42px;
-    margin-bottom: 2px;
-  }
-  
-  .signUpwrap input[type="tel"]{
-    width:70%;
-    height:100%;
-    border:none;
-    font-size:1em;
-    display:inline;
-    outline:none;
-    color:black;
-    border-bottom: 1px solid #999;
-  }
-  
-  .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback){
-    margin-left: 0;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  
-    
-  }
-  .input-group button {
-    border-radius: 30px;
-    margin-top:10px;
-    background-color: #343a40;
-    padding:10px 0;
-  }
-  
-  .input-group button:nth-child(1) {
-  
-    margin-top:30px;
-  
-  }
-  .form-check-inline {
-    margin-top:10px;
-  }
-  
-  /* 업로드페이지 css */
-  
-  
-  .UploadPageWrap .form-wrap {
-    position: relative;
-    margin: 2.6% auto;
-    padding: 5px;
-    overflow: hidden;
-    box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
-    background: #fefcfc;
-    text-align: center;
-    /* width:1100px; */
-  }
-  
-  .UploadPageWrap  .UploadTitle {
-    font-size:30px;
-    font-weight: bold;
-    padding: 30px;
-  }
-  
-  .UploadPageWrap  .table-active {
-    background:#333436;
-    color:#fff;
-    padding:15px;
-    width:200px;
-    height:40px;
-  }
-  .btn-primary {
-    color: #fff;
-    background-color: #232324;
-    border-color: #333436;
-  }
-   .btn-primary:hover {
-    color: #fff;
-    background-color: #333436;
-    border-color: #333436;
-  }
-  
-  .UploadPageWrap table tbody tr {
-    height:50px; margin: 0 auto;
-  }
-  
-  
-  
-  
-  .UploadPageWrap .remove:hover {
-    background: white;
-    color: black;
-  }
-  
-  .UploadPageWrap h3 {
-    text-align: left;
-    margin: 10px 0;
-    font-size:medium
-  }
-  
-  .UploadPageWrap .btnSubmit {
-    margin: 30px;
-    padding:10px;
-  }
-  
-  .UploadPageWrap .uploadImg {
-    border:1px solid #ddd;
-    border-radius: 10px;
-    padding:10px 10px;
-  }
-  .UploadPageWrap .uploadImg img {
-    height:150px;
-  }
-  
-  
-  .row {
-    --bs-gutter-x: 0;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(-1 * var(--bs-gutter-y));
-    margin-right: calc(-.5 * var(--bs-gutter-x));
-    margin-left: calc(-.5 * var(--bs-gutter-x));
-  }
-  
-  .btn-outline-secondary {padding: 0 10px;}
-  
-  .UploadPageWrap .detailimg {
-    display: flex;
-  }
-  
-  .UploadPageWrap .form-check-inline {
-    margin-top:7px;
-  }
-  
-  .UploadPageWrap table {
-         margin-bottom: 20px;
-     
-  }
-  
-  
-  /* 이미지업로드 */
-  .UploadPageWrap .table thead td, .table thead th {
-    border-width: 0 0 0px;
-    color: #363636;
-  }
-  
-  .UploadPageWrap .imagePreview {
-    width: 100%;
-    height: 180px;
-    background-position: center center;
-  background:url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
-  background-color:#fff;
-    background-size: cover;
-  background-repeat:no-repeat;
-    display: inline-block;
-  box-shadow:0px -3px 6px 2px rgba(0,0,0,0.2);
-  cursor:pointer
-  }
-  
-  .UploadPageWrap .imagePreviewMain {
-    width: 100%;
-    height: 380px;
-    background-position: center center;
-  background:url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
-  background-color:#fff;
-    background-size: cover;
-  background-repeat:no-repeat;
-    display: inline-block;
-  box-shadow:0px -3px 6px 2px rgba(0,0,0,0.2);
-  cursor:pointer
-  }
-  
-  
-  .UploadPageWrap .btn-primary
-  {
-  display:block;
-  border-radius:0px;
-  box-shadow:0px 4px 6px 2px rgba(0,0,0,0.2);
-  }
-  .UploadPageWrap .imgUp
-  {
-  margin-bottom:15px;
-  }
-  .UploadPageWrap .del
-  {
+}
+
+
+.main .card {width:16rem;}
+.main .row {display: flex; justify-content: space-between;}
+
+header {
+width:100%;
+position: fixed; 
+background:#1d1d1d;
+justify-content:center;
+align-items:center;
+display:flex;
+flex-direction:column;
+ position:fixed;
+top:0;
+left:0;
+right:0;
+z-index: 99999;
+}
+.HotItem .card img {
+  height:190px;
+}
+.HotItem .card:hover {
+  background:rgb(245, 245, 245);
+  box-shadow : 0 0 10px rgb(218, 218, 218);
+}
+
+.HotItem .card a {
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #000;
+  text-decoration: none;
+}
+
+.headerNav {
+width:100%;
+background:#1d1d1d;
+}
+
+.headerNav .form-control {
+  border-radius: 20px;
+}
+.headerNav .btn-outline-success {
+  border-radius: 30px;
+  background:#fff;
+  color:#1d1d1d;
+  border:#1d1d1d;
+}
+.headerNav .btn-outline-success:hover {
+  color: #000;
+  background-color: #fff;
+  border-color: #000;
+}
+.headerLogin {
+background:#fff;
+width:100%;
+display:flex;
+justify-content:center;
+}
+
+.headerLogin ul {
+  width:1110px;
+    max-width: 1200px;
+}
+
+.headerLogin nav {
+background:#fff;
+width:100%;
+
+}
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.headerNav .search {
+width:100%;
+display:flex;
+justify-content:center;
+
+height:80px;
+}
+
+
+
+.headerNav .search .navbar {
+width:1110px;
+background:#1d1d1d!important;
+background:tomato;
+
+}
+
+.headerNav .search .dropdown-menu a {
+color:#000;
+}
+
+
+.quickmenu {
   position:absolute;
-  top:0px;
-  right:15px;
-  width:30px;
-  height:30px;
-  text-align:center;
-  line-height:30px;
-  background-color:rgba(255,255,255,0.6);
-  cursor:pointer;
-  }
-  .UploadPageWrap .imgAdd
-  {
-  width:30px;
-  height:30px;
-  border-radius:50%;
-  background-color:#4bd7ef;
-  color:#fff;
-  box-shadow:0px 0px 2px 1px rgba(0,0,0,0.2);
-  text-align:center;
-  line-height:30px;
-  margin-top:0px;
-  cursor:pointer;
-  font-size:15px;
-  }
-  
-  .UploadPageWrap .col-sm-2 {
-    flex: 0 0 auto;
-    width: 100%;
-  }
-  
-  
-  
-  
-  
-  
-  .comment-add {
-    width: 100%;
-    margin-bottom: 10px;
-    display: table;
-    height: 100px;
-  }
-  
-  .comment-add .addBtn {
-    width:100px;
-    height:100px;
-  
-  }
-  
-  .comment-add>textarea {
-    padding: 10px;
-    display: table-cell;
-    width: calc(100% - 102px);
-    min-height: 100px;
-    vertical-align: top;
-    resize: vertical;
-    resize:none;
-    border:1px solid #ddd;
-  }
-  
-  .comment-add>button {
-    margin: 0;
-    padding: 0;
-    display: table-cell;
-    width: 80px;
-    height: 100%;
-    vertical-align: top;
-  }
-  
-  div.comment-edit {}
-  
-  div.comment-edit>p {
-    white-space: pre-line;
-  }
-  
-  div.comment-edit>div {
-    display: none;
-  }
-  
-  div.comment-edit>div>form {
-    width: 100%;
-    margin-bottom: 10px;
-    display: table;
-    height: 100px;
-  }
-  
-  div.comment-edit>div>form>textarea {
-    margin: 0;
-    padding: 10px;
-    display: table-cell;
-    width: calc(100% - 102px);
-    min-height: 100px;
-    vertical-align: top;
-    resize: vertical;
-  }
-  
-  div.comment-edit>div>form>button {
-    margin: 0;
-    padding: 0;
-    display: table-cell;
-    width: 80px;
-    height: 100%;
-    vertical-align: top;
-    color:#1d1d1d
-  }
-  
-  
-  .comment-edit-btn-close {
-    display: none;
-  }
-  
-  
-  .comment-item {
-    border-top: 1px solid #ddd;
-    padding: 10px 0;
-  }
-  
-  .comment-item>img {
-    margin-right: 10px;
-    padding: 0;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    vertical-align: top;
-  }
-  
-  .comment-item>div:first-of-type {
-    display: inline-block;
-    width: calc(100% - 70px);
-    vertical-align: top;
-  
-  }
-  
-  .comment-item>div:first-of-type>p {
-    display: inline-block;
-    margin-right: 5px;
-  }
-  
-  
-  .comment-delete-modal {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.4);
-    text-align: center;
-  
-  }
-  
-  .comment-delete-modal>div {
-    width: 300px;
-    margin: 250px auto;
-    background-color: #fff;
-    padding: 20px;
-  }
-  .DetailPage button {
-    border: none;
-    color: #fff;
-    background-color: #333;
-  
-  }
-  
-  .DetailPage img {cursor:pointer;}
-  
-  .DetailCard p {margin:10px;}
-  
-  .DetailCard .d-flex .btn {border-radius: 50%;}
-  
-  .DetailInner .carousel-item {
-    width: 800px;
-    height: 600px;
-    position: relative;
-    background: #fff;
-  }
-  
-  .DetailInner .carousel-item img {
-    max-width: 100%;
-    max-height: 100%;
-    position: absolute;
-    left: 15%;
-    top: 0;
-  }
-  
-  .DetailInner .carousel-caption {
-    position: absolute;
-    right: 15%;
-    left: 61%;
-    color: #333;
-    text-align: center;
-  }
-  
-  .DetailPage .btn-primary:hover {
-    color: #fff;
-    background-color: #818181;
-  }
-  
-  
-  /* 판매품목리스트 */
-  .ItemList .card { 
-    margin:20px;
-    }
-  .ItemList .card img {width:100%; height:300px;}
-  
-  .ItemList table thead {text-align: center;}
-  .ItemList table tbody {text-align: center;}
-  .ItemList table tbody .ItemName {
-    font-weight: bold; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: space-around; 
-    height:130px;
-    text-align: left;
-    margin-left:10px;
-    padding-top: 14px;
-  }
-    .ItemList table tbody .ItemName p {
-      font-size: 13px;
-      color:#818181;
-      margin-top:30px;
-    }
-  .ItemList table img {width:140px;}
-  
-  
-  .ItemList table tbody td {
-  padding-top:50px;
-   }
-  
-   .ItemList .ItemCard .container ul {
-   margin-bottom:30px;
-   border-bottom: 1px solid #ddd;
-   }
-   
-   .ItemList .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: #1F2428;
-  }
-  
-  .ItemList .table>:not(caption)>*>* {
-    border-bottom-width: 0px;
-  }
-  
-  .ItemList .pagination a {
-    color:#1d1d1d;
-  }
-  
-  .nav-link {
-    display: block;
-    padding: 0.5rem 1rem;
-    color: #818181;
-    text-decoration: none;
-  }
-  .headerLogin .nav-link:hover {
-    color:#000;
-  }
-  
-  .nav-link:hover {
-    display: block;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .ItemList .table>:not(:first-child) {
-    border-top: 2px solid #dadada;
-  }
-  
-  
-  .uploadImg p {
-    margin-top: 0;
-    margin: 0;
-  }
-  
-  
-  /* 상위로 올리는 버튼 */
-  .scrollTop {
-    position: fixed;
-    right: 10%;
-    bottom: 10px;
-    background-color: #BE3F48;
-    padding: 20px;
-    opacity: 0;
-    transition: all 0.3s ease-in-out 0s;
-  }
-  
-  .scrollTop a {
-    font-size: 18px;
-    color: #fff;
-  }
-  
-  /* 마이페이지 스타일 */
-  .myPagewrap {
-    width: 1100px;
-    position: relative;
-    margin: 2.6% auto;
-    padding: 0 0 383px 0;
-    box-shadow: 0 30px 28px rgb(0 0 0 / 25%), 0 20px 10px rgb(0 0 0 / 22%);
-    background: #fff;
-  }
-  
-  .myPagewrap .profile {
-    padding-left:0px;
-    padding-top:20px;
-  }
-   
-  .myPagewrap .profile p {
-    padding-top:20px;
-  }
-  
-  
-  .myPagewrap .profile_Img {
-    width:100px; height:100px; overflow:hidden; border-radius: 50%;
-    border:1px solid #3b3b3b;
-  }
-  .myPagewrap .profile .profile_Img img {
-    width:100px;
-  }
-  .myPagewrap .myPageMenu {
-    padding-bottom: 20px;
-  }
-  
-  .myPagewrap .myPageMenu h5 {
-    background:#1F2428;
-    color:#fff;
-    padding:10px;
-  }
-  .myPagewrap .myPageMenu ul li {
-    color:#1d1d1d;
-    padding-top:5px;
-  }
-  .myPagewrap .myPageMenu ul li a {
-    color:#1d1d1d;
-    padding-left:10px;
-  }
-  .myPagewrap .myPageMenu ul li a:hover {
-    font-weight: bold;
-  }
-  
-  .myPagewrap .myPageList {
-    height:200px;
-    padding:0 0 0 10px;
-    margin-left:30px
-  
-  }
-  
-  .myPagewrap .myPageList p {
-    font-weight: bold;
-    padding:13px 0 0 10px;
-  }
-  .myPagewrap .myPageList_List {padding-right:20px;}
-  .myPagewrap .myPageList_List img {width:130px;}
-  .myPagewrap .myPageList_List p {color:#818181;}
-  
-  .myPagewrap .myPageTitle {
-    margin:50px 0 50px 0;
-    display:flex;
-    justify-content:center;
-  
-  }
-  
-  
-  .nav-link:focus, .nav-link:hover {
-    color: #fff;
-  }
-  
-  .IdFindTitle {margin: 30px 0 20px 0;
-    display: flex;
-    justify-content: center;
-    font-size: 25px;
-    font-weight: bold;
-  }
-  
-    .IdFindwrap .form-wrap {
-      width: 460px;
-      height: 730px;
-      position: relative;
-      margin: 2.6% auto;
-      padding: 5px;
-      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-      background:#fefcfc;
-    }
-  
-    .IdFindwrap {
-      height: 100%;
-      width: 100%;
-      background-position: center;
-      background-size: cover;
-      position: absolute;
-  }
-    .IdFindwrap .input-group {
-      top: 210px;
-      position: absolute;
-      width: 380px;
-      transition: .5s;
-      margin: 0;
-      border: 0;
-  }
-  
-  .IdFindwrap .IdPwd {
-    border:1px solid #ddd;
-    text-align: center;
-    padding:  30px;
-    margin-bottom:30px;
-  }
-  
-  .modal-dialog {
-    max-width: 504px;
-    margin: 20rem auto;
-  }
+  width:150px;
+  top:50%;
+  float: left;
+  margin-top:-20px;
+  right:20px;
+  background:#fff;
+  z-index: 999;
+  border-radius: 50%;
+  overflow: hidden;
+  border:1px solid #ddd;
+  box-shadow: 3px 3px 3px #1d1d1d;
+  display: block;
+}
+.quickmenu ul {
+  position:relative;
+  width:100%;
+  float: left;
+  display:inline-block;
+  display:inline;
+}
+.quickmenu ul li a img{
+  width:100%;
+  height:100%;
+}
+
+.slider {margin-top:20px;}
+
+section {
+display:flex;
+flex-direction:column;
+}
+
+.ItemButton {
+height:auto;
+display:flex;
+justify-content:center;
+margin:30px 0 50px 0px;
+}
+
+.ItemTitle {
+margin:50px 0 50px 0;
+display:flex;
+justify-content:center;
+
+}
+
+
+
+.main .card {width: 16rem;}
+.Tip {
+background:#3b3b3b;
+height:400px;
+}
+
+.Tip img {
+height:100%;
+}
+
+.b-example-divider {
+height:3rem;
+background-color:rgba(0,0,0,.1);
+border:solid rgba(0,0,0,.15);
+box-shadow:inset 0 .5em 1.5em rgba(0,0,0,.1), inset 0 .125em .5em rgba(0,0,0,.15);
+border-width:1px 0;
+}
+
+.bi {
+vertical-align:-.125em;
+fill:currentColor;
+}
+
+.card-body {
+text-align:center;
+}
+
+
+
+#footer {
+background-color:#1F2428;
+width:100%;
+}
+
+.headerNav .search .navbar a,.headerNav .search .nav-link:hover {
+color:#fff;
+}
+
+.nav-link a {color:#343a40}
+.nav-link a:hover {color:#343a40}
+
+
+/* 회원가입 css */
+.signUpwrap {
+height: 100%;
+width: 100%;
+background-position: center;
+background-size: cover;
+position: absolute;
+}
+.signUpwrap .form-wrap {
+width: 460px;
+height: 730px;
+position: relative;
+margin: 2.6% auto;
+padding: 5px;
+box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+background:#fefcfc;
+}
+
+.signUpwrap .togglebtn {
+padding: 10px 30px;
+cursor: pointer;
+background: transparent;
+border: 0;
+outline: none;
+position: relative;
+color:#fff;
+}
+.signUpwrap #btn {
+top: 0;
+left: 0;
+position: absolute;
+width: 130px;
+height: 100%;
+background: #343a40;
+border-radius: 30px;
+transition: .5s;
+
+}
+.signUpwrap .social-icons {
+margin-top: 80px;
+text-align: center;
+}
+.signUpwrap .social-icons img {
+width: 100px ;
+cursor: pointer;
+}
+.signUpwrap .input-group {
+top: 210px;
+position: absolute;
+width: 380px;
+transition: .5s;
+margin:0;
+border:0;
+}
+.signUpwrap .input-field {
+width: 100%;
+padding: 10px 0;
+border: none;
+border-bottom: 1px solid #999;
+outline: none;
+background: transparent;
+}
+.signUpwrap .submit {
+width: 85%;
+padding: 10px 30px;
+cursor: pointer;
+display: block;
+margin: 15px auto;
+background: #343a40;
+border: 0;
+outline: none;
+border-radius: 30px;
+color:#fff;
+}
+.signUpwrap .checkbox {
+margin: 30px 10px 30px 0;
+}
+
+.signUpwrap #login {
+left: 42px;
+}
+.signUpwrap #register {
+left: 40px;
+}
+
+
+
+.signUpwrap input[type=button]{
+width: 30%;
+background-color: lightgray;
+border:none;
+background-color: #343a40;
+font-size:1em;
+color:#fff;
+outline:none;
+display:inline;
+height:42px;
+margin-bottom: 2px;
+}
+
+.signUpwrap input[type="tel"]{
+width:70%;
+height:100%;
+border:none;
+font-size:1em;
+display:inline;
+outline:none;
+color:black;
+border-bottom: 1px solid #999;
+}
+
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback){
+margin-left: 0;
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+
+
+}
+.input-group button {
+border-radius: 30px;
+margin-top:10px;
+background-color: #343a40;
+padding:10px 0;
+}
+
+.input-group button:nth-child(1) {
+
+margin-top:30px;
+
+}
+.form-check-inline {
+margin-top:10px;
+}
+
+/* 업로드페이지 css */
+
+
+.UploadPageWrap .form-wrap {
+position: relative;
+margin: 2.6% auto;
+padding: 5px;
+overflow: hidden;
+box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+background: #fefcfc;
+text-align: center;
+/* width:1100px; */
+}
+
+.UploadPageWrap  .UploadTitle {
+font-size:30px;
+font-weight: bold;
+padding: 30px;
+}
+
+.UploadPageWrap  .table-active {
+background:#333436;
+color:#fff;
+padding:15px;
+width:200px;
+height:40px;
+}
+.btn-primary {
+color: #fff;
+background-color: #232324;
+border-color: #333436;
+}
+.btn-primary:hover {
+color: #fff;
+background-color: #333436;
+border-color: #333436;
+}
+
+.UploadPageWrap table tbody tr {
+height:50px; margin: 0 auto;
+}
+
+
+
+
+.UploadPageWrap .remove:hover {
+background: white;
+color: black;
+}
+
+.UploadPageWrap h3 {
+text-align: left;
+margin: 10px 0;
+font-size:medium
+}
+
+.UploadPageWrap .btnSubmit {
+margin: 30px;
+padding:10px;
+}
+
+.UploadPageWrap .uploadImg {
+border:1px solid #ddd;
+border-radius: 10px;
+padding:10px 10px;
+}
+.UploadPageWrap .uploadImg img {
+height:150px;
+}
+
+
+.row {
+--bs-gutter-x: 0;
+--bs-gutter-y: 0;
+display: flex;
+flex-wrap: wrap;
+margin-top: calc(-1 * var(--bs-gutter-y));
+margin-right: calc(-.5 * var(--bs-gutter-x));
+margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+.btn-outline-secondary {padding: 0 10px;}
+
+.UploadPageWrap .detailimg {
+display: flex;
+}
+
+.UploadPageWrap .form-check-inline {
+margin-top:7px;
+}
+
+.UploadPageWrap table {
+     margin-bottom: 20px;
+ 
+}
+
+
+/* 이미지업로드 */
+.UploadPageWrap .table thead td, .table thead th {
+border-width: 0 0 0px;
+color: #363636;
+}
+
+.UploadPageWrap .imagePreview {
+width: 100%;
+height: 180px;
+background-position: center center;
+background:url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
+background-color:#fff;
+background-size: cover;
+background-repeat:no-repeat;
+display: inline-block;
+box-shadow:0px -3px 6px 2px rgba(0,0,0,0.2);
+cursor:pointer
+}
+
+.UploadPageWrap .imagePreviewMain {
+width: 100%;
+height: 380px;
+background-position: center center;
+background:url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
+background-color:#fff;
+background-size: cover;
+background-repeat:no-repeat;
+display: inline-block;
+box-shadow:0px -3px 6px 2px rgba(0,0,0,0.2);
+cursor:pointer
+}
+
+
+.UploadPageWrap .btn-primary
+{
+display:block;
+border-radius:0px;
+box-shadow:0px 4px 6px 2px rgba(0,0,0,0.2);
+}
+.UploadPageWrap .imgUp
+{
+margin-bottom:15px;
+}
+.UploadPageWrap .del
+{
+position:absolute;
+top:0px;
+right:15px;
+width:30px;
+height:30px;
+text-align:center;
+line-height:30px;
+background-color:rgba(255,255,255,0.6);
+cursor:pointer;
+}
+.UploadPageWrap .imgAdd
+{
+width:30px;
+height:30px;
+border-radius:50%;
+background-color:#4bd7ef;
+color:#fff;
+box-shadow:0px 0px 2px 1px rgba(0,0,0,0.2);
+text-align:center;
+line-height:30px;
+margin-top:0px;
+cursor:pointer;
+font-size:15px;
+}
+
+.UploadPageWrap .col-sm-2 {
+flex: 0 0 auto;
+width: 100%;
+}
+
+
+
+
+
+
+.comment-add {
+width: 100%;
+margin-bottom: 10px;
+display: table;
+height: 100px;
+}
+
+.comment-add .addBtn {
+width:100px;
+height:100px;
+
+}
+
+.comment-add>textarea {
+padding: 10px;
+display: table-cell;
+width: calc(100% - 102px);
+min-height: 100px;
+vertical-align: top;
+resize: vertical;
+resize:none;
+border:1px solid #ddd;
+}
+
+.comment-add>button {
+margin: 0;
+padding: 0;
+display: table-cell;
+width: 80px;
+height: 100%;
+vertical-align: top;
+}
+
+div.comment-edit {}
+
+div.comment-edit>p {
+white-space: pre-line;
+}
+
+div.comment-edit>div {
+display: none;
+}
+
+div.comment-edit>div>form {
+width: 100%;
+margin-bottom: 10px;
+display: table;
+height: 100px;
+}
+
+div.comment-edit>div>form>textarea {
+margin: 0;
+padding: 10px;
+display: table-cell;
+width: calc(100% - 102px);
+min-height: 100px;
+vertical-align: top;
+resize: vertical;
+}
+
+div.comment-edit>div>form>button {
+margin: 0;
+padding: 0;
+display: table-cell;
+width: 80px;
+height: 100%;
+vertical-align: top;
+color:#1d1d1d
+}
+
+
+.comment-edit-btn-close {
+display: none;
+}
+
+
+.comment-item {
+border-top: 1px solid #ddd;
+padding: 10px 0;
+}
+
+.comment-item>img {
+margin-right: 10px;
+padding: 0;
+display: inline-block;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+vertical-align: top;
+}
+
+.comment-item>div:first-of-type {
+display: inline-block;
+width: calc(100% - 70px);
+vertical-align: top;
+
+}
+
+.comment-item>div:first-of-type>p {
+display: inline-block;
+margin-right: 5px;
+}
+
+
+.comment-delete-modal {
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 10;
+background: rgba(0, 0, 0, 0.4);
+text-align: center;
+
+}
+
+.comment-delete-modal>div {
+width: 300px;
+margin: 250px auto;
+background-color: #fff;
+padding: 20px;
+}
+.DetailPage button {
+border: none;
+color: #fff !important;
+background-color: #333;
+
+}
+
+.DetailPage img {cursor:pointer;}
+
+.DetailCard p {margin:10px;}
+
+.DetailCard .d-flex .btn {border-radius: 50%;}
+
+.DetailInner .carousel-item {
+width: 800px;
+height: 600px;
+position: relative;
+background: #fff;
+}
+
+.DetailInner .carousel-item img {
+max-width: 100%;
+max-height: 100%;
+position: absolute;
+left: 15%;
+top: 0;
+}
+
+.DetailInner .carousel-caption {
+position: absolute;
+right: 15%;
+left: 61%;
+color: #333;
+text-align: center;
+}
+
+.DetailPage .btn-primary:hover {
+color: #fff;
+background-color: #818181;
+}
+
+
+/* 판매품목리스트 */
+.ItemList .card { 
+margin:20px;
+}
+.ItemList .card img {width:100%; height:300px;}
+
+.ItemList table thead {text-align: center;}
+.ItemList table tbody {text-align: center;}
+.ItemList table tbody .ItemName {
+font-weight: bold; 
+display: flex; 
+flex-direction: column; 
+justify-content: space-around; 
+height:130px;
+text-align: left;
+margin-left:10px;
+padding-top: 14px;
+}
+.ItemList table tbody .ItemName p {
+  font-size: 13px;
+  color:#818181;
+  margin-top:30px;
+}
+.ItemList table img {width:140px;}
+
+
+.ItemList table tbody td {
+padding-top:50px;
+}
+
+.ItemList .ItemCard .container ul {
+margin-bottom:30px;
+border-bottom: 1px solid #ddd;
+}
+
+.ItemList .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+color: #fff;
+background-color: #1F2428;
+}
+
+.ItemList .table>:not(caption)>*>* {
+border-bottom-width: 0px;
+}
+
+.ItemList .pagination a {
+color:#1d1d1d;
+}
+
+.nav-link {
+display: block;
+padding: 0.5rem 1rem;
+color: #818181;
+text-decoration: none;
+}
+.headerLogin .nav-link:hover {
+color:#000;
+}
+
+.nav-link:hover {
+display: block;
+padding: 0.5rem 1rem;
+color: #fff;
+text-decoration: none;
+}
+
+.ItemList .table>:not(:first-child) {
+border-top: 2px solid #dadada;
+}
+
+
+.uploadImg p {
+margin-top: 0;
+margin: 0;
+}
+
+
+/* 상위로 올리는 버튼 */
+.scrollTop {
+position: fixed;
+right: 10%;
+bottom: 10px;
+background-color: #BE3F48;
+padding: 20px;
+opacity: 0;
+transition: all 0.3s ease-in-out 0s;
+}
+
+.scrollTop a {
+font-size: 18px;
+color: #fff;
+}
+
+/* 마이페이지 스타일 */
+.myPagewrap {
+width: 1100px;
+position: relative;
+margin: 2.6% auto;
+padding: 0 0 383px 0;
+box-shadow: 0 30px 28px rgb(0 0 0 / 25%), 0 20px 10px rgb(0 0 0 / 22%);
+background: #fff;
+}
+
+.myPagewrap .profile {
+padding-left:0px;
+padding-top:20px;
+}
+
+.myPagewrap .profile p {
+padding-top:20px;
+}
+
+
+.myPagewrap .profile_Img {
+width:100px; height:100px; overflow:hidden; border-radius: 50%;
+border:1px solid #3b3b3b;
+}
+.myPagewrap .profile .profile_Img img {
+width:100px;
+}
+.myPagewrap .myPageMenu {
+padding-bottom: 20px;
+}
+
+.myPagewrap .myPageMenu h5 {
+background:#1F2428;
+color:#fff;
+padding:10px;
+}
+.myPagewrap .myPageMenu ul li {
+color:#1d1d1d;
+padding-top:5px;
+}
+.myPagewrap .myPageMenu ul li a {
+color:#1d1d1d;
+padding-left:10px;
+}
+.myPagewrap .myPageMenu ul li a:hover {
+font-weight: bold;
+}
+
+.myPagewrap .myPageList {
+height:200px;
+padding:0 0 0 10px;
+margin-left:30px
+
+}
+
+.myPagewrap .myPageList p {
+font-weight: bold;
+padding:13px 0 0 10px;
+}
+.myPagewrap .myPageList_List {padding-right:20px;}
+.myPagewrap .myPageList_List img {width:130px;}
+.myPagewrap .myPageList_List p {color:#818181;}
+
+.myPagewrap .myPageTitle {
+margin:50px 0 50px 0;
+display:flex;
+justify-content:center;
+
+}
+
+.myPage-lg {
+  display: block;
+}
+.myPage-sm {
+  display: none;
+}
+
+
+
+.nav-link:focus, .nav-link:hover {
+color: #fff;
+}
+
+.IdFindTitle {margin: 30px 0 20px 0;
+display: flex;
+justify-content: center;
+font-size: 25px;
+font-weight: bold;
+}
+
+.IdFindwrap .form-wrap {
+  width: 460px;
+  height: 730px;
+  position: relative;
+  margin: 2.6% auto;
+  padding: 0%;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  background:#fefcfc;
+}
+
+.IdFindwrap {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+.IdFindwrap .input-group {
+  top: 210px;
+  position: absolute;
+  width: 380px;
+  transition: .5s;
+  margin: 0;
+  border: 0;
+}
+
+.IdFindwrap .IdPwd {
+border:1px solid #ddd;
+text-align: center;
+padding:  30px;
+margin-bottom:30px;
+}
+
+.modal-dialog {
+max-width: 504px;
+margin: 20rem auto;
+}
+  
+
+
+
+/* 아이디 비밀번호 성공 팝업 */
+.IdFindwrap .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: beige;
+  /* 전체 배경 색상 */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.IdFindwrap .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 0 16px;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+.IdFindwrap .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.IdFindwrap .close:hover,
+.IdFindwrap .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.IdFindwrap .input-field {
+  padding: 5px;
+}
 }
