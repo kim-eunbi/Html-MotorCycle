@@ -781,7 +781,7 @@
   
   /* 마이페이지 스타일 */
   .myPagewrap {
-    width: 1100px;
+    
     position: relative;
     margin: 2.6% auto;
     padding: 0 0 383px 0;
@@ -792,6 +792,11 @@
   .myPagewrap .profile {
     padding-left:0px;
     padding-top:20px;
+
+  }
+
+  .myPagewrap .profile_main {
+    display: flex; background:tomato;
   }
    
   .myPagewrap .profile p {

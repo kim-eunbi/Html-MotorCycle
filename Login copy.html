@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/common.css">
 
-    <title>회원가입</title>
+    <title>아이디비번 찾기</title>
 
 
 </head>
@@ -37,7 +37,6 @@
         max-width: 330px;
         padding: 15px;
         margin: 7% auto;
-
     }
 
     .form-signin .checkbox {
@@ -55,6 +54,7 @@
     }
 
     .form-signin input[type="password"] {
+        margin-bottom: 10px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
     }
@@ -67,7 +67,6 @@
         user-select: none;
     }
 
-
     @media (min-width: 768px) {
         .bd-placeholder-img-lg {
             font-size: 3.5rem;
@@ -75,7 +74,8 @@
     }
 </style>
 
-<body class="text-center">
+
+<body>
 
     <!-- header -->
     <header>
@@ -142,65 +142,95 @@
         </ul>
     </header>
 
-    <!-- 로그인 -->
+    <!-- 아이디 비번찾기 -->
     <main class="form-signin">
         <form>
-            <img class="mb-4" src="./image/logo-01.png" alt="" width="72" height="57">
-            <h1 class="h3 mb-3 fw-normal">회원가입</h1>
+            <br />
+            <h1 class="h3 mb-3 fw-normal" style="text-align: center;">아이디/비밀번호 찾기</h1>
+            <br />
 
 
-            <div class="col-12">
-                <input type="text" class="form-control" id="name" placeholder="이름을 적어주세요">
-            </div>
-            <div class="col-12">
-                <input type="text" class="form-control" id="name" placeholder="닉네임을 적어주세요">
-            </div>
-
-            <div class="col-12">
-                <input type="email" class="form-control" placeholder="you@example.com">
-            </div>
-            <div class="col-12">
-                <input type="text" class="form-control" placeholder="아이디">
-            </div>
-            <div class="col-12">
-                <input type="password" class="form-control" id="password" placeholder="비밀번호 입력해주세요" required>
-            </div>
-            <div class="col-12">
-                <input type="password" class="form-control" id="password" placeholder="비밀번호를 한번 더 입력해주세요" required>
-            </div>
-            <div class="row col-12">
-                <input type="tel" class="form-control" placeholder="전화번호를 입력해주세요" required>
-                <input type="button" class="btn-dark" name="name" value="인증번호전송">
-            </div>
-            <div class="row col-12">
-                <input type="tel" class="form-control" placeholder="인증번호를 입력해주세요" required>
-                <input type="button" class="btn-dark" name="name" value="인증번호확인">
-            </div>
-            <div class="row" style="font-size:14px;">
-                <div class=" col-6">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked>
-                        <label class="form-check-label" for="inlineCheckbox1">메일수신 동의</label>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" checked>
-                        <label class="form-check-label" for="inlineCheckbox2">메세지수신 동의</label>
+            <div class="d-grid gap-2 col-12 mx-auto">
+                <p style="text-align: center;">아이디찾기</p>
+                <button type="button" onclick="location.href='SignUp.html'" class="btn btn-outline-dark"><i
+                        class="bi bi-person-badge"></i>휴대폰인증</button>
+                <button type="button" class="btn2 btn-outline-success " data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">본인인증 완료시 팝업</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="modal-body">
+                            회원님의 아이디는 <span>rladmsql1234</span> 입니다.
+                        </div>
                     </div>
                 </div>
             </div>
 
 
+            <div class="d-grid gap-2 col-12 mx-auto">
+                <p style="text-align: center;">비밀번호찾기</p>
+                <input type="text" placeholder="아이디입력">
+                <button type="button" onclick="location.href='SignUp.html'" class="btn btn-outline-dark"><i
+                        class="bi bi-person-badge"></i>휴대폰인증</button>
+                <button type="button" id="btn" class="btn2 btn-outline-success " data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">비번본인인증 완료시 팝업</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="modal-body">
+                            <div class="row">
+                                <p>변경할 비밀번호를 입력해 주세요.</p>
+                                <input type="password" class="input-field" placeholder="변경할 비밀번호" required>
+                                <input type="password" class="input-field" placeholder="변경할 비밀번호확인" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" onclick="location.href='Login.html'" class="btn btn-secondary"
+                                data-bs-dismiss="modal">변경완료</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">로그인으로 돌아가기</button>
 
-            <button class="w-100 btn btn-primary btn-lg" style="margin-top:30px;" type="submit">회원가입</button>
-
-
-            <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
         </form>
     </main>
 
 
+
+
+
 </body>
+<script>
+    let modals = document.getElementsByClassName("modal");
+    let btns = document.getElementsByClassName("btn2");
+    let closes = document.getElementsByClassName("close");
+    let funcs = [];
+
+    function Modal(num) {
+        return function () {
+            btns[num].onclick = function () {
+                modals[num].style.display = "block";
+                console.log(num);
+            };
+            closes[num].onclick = function () {
+                modals[num].style.display = "none";
+            };
+        };
+    }
+
+    for (let i = 0; i < btns.length; i++) {
+        funcs[i] = Modal(i);
+    }
+    for (let j = 0; j < btns.length; j++) {
+        funcs[j]();
+    }
+    // 영역 밖을 클릭하면 모달 닫기
+    window.onclick = function (event) {
+        if (event.target.className == "modal") {
+            event.target.style.display = "none";
+        }
+    };
+</script>
 
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
 
@@ -25,16 +25,97 @@
 
     <!-- css 경로 -->
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/index599.css">
-    <link rel="stylesheet" href="./css/index768.css">
     <link rel="stylesheet" href="./css/common.css">
-    <title>오토바이팔기</title>
+    <title>메인</title>
 </head>
+<style>
+    @media screen and (max-width: 599px) {
+        main .card {
+            display: flex;
+            flex-direction: row;
+            padding: 20px 0 0 0;
+        }
+
+        main .card img {
+            width: 140px;
+        }
+
+        main .card-body .btn {
+            margin-top: 20px;
+        }
+
+        main .card-body {
+            flex: 1 1 auto;
+            padding: 0;
+            text-align: center;
+            justify-content: center;
+        }
+
+        main .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
 
 
+    }
 
+    @media (min-width: 600px) {
+        main .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
 
+        main .card img {
+            width: 268px;
+            margin: 5% 13%;
+        }
 
+        main .card-body {
+            flex: 1 1 auto;
+            padding: 0.5rem 0.5rem;
+            text-align: center;
+        }
+
+        main .card-body .btn {
+            margin-top: 20px;
+        }
+
+        main .card {
+            width: 340px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        main .card img {
+            width: 268px;
+            margin: 5% 10%;
+        }
+
+        main .card {
+            width: 340px;
+        }
+
+        main .card-body {
+            flex: 1 1 auto;
+            padding: 0.5rem 0.5rem;
+            text-align: center;
+        }
+
+    }
+
+    main .card-body p {
+        margin-bottom: 5px;
+    }
+
+    main .card-body span {
+        font-size: 13px;
+        color: #888;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+</style>
 
 <body>
     <div id="wrap">
@@ -76,7 +157,6 @@
                                     <li class="nav-item">
                                         <a class="nav-link disabled"></a>
                                     </li>
-
                                 </ul>
                                 <form>
                                     <input class="form-control" type="text" placeholder="Search" aria-label="Search">
@@ -102,16 +182,12 @@
 
             </ul>
         </header>
-
-
-        <!-- 오토바이팔러가기 -->
         <!-- 스크롤시 따라오는 박스 -->
         <div class="quickmenu">
             <ul>
                 <li><a href="./UploadPage.html"><img src="./image/오토바이사진-01.png" alt="오토바이팔기버튼"></a></li>
             </ul>
         </div>
-
 
         <!-- 메인슬라이드 -->
         <div class="slider">
@@ -149,106 +225,88 @@
         </div>
 
 
-        <section class="HotItem">
-            <!-- 핫아이템 시작부분-->
-            <div class="ItemTitle">
-                <p class="font-weight-bold " style="font-size: 40px;">Hoooot Item</p>
-            </div>
-            <div class="main container">
-                <div class="row">
-                    <div class="card">
-                        <a href="./DetailPage.html">
-                            <img src="./image/5454.PNG" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">오토바이팔거에요</p>
-                                <p class="card-text">얼마일까요</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="./DetailPage.html">
-                            <img src="./image/5454.PNG" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">오토바이팔거에요</p>
-                                <p class="card-text">얼마일까요</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="./DetailPage.html">
-                            <img src="./image/5454.PNG" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">오토바이팔거에요</p>
-                                <p class="card-text">얼마일까요</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="./DetailPage.html">
-                            <img src="./image/5454.PNG" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">오토바이팔거에요</p>
-                                <p class="card-text">얼마일까요</p>
-                            </div>
-                        </a>
+
+        <main>
+            <section class="py-5 text-center container">
+                <div class="row py-lg-5">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <h1 class="fw-light">Motorcycle</h1>
+                        <p class="lead text-muted">
+                            오토바이를 편리하게 사고 팔수 있는 사이트 입니다.
+                        </p>
+                        <p>
+                            <a href="#" class="btn btn-primary my-2">사러가기</a>
+                            <a href="#" class="btn btn-secondary my-2">판매하러가기</a>
+                        </p>
                     </div>
                 </div>
-                <br />
-                <div class="row">
-                    <p class="opacity-100">
-                        <img src="./image/판매완료.png" style="width:150px; position: absolute; z-index: 999; "
-                            alt="판매완료라벨">
-                    </p>
-                    <div class="card opacity-50" style=" position:relative;">
-                        <a href="./DetailPage.html">
-                            <img src="./image/5454.PNG" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">오토바이팔거에요</p>
-                                <p class="card-text">얼마일까요</p>
+            </section>
+
+
+            <div class="album py-5 bg-light">
+                <div class="container">
+
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="./image/34.PNG" alt="">
+
+                                <div class="card-body">
+                                    <p class="card-text">제목: 오토바이 이름</p>
+                                    <span>2019 | 10,000Km | 서울</span>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="./DetailPage.html">
-                            <img src="./image/5454.PNG" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">오토바이팔거에요</p>
-                                <p class="card-text">얼마일까요</p>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="./image/34.PNG" alt="">
+
+                                <div class="card-body">
+                                    <p class="card-text">제목: 오토바이 이름</p>
+                                    <span>2019 | 10,000Km | 서울</span>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="btn-group">
+                                            <div class="btn-group">
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-secondary">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="./DetailPage.html">
-                            <img src="./image/2323.PNG" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">오토바이팔거에요</p>
-                                <p class="card-text">얼마일까요</p>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="./image/34.PNG" alt="">
+
+                                <div class="card-body">
+                                    <p class="card-text">제목: 오토바이 이름</p>
+                                    <span>2019 | 10,000Km | 서울</span>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="btn-group">
+                                            <div class="btn-group">
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-secondary">View</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="./DetailPage.html">
-                            <img src="./image/5454.PNG" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">오토바이팔거에요</p>
-                                <p class="card-text">얼마일까요 궁금하면 눌렁</p>
-                            </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
-                <div class="ItemButton">
-                    <button type="button" onclick="location.href='./ItemListPage.html' " class="btn btn-dark">VIEW
-                        ALL
-                        ITEM</button>
-                </div>
             </div>
-
-
-            <!-- 바이크 광고/ 배너자리 -->
-            <div class="Tip">
-
+            <div class="ItemButton">
+                <button type="button" onclick="location.href='./ItemListPage.html' " class="btn btn-dark">VIEW
+                    ALL
+                    ITEM</button>
             </div>
-        </section>
+        </main>
 
         <!-- Footer -->
         <div id="footer">
@@ -300,6 +358,7 @@
                 </footer>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
