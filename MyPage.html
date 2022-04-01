@@ -24,14 +24,24 @@
 
     <!-- css 경로 -->
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/index599.css">
-    <link rel="stylesheet" href="./css/index768.css">
     <link rel="stylesheet" href="./css/common.css">
-
     <title>마이페이지</title>
-
-
 </head>
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+</style>
 
 <body>
 
@@ -50,30 +60,25 @@
                 </ul>
             </div>
 
-            <!-- 로고, 메세지, 검색창 -->
+            <!-- 로고, 검색창 -->
             <div class="search">
-
-                <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
+                <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="./index.html">motorcycle</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
+                            data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false"
                             aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
 
-                        <div class="collapse navbar-collapse" id="navbarsExample04">
-                            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <div class="collapse navbar-collapse" id="navbarsExample02">
+                            <ul class="navbar-nav me-auto">
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#"></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#"></a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link disabled"></a>
-                                </li>
-
                             </ul>
                             <form>
                                 <input class="form-control" type="text" placeholder="Search" aria-label="Search">
@@ -96,145 +101,325 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
             </li>
-
         </ul>
     </header>
+
+
+
+
     <!-- 마이페이지 -->
-    <div class="myPagewrap">
-        <div class="myPageTitle" style="display: flex; flex-direction: column; align-items: center;">
-            <p class="font-weight-bold " style="font-size: 40px;">마이 페이지</p>
-            <span>회원님의 개인정보 및 비밀번호 관리 회원탈퇴를 하실 수 있습니다.</span>
-        </div>
-        <div class="profile_main row">
-            <div class="profile col-lg-2 d-flex flex-column align-items-center">
-                <h4>Hello</h4>
-                <div class="profile_Img">
-                    <img src="./image/logo-01.png" alt="">
-                </div>
-                <p>회원 닉네임</p>
-
-                <div class="myPageMenu col-lg-12 d-flex flex-column align-items-left">
-                    <h5>MENU</h5>
-                    <ul>
-                        <li><a href="./Information.html">개인정보수정</a></li>
-                        <li><a href="./PwdChange.html">비밀번호관리</a></li>
-                        <!-- 본인인증후 탈퇴하게 해줘 -->
-                        <li><a href="./Withdrawal.html">회원탈퇴</a></li>
-                    </ul>
-                </div>
-            </div>
+    <div class="myPagewrap col-lg-12">
 
 
-            <div class="myPageList col-lg-9">
-                <div class="d-flex justify-content-between" style="border-top:2px solid #232324">
-                    <p><i class="bi bi-cart-check-fill"></i> 판매내역</p>
-                    <button class="btn">more ></button>
-                </div>
-                <div class="myPage-lg">
 
-                    <div class="myPage_mainList d-flex" style="padding-left:20px; padding-top:16px;">
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                    <div class="position-sticky pt-3">
+                        <ul class="nav flex-column col-lg-12">
+                            <li class="profile nav-item row align-items-center text-center"
+                                style="width:100%; height:auto;background:#1d1d1d; color:#fff; overflow: hidden;">
+                                <h4>Hello</h4>
+                                <div class="profile_Img">
+                                    <img style="width:80px;" src="./image/logo-white.png" alt="">
+                                </div>
+                                <p>회원 아이디</p>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Information.html">
+                                    <span data-feather="file"></span>
+                                    개인정보수정
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./PwdChange.html">
+                                    <span data-feather="shopping-cart"></span>
+                                    비밀번호관리
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Withdrawal.html">
+                                    <span data-feather="users"></span>
+                                    회원탈퇴
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                </div>
+                </nav>
 
-                <div class="myPage-sm">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-
-
-
-
-                <!-- 구매내역이 없을때 -->
-                <div style="width:100%; height:250px; ">
-                    <div class="d-flex justify-content-between" style="border-top:2px solid #232324">
-                        <p><i class="bi bi-cart-fill"></i> 구매내역</p>
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                    <div class="ItemTitle">
+                        <p class="" style="font-size: 30px;">마이페이지임당</p>
                     </div>
-                    <div class="d-flex flex-column align-items-center">
-                        <p>구매내역이 없습니다</p>
-                        <button type="button" class="btn btn-warning text-center">구매하러가기 ></button>
-                    </div>
+                    <h4>판매내역</h4>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    오토바이 판매내역 1
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="my-2 w-100" style=" display: flex; flex-direction: row;">
+                                        <div class="col-lg-12 d-flex">
+                                            <img class="myPage_img" src="./image/34.PNG" alt="판매상품사진">
+                                            <div class="col-lg-8 mx-3 my-3">
+                                                <h3 class="col-lg-12">오토바이 파라여</h3>
+                                                <span class="col-lg-12">dsadds</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    오토바이 판매내역 2
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="my-2 w-100" style=" display: flex; flex-direction: row;">
+                                        <div class="col-lg-12 d-flex">
+                                            <img class="myPage_img" src="./image/34.PNG" alt="판매상품사진">
+                                            <div class="col-lg-8 mx-3 my-3">
+                                                <h3 class="col-lg-12">오토바이 판다니까여</h3>
+                                                <span class="col-lg-12">dsadds</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    오토바이 판매내역 3
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="my-2 w-100" style=" display: flex; flex-direction: row;">
+                                        <div class="col-lg-12 d-flex">
+                                            <img class="myPage_img" src="./image/34.PNG" alt="판매상품사진">
+                                            <div class="col-lg-8 mx-3 my-3">
+                                                <h3 class="col-lg-12">오토바이 팔려구여</h3>
+                                                <span class="col-lg-12">dsadds</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                </div>
+                        <br />
+                        <h4>구매내역</h4>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingfour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                    오토바이 구매내역 1
+                                </button>
+                            </h2>
+                            <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="my-2 w-100" style=" display: flex; flex-direction: row;">
+                                        <div class="col-lg-12 d-flex">
+                                            <img class="myPage_img" src="./image/34.PNG" alt="판매상품사진">
+                                            <div class="col-lg-8 mx-3 my-3">
+                                                <h3 class="col-lg-12">오토바이 팔려구여</h3>
+                                                <span class="col-lg-12">dsadds</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingfifty">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapsefifty" aria-expanded="false" aria-controls="collapsefifty">
+                                    오토바이 구매내역 2
+                                </button>
+                            </h2>
+                            <div id="collapsefifty" class="accordion-collapse collapse" aria-labelledby="headingfifty"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="my-2 w-100" style=" display: flex; flex-direction: row;">
+                                        <div class="col-lg-12 d-flex">
+                                            <img class="myPage_img" src="./image/34.PNG" alt="판매상품사진">
+                                            <div class="col-lg-8 mx-3 my-3">
+                                                <h3 class="col-lg-12">오토바이 팔려구여</h3>
+                                                <span class="col-lg-12">dsadds</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingsix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                                    오토바이 구매내역 3
+                                </button>
+                            </h2>
+                            <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingsix"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="my-2 w-100" style=" display: flex; flex-direction: row;">
+                                        <div class="col-lg-12 d-flex">
+                                            <img class="myPage_img" src="./image/34.PNG" alt="판매상품사진">
+                                            <div class="col-lg-8 mx-3 my-3">
+                                                <h3 class="col-lg-12">오토바이 팔려구여</h3>
+                                                <span class="col-lg-12">dsadds</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                <!-- 구매내역이 있을때 -->
-                <div style="width:100%; height:250px; ">
-                    <div class="d-flex justify-content-between" style="border-top:2px solid #232324">
-                        <p><i class="bi bi-heart-fill"></i> 내 장바구니</p>
-                        <button class="btn">more ></button>
-                    </div>
+
+                        <div class="album py-5 bg-light">
+                            <div class="container">
+                                <h4>장바구니</h4>
+                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                    <div class="col">
+                                        <div class="card shadow-sm">
+                                            <img src="./image/34.PNG" alt="">
+
+                                            <div class="card-body">
+                                                <p class="card-text">제목: 오토바이 이름</p>
+                                                <span>2019 | 10,000Km | 서울</span>
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div class="btn-group">
+                                                        <button type="button"
+                                                            class="btn btn-sm btn-outline-secondary">View</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card shadow-sm">
+                                            <img src="./image/34.PNG" alt="">
+
+                                            <div class="card-body">
+                                                <p class="card-text">제목: 오토바이 이름</p>
+                                                <span>2019 | 10,000Km | 서울</span>
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div class="btn-group">
+                                                        <div class="btn-group">
+                                                            <button type="button"
+                                                                class="btn btn-sm btn-outline-secondary">View</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card shadow-sm">
+                                            <img src="./image/34.PNG" alt="">
+
+                                            <div class="card-body">
+                                                <p class="card-text">제목: 오토바이 이름</p>
+                                                <span>2019 | 10,000Km | 서울</span>
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div class="btn-group">
+                                                        <div class="btn-group">
+                                                            <button type="button"
+                                                                class="btn btn-sm btn-outline-secondary">View</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
-                    <div class="myPage_mainList d-flex" style="padding-left:20px; padding-top:16px;">
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
+
+
+                        <div class="album py-5 bg-light">
+                            <div class="container">
+                                <h4>목록이 비어있을때</h4>
+                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                    <div class="col-lg-12">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body my-4">
+                                                <p class="card-text" style="color:red;">장바구니 목록이 없습니다.</p>
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <div class="btn-group">
+                                                        <button type="button"
+                                                            class="btn btn-sm btn-outline-secondary">장바구니에 담으러
+                                                            가기</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
-                        <div class="myPageList_List d-flex flex-column justify-content-center align-items-center">
-                            <img src="./image/22.PNG" alt="">
-                            <p>제목</p>
-                        </div>
-                    </div>
-                </div>
+
+
+
+
+                        <style>
+                            @media screen and (max-width: 599px) {
+                                .myPage_img {
+                                    width: 150px;
+                                }
+
+                                .myPage_menubar {
+                                    display: block;
+                                }
+
+                                .myPagewrap {
+                                    width: 100%;
+                                }
+
+
+                            }
+
+                            @media screen and (min-width: 600px) {
+                                .myPage_img {
+                                    width: 200px;
+                                }
+
+                                .myPage_menubar {
+                                    display: block;
+                                }
+                            }
+
+                            @media (min-width: 1200px) {
+                                .myPage_img {
+                                    width: 200px;
+                                }
+
+                                .myPage_menubar {
+                                    display: none;
+                                }
+
+                                .myPagewrap {
+                                    width: 1100px;
+                                }
+                            }
+                        </style>
+                </main>
             </div>
         </div>
     </div>
