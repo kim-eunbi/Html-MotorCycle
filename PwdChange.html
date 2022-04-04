@@ -22,17 +22,12 @@
     <!-- js CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-
     <!-- css 경로 -->
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/index599.css">
-    <link rel="stylesheet" href="./css/index768.css">
     <link rel="stylesheet" href="./css/common.css">
-
-    <title>비밀번호 관리</title>
-
-
+    <title>비밀번호관리</title>
 </head>
+
 
 <body>
 
@@ -92,90 +87,197 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
             </li>
-
         </ul>
     </header>
 
 
-    <!-- 개인정보수정페이지 -->
-    <div class="myPagewrap">
-        <div class="myPageTitle" style="display: flex; flex-direction: column; align-items: center;">
-            <p class="font-weight-bold " style="font-size: 40px;">비밀번호 관리</p>
-            <span>본인인증 후 비밀번호를 변경 하실 수 있습니다.</span>
-        </div>
-
-        <div class="row">
-            <div class="profile col-lg-2 d-flex flex-column align-items-center">
-                <h4>Hello</h4>
-                <div class="profile_Img">
-                    <img src="./image/logo-01.png" alt="">
-                </div>
-                <p>회원 닉네임</p>
-                <div class="myPageMenu col-lg-12 d-flex flex-column align-items-left">
-                    <h5>MENU</h5>
-                    <ul>
-                        <li><a href="./Information.html">개인정보수정</a></li>
-                        <li><a href="./PwdChange.html">비밀번호관리</a></li>
-                        <!-- 본인인증후 탈퇴하게 해줘 -->
-                        <li><a href="./Withdrawal.html">회원탈퇴</a></li>
-                    </ul>
-                </div>
-            </div>
 
 
-            <div class="myPageList col-lg-9">
-
-
-                <div style="width:100%; height:250px;">
-                    <div class="d-flex flex-column" style="border-top:2px solid #232324">
-                        <p>비밀번호 관리</p>
-                        <span style="margin-left:10px; font-size:13px;">비밀번호는 8~20자 이내로 입력하여야 합니다.</span>
-                        <span style="margin-left:10px; font-size:13px;">비밀번호는 문자/숫자/기호를 사용하여 입력하여야 합니다.</span>
-                        <span style="margin-left:10px; font-size:13px;">비밀번호는 최소 6개월마다 주기적으로 변경하여야 안전합니다.</span>
+    <!-- 마이페이지 -->
+    <div class="myPagewrap col-lg-12">
+        <div class="container-fluid">
+            <div class="row">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                    <div class="position-sticky pt-3">
+                        <ul class="nav flex-column" style="border-top:4px solid #fff;">
+                            <li class="profile nav-item row align-items-center text-center"
+                                style="width:100%; height:auto;background:#1d1d1d; color:#fff; overflow: hidden;">
+                                <h4></h4>
+                                <div class="profile_Img">
+                                    <img style="width:80px;" src="./image/logo-white.png" alt="">
+                                </div>
+                                <p>회원 아이디</p>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./MyPage.html">
+                                    <span data-feather="file"></span>
+                                    마이페이지
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Information.html">
+                                    <span data-feather="file"></span>
+                                    개인정보수정
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./PwdChange.html">
+                                    <span data-feather="shopping-cart"></span>
+                                    비밀번호관리
+                                </a>
+                            </li>
+                            <li class="nav-item" style=" border-radius: 0 0 20px 20px;">
+                                <a class="nav-link" href="./Withdrawal.html">
+                                    <span data-feather="users"></span>
+                                    회원탈퇴
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="container">
-                        <div class="form-wrap">
-                            <br />
-                            <div class="IdPwd col-lg-12 d-flex">
-                                <button type="button" class="btn btn-outline-dark col-lg-12" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal"><i class="bi bi-person-badge"></i>본인인증</button>
-                            </div>
-                            <br />
-                            <div class="row" style="padding-left:10px;">
-                                <p style="padding:0;">비밀번호 변경</p>
-                                <div class="mb-3">
-                                    <label for="password">현재 비밀번호</label>
-                                    <input type="password" class="form-control" id="password"
-                                        placeholder="변경할 비밀번호를 입력 해 주세요." required>
-                                </div>
+                </nav>
 
-                                <div class="mb-3">
-                                    <label for="password">변경할 비밀번호</label>
-                                    <input type="password" class="form-control" id="password"
-                                        placeholder="변경할 비밀번호를 입력 해 주세요." required>
+
+
+
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                    <!-- 비밀번호관리 -->
+
+                    <div class="myPageTitle" style="display: flex; flex-direction: column;">
+                        <h4><i class="bi bi-file-lock"></i> 비밀번호 관리</h4>
+                    </div>
+                    <div class="row">
+                        <div class="myPageList col-lg-9">
+                            <div>
+                                <div class="d-flex flex-column" style="border-top:2px solid #232324">
+                                    <br /><span style="color: red; margin-left:10px; font-size:13px;">본인인증 후 비밀번호를 변경하실수
+                                        있습니다.</span>
+                                    <span style="margin-left:10px; font-size:13px;">비밀번호는 8~20자 이내로 입력하여야
+                                        합니다.</span>
+                                    <span style="margin-left:10px; font-size:13px;">비밀번호는 문자/숫자/기호를 사용하여 입력하여야
+                                        합니다.</span>
+                                    <span style="margin-left:10px; font-size:13px;">비밀번호는 최소 6개월마다 주기적으로 변경하여야
+                                        안전합니다.</span>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="password">변경할 비밀번호 확인</label>
-                                    <input type="password" class="form-control" id="password"
-                                        placeholder="변경할 비밀번호를 한번 더 입력 해 주세요." required>
+                                <div class="container">
+                                    <div class="form-wrap">
+                                        <br />
+                                        <div class="IdPwd col-lg-12 d-flex">
+                                            <button type="button" class="btn btn-outline-dark col-lg-12"
+                                                data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                    class="bi bi-person-badge"></i>본인인증</button>
+                                        </div>
+                                        <br />
+                                        <div class="row" style="padding-left:10px;">
+                                            <p style="padding:0;">비밀번호 변경</p>
+                                            <div class="mb-3">
+                                                <label for="password">현재 비밀번호</label>
+                                                <input type="password" class="form-control" id="password"
+                                                    placeholder="변경할 비밀번호를 입력 해 주세요." required>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="password">변경할 비밀번호</label>
+                                                <input type="password" class="form-control" id="password"
+                                                    placeholder="변경할 비밀번호를 입력 해 주세요." required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="password">변경할 비밀번호 확인</label>
+                                                <input type="password" class="form-control" id="password"
+                                                    placeholder="변경할 비밀번호를 한번 더 입력 해 주세요." required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-center align-items-center">
+                                        <div class="d-grid gap-2 col-4 mx-auto">
+                                            <button class="btn btn-dark" onclick="location.href='MyPage.html'"
+                                                style="padding: 10px; " type="submit">변경완료</button>
+                                        </div>
+                                        <div class="d-grid gap-2 col-4 mx-auto">
+                                            <button class="btn btn-dark" onclick="location.href='MyPage.html'"
+                                                style="padding: 10px; " type="submit">변경취소</button>
+                                        </div>
+                                    </div>
+                                    <br />
                                 </div>
                             </div>
                         </div>
-                        <div class="row d-flex justify-content-center align-items-center">
-                            <div class="d-grid gap-2 col-4 mx-auto">
-                                <button class="btn btn-dark" style="padding: 10px; " type="submit">변경완료</button>
-                            </div>
-                            <div class="d-grid gap-2 col-4 mx-auto">
-                                <button class="btn btn-dark" onclick="location.href='Index.html'"
-                                    style="padding: 10px; " type="submit">변경취소</button>
-                            </div>
-                        </div>
                     </div>
-                </div>
+
+                </main>
+
+
+
+
+
+
+                <style>
+                    .bd-placeholder-img {
+                        font-size: 1.125rem;
+                        text-anchor: middle;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        user-select: none;
+                    }
+
+                    #sidebarMenu:not(.show) {
+                        display: block !important;
+                    }
+
+                    @media (min-width: 768px) {
+                        .bd-placeholder-img-lg {
+                            font-size: 3.5rem;
+                        }
+                    }
+
+
+                    @media screen and (max-width: 599px) {
+                        .myPage_img {
+                            width: 150px;
+                        }
+
+                        #sidebarMenu:not(.show) {
+                            display: block !important;
+                        }
+
+                        .myPage_menubar {
+                            display: block;
+                        }
+
+                        .myPagewrap {
+                            width: 100%;
+                        }
+
+
+                    }
+
+                    @media screen and (min-width: 600px) {
+                        .myPage_img {
+                            width: 200px;
+                        }
+
+                        .myPage_menubar {
+                            display: block;
+                        }
+                    }
+
+                    @media (min-width: 1200px) {
+                        .myPage_img {
+                            width: 200px;
+                        }
+
+                        .myPage_menubar {
+                            display: none;
+                        }
+
+                        .myPagewrap {
+                            width: 1100px;
+                        }
+                    }
+                </style>
+
             </div>
         </div>
     </div>
 </body>
-
 
 </html>

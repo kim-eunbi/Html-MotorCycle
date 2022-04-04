@@ -27,21 +27,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <title>마이페이지</title>
 </head>
-<style>
-    .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-    }
 
-    @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-        }
-    }
-</style>
 
 <body>
 
@@ -109,21 +95,25 @@
 
     <!-- 마이페이지 -->
     <div class="myPagewrap col-lg-12">
-
-
-
         <div class="container-fluid">
             <div class="row">
+
                 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                     <div class="position-sticky pt-3">
-                        <ul class="nav flex-column col-lg-12">
+                        <ul class="nav flex-column" style="border-top:4px solid #fff;">
                             <li class="profile nav-item row align-items-center text-center"
                                 style="width:100%; height:auto;background:#1d1d1d; color:#fff; overflow: hidden;">
-                                <h4>Hello</h4>
+                                <h4></h4>
                                 <div class="profile_Img">
                                     <img style="width:80px;" src="./image/logo-white.png" alt="">
                                 </div>
                                 <p>회원 아이디</p>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./MyPage.html">
+                                    <span data-feather="file"></span>
+                                    마이페이지
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./Information.html">
@@ -137,7 +127,7 @@
                                     비밀번호관리
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" style=" border-radius: 0 0 20px 20px;">
                                 <a class="nav-link" href="./Withdrawal.html">
                                     <span data-feather="users"></span>
                                     회원탈퇴
@@ -147,11 +137,10 @@
                     </div>
                 </nav>
 
+
                 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <div class="ItemTitle">
-                        <p class="" style="font-size: 30px;">마이페이지임당</p>
-                    </div>
-                    <h4>판매내역</h4>
+
+                    <h4><i class="bi bi-cart-plus-fill"></i> 판매내역</h4>
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
@@ -220,12 +209,12 @@
                             </div>
                         </div>
 
-                        <br />
-                        <h4>구매내역</h4>
+                        <h4><i class="bi bi-cart4"></i> 구매내역</h4>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingfour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                <button class="accordion-button collapsed" style="border-top: 1px solid #ddd;"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour"
+                                    aria-expanded="false" aria-controls="collapsefour">
                                     오토바이 구매내역 1
                                 </button>
                             </h2>
@@ -290,9 +279,9 @@
                         </div>
 
 
-                        <div class="album py-5 bg-light">
+                        <div class="album bg-light">
                             <div class="container">
-                                <h4>장바구니</h4>
+                                <h4><i class="bi bi-emoji-heart-eyes"></i> 장바구니</h4>
                                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                                     <div class="col">
                                         <div class="card shadow-sm">
@@ -303,7 +292,7 @@
                                                 <span>2019 | 10,000Km | 서울</span>
                                                 <div class="d-flex justify-content-center align-items-center">
                                                     <div class="btn-group">
-                                                        <button type="button"
+                                                        <button type="button" onclick="location.href='DetailPage.html'"
                                                             class="btn btn-sm btn-outline-secondary">View</button>
                                                     </div>
                                                 </div>
@@ -321,6 +310,7 @@
                                                     <div class="btn-group">
                                                         <div class="btn-group">
                                                             <button type="button"
+                                                                onclick="location.href='DetailPage.html'"
                                                                 class="btn btn-sm btn-outline-secondary">View</button>
                                                         </div>
                                                     </div>
@@ -339,6 +329,7 @@
                                                     <div class="btn-group">
                                                         <div class="btn-group">
                                                             <button type="button"
+                                                                onclick="location.href='DetailPage.html'"
                                                                 class="btn btn-sm btn-outline-secondary">View</button>
                                                         </div>
                                                     </div>
@@ -356,7 +347,7 @@
                         <div class="album py-5 bg-light">
                             <div class="container">
                                 <h4>목록이 비어있을때</h4>
-                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                <div class="row row-cols-1 row-cols-sm-12 row-cols-md-12 g-3">
                                     <div class="col-lg-12">
                                         <div class="card shadow-sm">
                                             <div class="card-body my-4">
@@ -378,10 +369,34 @@
 
 
 
+
                         <style>
+                            .bd-placeholder-img {
+                                font-size: 1.125rem;
+                                text-anchor: middle;
+                                -webkit-user-select: none;
+                                -moz-user-select: none;
+                                user-select: none;
+                            }
+
+                            #sidebarMenu:not(.show) {
+                                display: block !important;
+                            }
+
+                            @media (min-width: 768px) {
+                                .bd-placeholder-img-lg {
+                                    font-size: 3.5rem;
+                                }
+                            }
+
+
                             @media screen and (max-width: 599px) {
                                 .myPage_img {
                                     width: 150px;
+                                }
+
+                                #sidebarMenu:not(.show) {
+                                    display: block !important;
                                 }
 
                                 .myPage_menubar {

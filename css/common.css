@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 * {
-    margin: 0; 
+    margin: 0;
     text-decoration: none;
 }
 
@@ -13,11 +13,34 @@ ol {
     padding: 0;
 }
 
-a {text-decoration: none; color:#fff;}
+a {
+    text-decoration: none;
+    color: #fff;
+}
 
 
+h4 {
+    padding: 20px 0 15px 0;
+    ;
+    font-size: 15px;
+    display: flex;
 
+}
 
+h4 i {
+    margin-right: 5px;
 
+}
 
+h3 {
+    padding: 10px;
+    font-size: 16px;
+}
 
+li a {
+    font-size: 13px;
+}
+
+p {
+    font-size: 12px;
+}

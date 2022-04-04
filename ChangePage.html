@@ -27,8 +27,6 @@
 
     <!-- css 경로 -->
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/index599.css">
-    <link rel="stylesheet" href="./css/index768.css">
     <link rel="stylesheet" href="./css/common.css">
     <script src="./js/UploadPage.js"></script>
 
@@ -101,8 +99,11 @@
     <!-- 업로드페이지 -->
     <div class="UploadPageWrap ">
         <div class="form-wrap col-lg-7 col-md-6 col-sm-12 col-xs-12">
-            <div class="form-group" style="padding: 20px 30px; background:#fff">
+            <div class="form-group" style=" background:#fff">
                 <label class="UploadTitle">🏍️바이크판매 등록수정🏍️</label>
+                <div class="d-grid row-cols-md-12 d-flex justify-content-end">
+                    <button class="btn btn-dark" style="margin-right: 20px;" type="submit">판매글삭제</button>
+                </div>
                 <!-- 이미지업로드 -->
                 <div class="container" style="margin-bottom:35px;">
                     <div class="row">
@@ -193,15 +194,12 @@
                                 </div>
                             </div>
                             <div class="col-lg-6" style="
-                            display: flex; flex-direction: column; justify-content: flex-end; ">
+                            display: flex; flex-direction: column; justify-content: flex-end;">
                                 <div class="row">
                                     <div class="imgtext"
-                                        style="text-align: left; margin-left:20px; margin-bottom:10px;">
-                                        <div class="d-grid col-11 d-flex justify-content-end">
-                                            <button class="btn btn-dark" style="padding: 10px;"
-                                                type="submit">판매글삭제</button>
-                                        </div>
+                                        style="text-align: center; padding-left:15px; margin-bottom:10px; background:#ddd;">
                                         <br />
+                                        <p style="color:red;">※ 사진 업로드 주의 사항 ※</p>
                                         <p>1. 해당되는 곳에 맞춰 사진을 넣어주세요.</p>
                                         <p>2. 메인사진은 업로드시 제일 처음에 보이는 사진입니다.</p>
                                         <p>3. 해상도가 높은 사진을 올려주세요.</p>
@@ -314,7 +312,7 @@
 
 
                 <!-- 상세사항작성 시작 -->
-                <div class="container" style="margin:0px 0;">
+                <div class="container" style="margin:2.5% auto;">
                     <input class="form-control" type="text" placeholder="제목을 적어주세요." aria-label="default input example">
                     <div class="input-group mb-3">
                         <input type="file" class="form-control">

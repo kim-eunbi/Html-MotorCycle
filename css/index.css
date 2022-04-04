@@ -22,6 +22,12 @@ body {
     padding: 20px 0 0 0;
   }
 
+
+
+  .myPagewrap .position-sticky {
+    margin-top: -16px;
+  }
+
   main .card img {
     width: 140px;
   }
@@ -46,6 +52,45 @@ body {
   }
 
 
+  .UploadPageWrap .form-group {
+    padding: 10px;
+    background: #fff;
+  }
+
+  .UploadPageWrap .table-active {
+    font-size: 14px;
+    background: #333436;
+    color: #fff;
+    padding: 20px 3px !important;
+    width: 100px !important;
+    height: 40px;
+    margin-top: 50px;
+
+  }
+
+  .UploadPageWrap .d-grid a button {
+    padding: 10px;
+  }
+
+  .UploadPageWrap .imagePreview {
+    width: 100%;
+    height: 260px !important;
+    background-position: center center;
+    background: url(http://cliquecities.com/assets/no-image-e3699ae….jpg);
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    box-shadow: 0px -3px 6px 2px rgb(0 0 0 / 20%);
+    cursor: pointer;
+  }
+
+  .table>:not(caption)>*>* {
+    padding: 0.5rem 0.5rem;
+    background-color: var(--bs-table-bg);
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+  }
 }
 
 @media (min-width: 600px) {
@@ -73,6 +118,14 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  .px-md-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+    padding-bottom: 1.5rem;
+  }
+}
+
 @media (min-width: 1200px) {
   main .card img {
     /* width: 268px;
@@ -89,6 +142,15 @@ body {
     text-align: center;
   }
 
+  .UploadPageWrap .form-group {
+    padding: 20px 30px;
+    background: #fff;
+  }
+
+  .UploadPageWrap .d-grid a button {
+    padding: 10px;
+    width: 80%;
+  }
 }
 
 main .card-body p {
@@ -184,9 +246,11 @@ header {
 
 }
 
-.collapse:not(.show) {
+
+.position-sticky {
   display: block;
 }
+
 
 .navbar {
   position: relative;
@@ -338,7 +402,7 @@ section {
 }
 
 .nav-link a:hover {
-  color: #343a40
+  color: #818181
 }
 
 
@@ -502,7 +566,7 @@ section {
 }
 
 .UploadPageWrap .UploadTitle {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   padding: 30px;
 }
@@ -823,7 +887,6 @@ div.comment-edit>div>form>button {
   max-width: 100%;
   max-height: 100%;
   position: absolute;
-  left: 15%;
   top: 0;
 }
 
@@ -841,43 +904,6 @@ div.comment-edit>div>form>button {
 }
 
 
-/* 판매품목리스트 */
-
-
-
-/* .ItemList table thead {
-  text-align: center;
-}
-
-.ItemList table tbody {
-  text-align: center;
-}
-
-.ItemList table tbody .ItemName {
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 130px;
-  text-align: left;
-  margin-left: 10px;
-  padding-top: 14px;
-}
-
-.ItemList table tbody .ItemName p {
-  font-size: 13px;
-  color: #818181;
-  margin-top: 30px;
-}
-
-.ItemList table img {
-  width: 140px;
-}
-
-
-.ItemList table tbody td {
-  padding-top: 50px;
-} */
 
 .ItemList .ItemCard .container ul {
   margin-bottom: 30px;
@@ -905,8 +931,12 @@ div.comment-edit>div>form>button {
   text-decoration: none;
 }
 
+.nav-link:hover {
+  color: #818181
+}
+
 .headerLogin .nav-link:hover {
-  color: #fff;
+  color: #666;
 }
 
 .nav-link:hover {
@@ -946,9 +976,21 @@ div.comment-edit>div>form>button {
 .myPagewrap {
   position: relative;
   margin: 2.6% auto;
-  padding: 0 0 383px 0;
+  padding-top: 20px;
   box-shadow: 0 30px 28px rgb(0 0 0 / 10%), 0 10px 5px rgb(0 0 0 / 10%);
   background: #fff;
+}
+
+.myPagewrap .nav-item {
+  background: #1d1d1d
+}
+
+
+.myPagewrap .myPageTitle {
+  margin: 20px 0 0px 0;
+  font-size: 25px;
+
+
 }
 
 /*
@@ -1021,12 +1063,7 @@ div.comment-edit>div>form>button {
   color: #818181;
 }
 
-.myPagewrap .myPageTitle {
-  margin: 50px 0 50px 0;
-  display: flex;
-  justify-content: center;
 
-}
 
 .myPage-lg {
   display: block;
@@ -1038,10 +1075,8 @@ div.comment-edit>div>form>button {
 
 
 
-.nav-link:focus,
-.nav-link:hover {
-  color: #fff;
-}
+
+
 
 /* .myPagewrap .nav-link:focus,
 .nav-link:hover {

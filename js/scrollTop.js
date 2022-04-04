@@ -8,7 +8,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var topPos = $(this).scrollTop();
         if (topPos > 100) {
-            $(scrollTop).css("opacity", "1");
+            $(scrollTop).css("opacity", "0.5");
 
         } else {
             $(scrollTop).css("opacity", "0");
