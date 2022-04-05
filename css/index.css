@@ -3,11 +3,11 @@
 }
 
 .container:not(.is-max-desktop):not(.is-max-widescreen) {
-  max-width: 1110px;
+  /* max-width: 1110px; */
 }
 
 body {
-  padding-top: 136px;
+  padding-top: 130px;
 }
 
 .wrap {
@@ -15,31 +15,58 @@ body {
 
 }
 
+.shadow {
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0) !important;
+  border: none;
+}
+
+.shadow-sm {
+  box-shadow: 0 .0 .0 rgba(0, 0, 0, 0) !important;
+}
+
+
+@media (min-width: 576px) {
+
+  .row-cols-sm-2>* {
+    flex: 0 0 auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
 @media screen and (max-width: 599px) {
   main .card {
     display: flex;
     flex-direction: row;
-    padding: 20px 0 0 0;
+    align-items: center;
+    padding: 20px 0 20px 20px;
+    margin-bottom: 20px;
   }
 
-
+  .shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0) !important;
+    border: none;
+  }
 
   .myPagewrap .position-sticky {
     margin-top: -16px;
   }
 
   main .card img {
-    width: 140px;
+    width: 167px;
+    height: 140px;
   }
 
   main .card-body .btn {
-    margin-bottom: 20px;
+    margin: 15px;
   }
 
   main .card-body {
     flex: 1 1 auto;
-    padding: 0;
-    text-align: center;
+    padding: 0 0 0 20px;
+    text-align: left;
     justify-content: center;
   }
 
@@ -99,14 +126,21 @@ body {
   }
 
   main .card img {
-    /* width: 268px;
-    margin: 5% 13%; */
+    max-width: 100%;
+    height: 350px;
+    opacity: 1;
+  }
+
+  main .card img:hover {
+    max-width: 100%;
+    height: 350px;
+    opacity: 0.7;
   }
 
   main .card-body {
     flex: 1 1 auto;
     padding: 0.5rem 0.5rem;
-    text-align: center;
+    text-align: left;
   }
 
   main .card-body .btn {
@@ -114,7 +148,21 @@ body {
   }
 
   main .card {
-    width: 100%;
+    width: 95%;
+    border: none;
+  }
+
+
+  .myPagewrap main .card img {
+    max-width: 100%;
+    height: 200px;
+    opacity: 1;
+  }
+
+  .myPagewrap main .card img:hover {
+    max-width: 100%;
+    height: 200px;
+    opacity: 0.7;
   }
 }
 
@@ -124,22 +172,52 @@ body {
     padding-left: 1.5rem !important;
     padding-bottom: 1.5rem;
   }
+
+  .row-cols-md-3>* {
+    /* flex: 0 0 auto; */
+    width: 33.3333333333%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
 }
+
+
 
 @media (min-width: 1200px) {
   main .card img {
-    /* width: 268px;
-    margin: 5% 10%; */
+    max-width: 100%;
+    height: 360px;
+    opacity: 1;
+  }
+
+  .myPagewrap main .card img {
+    max-width: 100%;
+    height: 260px;
+    opacity: 1;
+  }
+
+  .myPagewrap main .card img:hover {
+    max-width: 100%;
+    height: 260px;
+    opacity: 0.7;
+  }
+
+  main .card img:hover {
+    max-width: 100%;
+    height: 360px;
+    opacity: 0.7;
   }
 
   main .card {
-    width: 100%;
+    width: 90%;
+    border: none;
   }
 
   main .card-body {
     flex: 1 1 auto;
-    padding: 0.5rem 0.5rem;
-    text-align: center;
+    padding: 1rem;
+    text-align: left;
   }
 
   .UploadPageWrap .form-group {
@@ -151,17 +229,29 @@ body {
     padding: 10px;
     width: 80%;
   }
+
+  .row-cols-md-3>* {
+    /* flex: 0 0 auto; */
+    width: 33.3333333333%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
 }
 
 main .card-body p {
   margin-bottom: 5px;
+  color: #161616 !important;
+  font-size: 16px !important;
+  font-weight: 300;
 }
 
 main .card-body span {
-  font-size: 13px;
-  color: #888;
+  font-size: 20px;
+  color: #161616;
   margin-bottom: 10px;
-  padding: 10px;
+  font-weight: 600;
+  ;
 }
 
 .main .card {
@@ -213,6 +303,7 @@ header {
 
 .headerNav .form-control {
   border-radius: 20px;
+  padding: 5px;
 }
 
 .headerNav .btn-outline-success {
@@ -287,18 +378,17 @@ header {
 
 .quickmenu {
   position: absolute;
-  width: 150px;
   top: 50%;
   float: left;
   margin-top: 0px;
   right: 20px;
-  background: #fff;
   z-index: 999;
-  border-radius: 50%;
   overflow: hidden;
-  border: 1px solid #ddd;
-  box-shadow: 3px 3px 3px #1d1d1d;
   display: block;
+}
+
+.quickmenu img {
+  width: 200px
 }
 
 @media screen and (max-width: 599px) {
@@ -345,11 +435,11 @@ section {
   height: auto;
   display: flex;
   justify-content: center;
-  margin: 30px 0 50px 0px;
+  margin: 30px 0 10px 0px;
 }
 
 .ItemTitle {
-
+  padding: 40px;
   display: flex;
   justify-content: center;
 
@@ -382,6 +472,8 @@ section {
   vertical-align: -.125em;
   fill: currentColor;
 }
+
+
 
 
 
@@ -986,6 +1078,7 @@ div.comment-edit>div>form>button {
 }
 
 
+
 .myPagewrap .myPageTitle {
   margin: 20px 0 0px 0;
   font-size: 25px;
@@ -1177,4 +1270,48 @@ div.comment-edit>div>form>button {
 
 .IdFindwrap .input-field {
   padding: 5px;
+}
+
+.aButton {
+  transition: 1.0s ease all;
+  -moz-transition: 1.0s ease all;
+  -webkit-transition: 1.0s ease all;
+  border: none;
+  border-radius: 3px;
+  background-image: url("image/오토바이사진-01.png");
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.quickmenu .shadow {
+  box-shadow: 0 !important;
+}
+
+.aButton:hover {
+  transition: 1.0s ease all;
+  -moz-transition: 1.0s ease all;
+  -webkit-transition: 1.0s ease all;
+}
+
+.rotateY {
+  cursor: pointer;
+
+}
+
+.rotateY:hover {
+  transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
+  transform-origin: center;
+  -moz-transform-origin: center;
+  -webkit-transform-origin: center;
+  transition: transform 1.0s ease all;
+  -moz-transition: -moz-transform 1.0s ease all;
+  -webkit-transition: -webkit-transform 1.0s ease all;
+}
+
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
 }

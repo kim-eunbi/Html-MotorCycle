@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html html lang="ko">
+<html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,245 +18,255 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
         integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 
-    <!-- js CDN -->
+    <!-- js 경로 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./js/moveScroll.js"></script>
 
     <!-- css 경로 -->
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/common.css">
-    <title>회원탈퇴</title>
+    <title>메인</title>
 </head>
 
 
 <body>
+    <div id="wrap">
+        <!-- 헤더 -->
+        <header>
+            <div class="headerNav">
+                <!-- 로그인 회원가입 마이페이지 -->
+                <div class="headerLogin">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./Login.html">로그인/회원가입</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./MyPage.html">마이페이지</a>
+                        </li>
+                    </ul>
+                </div>
 
-    <!-- header -->
-    <header>
-        <div class="headerNav">
-            <!-- 로그인 회원가입 마이페이지 -->
-            <div class="headerLogin">
-                <ul class="nav justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./Login.html">로그인/회원가입</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./MyPage.html">마이페이지</a>
-                    </li>
-                </ul>
+                <!-- 로고, 검색창 -->
+                <div class="search">
+                    <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="./index.html">motorcycle</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarsExample02" aria-controls="navbarsExample02"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarsExample02">
+                                <ul class="navbar-nav me-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#"></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"></a>
+                                    </li>
+                                </ul>
+                                <form>
+                                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
             </div>
 
-            <!-- 로고, 검색창 -->
-            <div class="search">
-                <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="./index.html">motorcycle</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
 
-                        <div class="collapse navbar-collapse" id="navbarsExample02">
-                            <ul class="navbar-nav me-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#"></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"></a>
-                                </li>
-                            </ul>
-                            <form>
-                                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                            </form>
-                        </div>
+            <!-- 메뉴바 -->
+            <ul class="nav headerMenu justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">메뉴1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">메뉴2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+
+            </ul>
+        </header>
+        <!-- 스크롤시 따라오는 박스 -->
+        <div class="quickmenu">
+            <div class="aButton shadow rotateY"><img src="./image/오토바이사진-01.png" alt=""></div>
+        </div>
+
+        <!-- 메인슬라이드 -->
+        <div class="slider">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./image/main2.png" class="d-block w-100" alt="...">
                     </div>
-                </nav>
+                    <div class="carousel-item">
+                        <img src="./image/main1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./image/main3.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
 
 
-        <!-- 메뉴바 -->
-        <ul class="nav headerMenu justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">메뉴1</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">메뉴2</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-        </ul>
-    </header>
 
-
-
-
-    <!-- 마이페이지 -->
-    <div class="myPagewrap col-lg-12">
-        <div class="container-fluid">
-            <div class="row">
-                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-                    <div class="position-sticky pt-3">
-                        <ul class="nav flex-column" style="border-top:4px solid #fff;">
-                            <li class="profile nav-item row align-items-center text-center"
-                                style="width:100%; height:auto;background:#1d1d1d; color:#fff; overflow: hidden;">
-                                <h4>Hello</h4>
-                                <div class="profile_Img">
-                                    <img style="width:80px;" src="./image/logo-white.png" alt="">
-                                </div>
-                                <p>회원 아이디</p>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./MyPage.html">
-                                    <span data-feather="file"></span>
-                                    마이페이지
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./Information.html">
-                                    <span data-feather="file"></span>
-                                    개인정보수정
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./PwdChange.html">
-                                    <span data-feather="shopping-cart"></span>
-                                    비밀번호관리
-                                </a>
-                            </li>
-                            <li class="nav-item" style=" border-radius: 0 0 20px 20px;">
-                                <a class="nav-link" href="./Withdrawal.html">
-                                    <span data-feather="users"></span>
-                                    회원탈퇴
-                                </a>
-                            </li>
-                        </ul>
+        <main>
+            <section class="py-5 text-center container">
+                <div class="row py-lg-5">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <h1 class="fw-light">Motorcycle</h1>
+                        <p class="lead text-muted">
+                            안녕하세요 <br />오토바이를 편리하게 사고 팔수 있는 사이트 입니다.
+                        </p>
+                        <p>
+                            <a href="./ItemListPage.html" class="btn btn-primary my-2">사러가기</a>
+                            <a href="./UploadPage.html" class="btn btn-secondary my-2">팔러가기</a>
+                        </p>
                     </div>
-                </nav>
+                </div>
+            </section>
 
 
+            <div class="album py-5 bg-light">
+                <div class="container">
 
-
-                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <!-- 회원탈퇴 -->
-
-                    <div class="myPageTitle" style="display: flex; flex-direction: column;">
-                        <h4><i class="bi bi-person-x-fill"></i> 회원탈퇴</h4>
-                        <span>그동안 저희 사이트를 이용해 주셔서 감사합니다.</span>
-                    </div>
-                    <div class="row">
-                        <div class="myPageList col-lg-9">
-                            <div>
-                                <div class="d-flex flex-column" style="border-top:2px solid #232324">
-                                    <br />
-                                    <span style="margin-left:10px; font-size:13px;">본인인증 후 회원탈퇴 하실 수 있습니다.</span>
-                                    <span style="margin-left:10px; font-size:13px;">회원탈퇴 후 7일동안 다시 회원가입 하실 수
-                                        없습니다.</span>
-                                    <span style="margin-left:10px; font-size:13px;">회원탈퇴 시 회원님의 정보는 전자상거래 등에서의 소비자 보호에
-                                        관한 법률에 의거
-                                        고객정보 보호정책에 따라 관리됩니다.</span>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <a href="./DetailPage.html"><img src="./image/111.PNG" alt="" style="width:100%;"></a>
+                                <div class="card-body">
+                                    <p class="card-text">제목: 오토바이 이름</p>
+                                    <span>20,000원</span>
                                 </div>
-                                <div class="container">
-                                    <div class="form-wrap">
-                                        <br />
-                                        <span class="form-control">아이디</span>
-                                        <br />
-                                        <div class="IdPwd col-lg-12 d-flex">
-                                            <button type="button" class="btn btn-outline-dark col-lg-12"
-                                                data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                                    class="bi bi-person-badge"></i>본인인증</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br />
-                                <div class="row d-flex justify-content-center align-items-center">
-                                    <div class="d-grid gap-2 col-4 mx-auto">
-                                        <button class="btn btn-dark" style="padding: 10px; " type="submit">회원탈퇴</button>
-                                    </div>
-                                    <div class="d-grid gap-2 col-4 mx-auto">
-                                        <button class="btn btn-dark" onclick="location.href='Index.html'"
-                                            style="padding: 10px; " type="submit">탈퇴취소</button>
-                                    </div>
-
-                                </div>
-                                <br />
                             </div>
                         </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <a href="./DetailPage.html"><img src="./image/12.PNG" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">서울시에서 판매가능하신분 연락주세요</p>
+                                    <span>150,000원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <a href="./DetailPage.html"><img src="./image/545454.PNG" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">천사소녀네티를 닮은 내 오토바이 팝니다</p>
+                                    <span>20,000원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <a href="./DetailPage.html"><img src="./image/66.PNG" alt="" style="width:100%;"></a>
+                                <div class="card-body">
+                                    <p class="card-text">제목: 오토바이 이름</p>
+                                    <span>350,000원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <a href="./DetailPage.html"><img src="./image/5454.PNG" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">제목: 오토바이 이름</p>
+                                    <span>20,000원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <a href="./DetailPage.html"><img src="./image/2323.PNG" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">제목: 오토바이 이름</p>
+                                    <span>2,000,000원</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
-                </main>
+                </div>
+                <div class="ItemButton">
+                    <button type="button" onclick="location.href='./ItemListPage.html' " class="btn btn-dark">
+                        더 알아보기</button>
+                </div>
+            </div>
 
+        </main>
 
+        <!-- Footer -->
+        <div id="footer">
+            <div class="container">
+                <footer class="row row-cols-5 py-5 bg-dark text-center text-white">
+                    <div class="col">
+                        <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none ">
+                            <p class="text-white">부릉부릉현서네 <img src="./image/logo-01.png"
+                                    style="width:100px; color:#fff; margin-top:10px;" alt="">
+                            </p>
+                        </a>
+                        <p class="text-muted">&copy; 2022</p>
+                    </div>
+                    <div class="col">
 
+                    </div>
 
+                    <div class="col">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">콩게임즈</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                    </div>
 
-
-                <style>
-                    .bd-placeholder-img {
-                        font-size: 1.125rem;
-                        text-anchor: middle;
-                        -webkit-user-select: none;
-                        -moz-user-select: none;
-                        user-select: none;
-                    }
-
-                    #sidebarMenu:not(.show) {
-                        display: block !important;
-                    }
-
-                    @media (min-width: 768px) {
-                        .bd-placeholder-img-lg {
-                            font-size: 3.5rem;
-                        }
-                    }
-
-
-                    @media screen and (max-width: 599px) {
-                        .myPage_img {
-                            width: 150px;
-                        }
-
-                        #sidebarMenu:not(.show) {
-                            display: block !important;
-                        }
-
-                        .myPage_menubar {
-                            display: block;
-                        }
-
-                        .myPagewrap {
-                            width: 100%;
-                        }
-
-
-                    }
-
-                    @media screen and (min-width: 600px) {
-                        .myPage_img {
-                            width: 200px;
-                        }
-
-                        .myPage_menubar {
-                            display: block;
-                        }
-                    }
-
-                    @media (min-width: 1200px) {
-                        .myPage_img {
-                            width: 200px;
-                        }
-
-                        .myPage_menubar {
-                            display: none;
-                        }
-
-                        .myPagewrap {
-                            width: 1100px;
-                        }
-                    }
-                </style>
-
+                    <div class="col">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                    </div>
+                </footer>
             </div>
         </div>
     </div>

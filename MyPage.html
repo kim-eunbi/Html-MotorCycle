@@ -19,8 +19,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
         integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 
-    <!-- js CDN -->
+    <!-- js 경로 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./js/moveScroll.js"></script>
 
     <!-- css 경로 -->
     <link rel="stylesheet" href="./css/index.css">
@@ -89,7 +90,11 @@
             </li>
         </ul>
     </header>
-
+    <!-- 스크롤시 따라오는 박스 -->
+    <div class="quickmenu">
+        <div class="aButton shadow rotateY"><a href="./UploadPage.html"><img src="./image/오토바이사진-01.png"
+                    alt="팔러가기 스크롤버튼"></a></div>
+    </div>
 
 
 
@@ -103,11 +108,12 @@
                         <ul class="nav flex-column" style="border-top:4px solid #fff;">
                             <li class="profile nav-item row align-items-center text-center"
                                 style="width:100%; height:auto;background:#1d1d1d; color:#fff; overflow: hidden;">
-                                <h4></h4>
+                                <h3></h3>
+                                <p>회원 아이디</p>
                                 <div class="profile_Img">
                                     <img style="width:80px;" src="./image/logo-white.png" alt="">
                                 </div>
-                                <p>회원 아이디</p>
+                                <h3></h3>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./MyPage.html">
@@ -281,59 +287,37 @@
 
                         <div class="album bg-light">
                             <div class="container">
-                                <h4><i class="bi bi-emoji-heart-eyes"></i> 장바구니</h4>
+                                <div class="d-flex align-items-center justify-content-between mx-2">
+                                    <h4><i class="bi bi-emoji-heart-eyes"></i> 장바구니</h4>
+                                    <a href="./ItemListPage.html"></a>
+                                    <p style="cursor:pointer" onclick="location.href='ItemListPage.html'">더보기 ></p>
+                                </div>
                                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                                     <div class="col">
                                         <div class="card shadow-sm">
-                                            <img src="./image/34.PNG" alt="">
-
+                                            <a href="./DetailPage.html"><img src="./image/545454.PNG" alt=""></a>
                                             <div class="card-body">
-                                                <p class="card-text">제목: 오토바이 이름</p>
-                                                <span>2019 | 10,000Km | 서울</span>
-                                                <div class="d-flex justify-content-center align-items-center">
-                                                    <div class="btn-group">
-                                                        <button type="button" onclick="location.href='DetailPage.html'"
-                                                            class="btn btn-sm btn-outline-secondary">View</button>
-                                                    </div>
-                                                </div>
+                                                <p class="card-text">천사소녀네티를 닮은 내 오토바이 팝니다</p>
+                                                <span>20,000원</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card shadow-sm">
-                                            <img src="./image/34.PNG" alt="">
-
+                                            <a href="./DetailPage.html"><img src="./image/66.PNG" alt=""
+                                                    style="width:100%;"></a>
                                             <div class="card-body">
                                                 <p class="card-text">제목: 오토바이 이름</p>
-                                                <span>2019 | 10,000Km | 서울</span>
-                                                <div class="d-flex justify-content-center align-items-center">
-                                                    <div class="btn-group">
-                                                        <div class="btn-group">
-                                                            <button type="button"
-                                                                onclick="location.href='DetailPage.html'"
-                                                                class="btn btn-sm btn-outline-secondary">View</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <span>350,000원</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card shadow-sm">
-                                            <img src="./image/34.PNG" alt="">
-
+                                            <a href="./DetailPage.html"><img src="./image/5454.PNG" alt=""></a>
                                             <div class="card-body">
                                                 <p class="card-text">제목: 오토바이 이름</p>
-                                                <span>2019 | 10,000Km | 서울</span>
-                                                <div class="d-flex justify-content-center align-items-center">
-                                                    <div class="btn-group">
-                                                        <div class="btn-group">
-                                                            <button type="button"
-                                                                onclick="location.href='DetailPage.html'"
-                                                                class="btn btn-sm btn-outline-secondary">View</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <span>20,000원</span>
                                             </div>
                                         </div>
                                     </div>
