@@ -30,246 +30,76 @@
 
 
 <body>
-    <div id="wrap">
-        <!-- 헤더 -->
-        <header>
-            <div class="headerNav">
-                <!-- 로그인 회원가입 마이페이지 -->
-                <div class="headerLogin">
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="./Login.html">로그인/회원가입</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="./MyPage.html">마이페이지</a>
-                        </li>
-                    </ul>
-                </div>
+    <html>
 
-                <!-- 로고, 검색창 -->
-                <div class="search">
-                    <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
-                        <div class="container-fluid">
-                            <a class="navbar-brand" href="./index.html">motorcycle</a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarsExample02" aria-controls="navbarsExample02"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
+    <head>
+        <title>BLUEB</title>
+    </head>
 
-                            <div class="collapse navbar-collapse" id="navbarsExample02">
-                                <ul class="navbar-nav me-auto">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="#"></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#"></a>
-                                    </li>
-                                </ul>
-                                <form>
-                                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                                </form>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+    <body>
+        <script language='javascript'>
+        < !--
+             var cnt = new Array();
+            cnt[0] = new Array('전체');
+            cnt[1] = new Array('전체', '강남구', '강동구', '강북구', '강서구', '관악구', '광진구', '구로구', '금천구', '노원구', '도봉구', '동대문구', '동작구', '마포구', '서대문구', '서초구', '성동구', '성북구', '송파구', '양천구', '영등포구', '용산구', '은평구', '종로구', '중구', '중랑구');
+            cnt[2] = new Array('전체', '강서구', '금정구', '남구', '동구', '동래구', '부산진구', '북구', '사상구', '사하구', '서구', '수영구', '연제구', '영도구', '중구', '해운대구', '기장군');
+            cnt[3] = new Array('전체', '남구', '달서구', '동구', '북구', '서구', '수성구', '중구', '달성군');
+            cnt[4] = new Array('전체', '계양구', '남구', '남동구', '동구', '부평구', '서구', '연수구', '중구', '강화군', '옹진군');
+            cnt[5] = new Array('전체', '광산구', '남구', '동구', '북구', '서구');
+            cnt[6] = new Array('전체', '대덕구', '동구', '서구', '유성구', '중구');
+            cnt[7] = new Array('전체', '남구', '동구', '북구', '중구', '울주군');
+            cnt[8] = new Array('전체', '고양시', '과천시', '광명시', '구리시', '군포시', '남양주시', '동두천시', '부천시', '성남시', '수원시', '시흥시', '안산시', '안양시', '오산시', '의왕시', '의정부시', '평택시', '하남시', '가평군', '광주시', '김포시', '안성시', '양주군', '양평군', '여주군', '연천군', '용인시', '이천군', '파주시', '포천시', '화성시');
+            cnt[9] = new Array('전체', '강릉시', '동해시', '삼척시', '속초시', '원주시', '춘천시', '태백시', '고성군', '양구군', '양양군', '영월군', '인제군', '정선군', '철원군', '평창군', '홍천군', '화천군', '황성군');
+            cnt[10] = new Array('전체', '제천시', '청주시', '충주시', '괴산군', '단양군', '보은군', '영동군', '옥천군', '음성군', '진천군', '청원군');
+            cnt[11] = new Array('전체', '공주시', '보령시', '서산시', '아산시', '천안시', '금산군', '논산군', '당진군', '부여군', '서천군', '연기군', '예산군', '청양군', '태안군', '홍성군');
+            cnt[12] = new Array('전체', '군산시', '김제시', '남원시', '익산시', '전주시', '정읍시', '고창군', '무주군', '부안군', '순창군', '완주군', '임실군', '장수군', '진안군');
+            cnt[13] = new Array('전체', '광양시', '나주시', '목포시', '순천시', '여수시', '여천시', '강진군', '고흥군', '곡성군', '구례군', '담양군', '무안군', '보성군', '신안군', '여천군', '영광군', '영암군', '완도군', '장성군', '장흥군', '진도군', '함평군', '해남군', '화순군');
+            cnt[14] = new Array('전체', '경산시', '경주시', '구미시', '김천시', '문겅시', '상주시', '안동시', '영주시', '영천시', '포항시', '고령군', '군위군', '봉화군', '성주군', '영덕군', '영양군', '예천군', '울릉군', '울진군', '의성군', '청도군', '청송군', '칠곡군');
+            cnt[15] = new Array('전체', '거제시', '김해시', '마산시', '밀양시', '사천시', '울산시', '진주시', '진해시', '창원시', '통영시', '거창군', '고성군', '남해군', '산청군', '양산시', '의령군', '창녕군', '하동군', '함안군', '함양군', '합천군');
+            cnt[16] = new Array('전체', '서귀포시', '제주시', '남제주군', '북제주군');
+            function change(add) {
+                sel = document.form.county
+                /* 옵션메뉴삭제 */
+                for (i = sel.length - 1; i >= 0; i--) {
+                    sel.options[i] = null
+                }
+                /* 옵션박스추가 */
+                for (i = 0; i < cnt[add].length; i++) {
+                    sel.options[i] = new Option(cnt[add][i], cnt[add][i]);
+                }
+            }
+        //-->
+        </script>
+        <form name=form method=post action=$PHP_SELF>
+            시/도:
+            <select name='city' onchange="change(this.selectedIndex);" class=input>
+                <option value='전체'>전체</option>
+                <option value='서울'>서울특별시</option>
+                <option value='부산'>부산광역시</option>
+                <option value='대구'>대구광역시</option>
+                <option value='인천'>인천광역시</option>
+                <option value='광주'>광주광역시</option>
+                <option value='대전'>대전광역시</option>
+                <option value='울산'>울산광역시</option>
+                <option value='경기'>경기도</option>
+                <option value='강원'>강원도</option>
+                <option value='충북'>충청북도</option>
+                <option value='충남'>충청남도</option>
+                <option value='전북'>전라북도</option>
+                <option value='전남'>전라남도</option>
+                <option value='경북'>경상북도</option>
+                <option value='경남'>경상남도</option>
+                <option value='제주'>제주도</option>
+            </select>
+            구/군:
+            <select name='county' class=select>
+                <option value=''>전체</option>
+            </select>
+        </form>
 
+    </body>
 
-            <!-- 메뉴바 -->
-            <ul class="nav headerMenu justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">메뉴1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">메뉴2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-
-            </ul>
-        </header>
-        <!-- 스크롤시 따라오는 박스 -->
-        <div class="quickmenu">
-            <div class="aButton shadow rotateY"><img src="./image/오토바이사진-01.png" alt=""></div>
-        </div>
-
-        <!-- 메인슬라이드 -->
-        <div class="slider">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./image/main2.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./image/main1.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./image/main3.png" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-
-
-
-        <main>
-            <section class="py-5 text-center container">
-                <div class="row py-lg-5">
-                    <div class="col-lg-6 col-md-8 mx-auto">
-                        <h1 class="fw-light">Motorcycle</h1>
-                        <p class="lead text-muted">
-                            안녕하세요 <br />오토바이를 편리하게 사고 팔수 있는 사이트 입니다.
-                        </p>
-                        <p>
-                            <a href="./ItemListPage.html" class="btn btn-primary my-2">사러가기</a>
-                            <a href="./UploadPage.html" class="btn btn-secondary my-2">팔러가기</a>
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-
-            <div class="album py-5 bg-light">
-                <div class="container">
-
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <a href="./DetailPage.html"><img src="./image/111.PNG" alt="" style="width:100%;"></a>
-                                <div class="card-body">
-                                    <p class="card-text">제목: 오토바이 이름</p>
-                                    <span>20,000원</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <a href="./DetailPage.html"><img src="./image/12.PNG" alt=""></a>
-                                <div class="card-body">
-                                    <p class="card-text">서울시에서 판매가능하신분 연락주세요</p>
-                                    <span>150,000원</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <a href="./DetailPage.html"><img src="./image/545454.PNG" alt=""></a>
-                                <div class="card-body">
-                                    <p class="card-text">천사소녀네티를 닮은 내 오토바이 팝니다</p>
-                                    <span>20,000원</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <a href="./DetailPage.html"><img src="./image/66.PNG" alt="" style="width:100%;"></a>
-                                <div class="card-body">
-                                    <p class="card-text">제목: 오토바이 이름</p>
-                                    <span>350,000원</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <a href="./DetailPage.html"><img src="./image/5454.PNG" alt=""></a>
-                                <div class="card-body">
-                                    <p class="card-text">제목: 오토바이 이름</p>
-                                    <span>20,000원</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <a href="./DetailPage.html"><img src="./image/2323.PNG" alt=""></a>
-                                <div class="card-body">
-                                    <p class="card-text">제목: 오토바이 이름</p>
-                                    <span>2,000,000원</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="ItemButton">
-                    <button type="button" onclick="location.href='./ItemListPage.html' " class="btn btn-dark">
-                        더 알아보기</button>
-                </div>
-            </div>
-
-        </main>
-
-        <!-- Footer -->
-        <div id="footer">
-            <div class="container">
-                <footer class="row row-cols-5 py-5 bg-dark text-center text-white">
-                    <div class="col">
-                        <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none ">
-                            <p class="text-white">부릉부릉현서네 <img src="./image/logo-01.png"
-                                    style="width:100px; color:#fff; margin-top:10px;" alt="">
-                            </p>
-                        </a>
-                        <p class="text-muted">&copy; 2022</p>
-                    </div>
-                    <div class="col">
-
-                    </div>
-
-                    <div class="col">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">콩게임즈</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                        </ul>
-                    </div>
-                </footer>
-            </div>
-        </div>
-    </div>
+    </html>
 </body>
 
 </html>

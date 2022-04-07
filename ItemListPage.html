@@ -30,7 +30,11 @@
     <title>판매품목리스트</title>
 </head>
 
-
+<style>
+    select option[value=""][disabled] {
+        display: none;
+    }
+</style>
 
 
 
@@ -74,7 +78,8 @@
                                     </li>
                                 </ul>
                                 <form>
-                                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                    <input class="form-control" type="text" placeholder="  🏍️  Search"
+                                        aria-label="Search">
                                 </form>
                             </div>
                         </div>
@@ -102,37 +107,40 @@
         <!-- 오토바이팔러가기 -->
         <!-- 스크롤시 따라오는 박스 -->
         <div class="quickmenu">
-            <div class="aButton shadow rotateY"><a href="./UploadPage.html"><img src="./image/오토바이사진-01.png"
-                        alt="팔러가기 스크롤버튼"></a></div>
+            <div class="row">
+                <div class="block">
+                    <a href="./UploadPage.html"><i class="hovicon effect-8 d-flex justify-content-center"
+                            style="font-size:20px; background:rgba(176, 210, 255, 0.6); ">Selling</i></a>
+                </div>
+            </div>
         </div>
 
 
         <section class="ItemList">
             <!-- Item Card -->
-            <div class="ItemTitle">
-                <p class="font-weight-bold " style="font-size: 30px; padding-top:40px">판매목록</p>
+            <div class="MainTitle">
+                <h1 class="font-weight-bold">Hoooot Item</h1>
             </div>
 
             <div class="ItemCard">
                 <div class="container max-width:1100px;">
                     <div style="background:#eeeff0; padding: 20px;">
-                        <ul class="nav nav-pills">
+                        <ul class="nav nav-pills d-flex justify-content-start">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">전체</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" style="color:#888;" href="#">기타</a>
                             </li>
-
-
                         </ul>
                         <div class="row" style="
                         display: flex;
                         justify-content: space-between;
                     ">
                             <div class="col-lg-2">
-                                <select class="form-select col-lg-4" aria-label="Default select example">
-                                    <option selected>제조사</option>
+                                <select class="form-select col-lg-4" aria-placeholder="제조사"
+                                    aria-label="Default select example">
+                                    <option value="" disabled selected>제조사</option>
                                     <option>야마하</option>
                                     <option>혼다</option>
                                     <option>가와사키</option>
@@ -153,34 +161,35 @@
                             </div>
                             <div class="col-lg-1">
                                 <select class="form-select col-lg-4" onchange="categoryChange(this)">
-                                    <option value>시/도</option>
-                                    <option value="general01">강원</option>
-                                    <option value="general02">경기</option>
-                                    <option value="general03">경남</option>
-                                    <option value="general04">경북</option>
-                                    <option value="general05">광주</option>
-                                    <option value="general06">대구</option>
-                                    <option value="general07">대전</option>
-                                    <option value="general08">부산</option>
-                                    <option value="general09">서울</option>
-                                    <option value="general10">울산</option>
-                                    <option value="general11">인천</option>
-                                    <option value="general12">전남</option>
-                                    <option value="general13">전북</option>
-                                    <option value="general14">제주</option>
-                                    <option value="general15">충남</option>
-                                    <option value="general16">충북</option>
+                                    <option value="" disabled selected>시/도</option>
+                                    <option value="general01">전체</option>
+                                    <option value="general02">강원</option>
+                                    <option value="general03">경기</option>
+                                    <option value="general04">경남</option>
+                                    <option value="general05">경북</option>
+                                    <option value="general06">광주</option>
+                                    <option value="general07">대구</option>
+                                    <option value="general08">대전</option>
+                                    <option value="general09">부산</option>
+                                    <option value="general10">서울</option>
+                                    <option value="general11">울산</option>
+                                    <option value="general12">인천</option>
+                                    <option value="general13">전남</option>
+                                    <option value="general14">전북</option>
+                                    <option value="general15">제주</option>
+                                    <option value="general16">충남</option>
+                                    <option value="general17">충북</option>
                                 </select>
                             </div>
                             <div class="col-lg-2">
                                 <select class="form-select col-lg-4" id="state" aria-label="Default select example">
-                                    <option>군/구</option>
+                                    <option value="" disabled selected>군/구</option>
                                 </select>
                             </div>
 
                             <div class="col-lg-1">
                                 <select class="form-select col-lg-4" aria-label="Default select example">
-                                    <option selected>년식</option>
+                                    <option value="" disabled selected>년식</option>
                                     <option>2022</option>
                                     <option>2021</option>
                                     <option>2020</option>
@@ -188,7 +197,7 @@
                             </div>
                             <div class="col-lg-2">
                                 <select class="form-select col-lg-4" aria-label="Default select example">
-                                    <option selected>주행거리</option>
+                                    <option value="" disabled selected>주행거리</option>
                                     <option>0 ~ 10,000Km</option>
                                     <option>10,000 ~ 20,000Km</option>
                                     <option>20,000 ~ 30,000Km</option>
@@ -200,7 +209,7 @@
                             </div>
                             <div class="col-lg-3">
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>모델</option>
+                                    <option value="" disabled selected>모델</option>
                                     <option>1모델</option>
                                     <option>2모델</option>
                                     <option>3모델</option>
@@ -218,9 +227,6 @@
 
 
                     <main>
-
-
-
                         <div class="album py-5 bg-light">
                             <div class="container">
 
@@ -282,15 +288,10 @@
                                 </nav>
                             </div>
                         </div>
-
                     </main>
-
                 </div>
-
             </div>
-
         </section>
-
         <!-- Footer -->
         <div id="footer">
             <div class="container">

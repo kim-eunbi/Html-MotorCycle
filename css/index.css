@@ -1,11 +1,3 @@
-.selector-for-some-widget {
-  box-sizing: content-box;
-}
-
-.container:not(.is-max-desktop):not(.is-max-widescreen) {
-  /* max-width: 1110px; */
-}
-
 body {
   padding-top: 130px;
 }
@@ -24,6 +16,27 @@ body {
   box-shadow: 0 .0 .0 rgba(0, 0, 0, 0) !important;
 }
 
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+
+
+.MainTitle h1 {
+  padding: 30px 0;
+  text-align: center;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 20px;
+  /* margin-top: 20px; */
+}
+
+.ItemList .MainTitle {
+  margin-top: 20px;
+}
+
+
+
 
 @media (min-width: 576px) {
 
@@ -33,6 +46,19 @@ body {
     display: flex;
     justify-content: center;
   }
+
+  .quickmenu {
+    position: absolute;
+    top: 50%;
+    float: left;
+    margin-top: -20px;
+    right: 20px;
+    background: #fff;
+    z-index: 999;
+    border-radius: 50%;
+    overflow: hidden;
+    display: none;
+  }
 }
 
 
@@ -41,8 +67,13 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 20px 0 20px 20px;
     margin-bottom: 20px;
+  }
+
+
+
+  .price .justify-content-end {
+    justify-content: space-between !important;
   }
 
   .shadow {
@@ -70,6 +101,11 @@ body {
     justify-content: center;
   }
 
+  .aalbum .card-body {
+    padding: 10px 0 0 0;
+    text-align: center;
+  }
+
   main .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -78,18 +114,61 @@ body {
     user-select: none;
   }
 
+  .DetailInner .carousel-item {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background: #fff;
+  }
 
   .UploadPageWrap .form-group {
     padding: 10px;
     background: #fff;
   }
 
+  .myPage_img {
+    width: 150px;
+  }
+
+  #sidebarMenu:not(.show) {
+    display: block !important;
+  }
+
+  .myPage_menubar {
+    display: block;
+  }
+
+  .myPagewrap {
+    width: 100%;
+  }
+
+
+  .UploadPageWrap .delete {
+    width: 100%;
+    margin-right: 18px;
+    margin: 15px;
+  }
+
+
+
+  .Price_box {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .price_text {
+    width: 120px;
+  }
+
+  .price {
+    width: 60px;
+  }
+
   .UploadPageWrap .table-active {
     font-size: 14px;
     background: #333436;
     color: #fff;
-    padding: 20px 3px !important;
-    width: 100px !important;
     height: 40px;
     margin-top: 50px;
 
@@ -118,6 +197,43 @@ body {
     border-bottom-width: 1px;
     box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
   }
+
+  .quickmenu {
+    position: absolute;
+    top: 50%;
+    float: left;
+    margin-top: -20px;
+    right: 20px;
+    background: #fff;
+    z-index: 999;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    box-shadow: 3px 3px 3px #1d1d1d;
+    display: none;
+  }
+
+  .UploadPageWrap .imagePreviewMain {
+    width: 100%;
+    height: 260px;
+    background-position: center center;
+    background: url(http://cliquecities.com/assets/no-image-e3699ae….jpg);
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    box-shadow: 0px -3px 6px 2px rgb(0 0 0 / 20%);
+    cursor: pointer;
+  }
+
+  .Certified {
+    width: 100%;
+  }
+
+  .myPagewrap .nav-item {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
 }
 
 @media (min-width: 600px) {
@@ -127,13 +243,11 @@ body {
 
   main .card img {
     max-width: 100%;
-    height: 350px;
     opacity: 1;
   }
 
   main .card img:hover {
     max-width: 100%;
-    height: 350px;
     opacity: 0.7;
   }
 
@@ -148,8 +262,9 @@ body {
   }
 
   main .card {
-    width: 95%;
+    width: 80%;
     border: none;
+    display: flex;
   }
 
 
@@ -161,8 +276,19 @@ body {
 
   .myPagewrap main .card img:hover {
     max-width: 100%;
-    height: 200px;
     opacity: 0.7;
+  }
+
+  .Certified {
+    width: 100%;
+  }
+
+  .myPage_img {
+    width: 200px;
+  }
+
+  .myPage_menubar {
+    display: block;
   }
 }
 
@@ -180,6 +306,10 @@ body {
     justify-content: space-around;
     margin-bottom: 20px;
   }
+
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
 }
 
 
@@ -187,8 +317,9 @@ body {
 @media (min-width: 1200px) {
   main .card img {
     max-width: 100%;
-    height: 360px;
+    height: 290px;
     opacity: 1;
+    width: 100%;
   }
 
   .myPagewrap main .card img {
@@ -199,18 +330,17 @@ body {
 
   .myPagewrap main .card img:hover {
     max-width: 100%;
-    height: 260px;
     opacity: 0.7;
   }
 
   main .card img:hover {
     max-width: 100%;
-    height: 360px;
+
     opacity: 0.7;
   }
 
   main .card {
-    width: 90%;
+    /* width: 90%; */
     border: none;
   }
 
@@ -230,19 +360,74 @@ body {
     width: 80%;
   }
 
+  .DetailInner .carousel-item {
+    width: 800px;
+    height: 600px;
+    position: relative;
+    background: #fff;
+  }
+
   .row-cols-md-3>* {
     /* flex: 0 0 auto; */
     width: 33.3333333333%;
     display: flex;
     justify-content: space-around;
-    margin-bottom: 40px;
+  }
+
+  .UploadPageWrap .imagePreviewMain {
+    width: 100%;
+    height: 390px;
+    background-position: center center;
+    background: url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    box-shadow: 0px -3px 6px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer
+  }
+
+  .quickmenu {
+    position: absolute;
+    top: 50%;
+    float: left;
+    margin-top: -20px;
+    right: 20px;
+    background: #fff;
+    z-index: 999;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+  }
+
+  .Certified {
+    width: 100%;
+  }
+
+  .myPage_img {
+    width: 200px;
+  }
+
+  .myPage_menubar {
+    display: none;
+  }
+
+  .myPagewrap {
+    width: 1296px;
   }
 }
+
+
+
+
+
+
+
 
 main .card-body p {
   margin-bottom: 5px;
   color: #161616 !important;
-  font-size: 16px !important;
+  font-size: 15px;
   font-weight: 300;
 }
 
@@ -327,8 +512,8 @@ header {
 }
 
 .headerLogin ul {
-  width: 1110px;
-  max-width: 1200px;
+  width: 1296px;
+  /* max-width: 1200px; */
 }
 
 .headerLogin nav {
@@ -364,7 +549,7 @@ header {
 
 
 .headerNav .search .navbar {
-  width: 1110px;
+  width: 1296px;
   background: #1d1d1d !important;
   background: tomato;
   display: flex;
@@ -376,46 +561,13 @@ header {
 }
 
 
-.quickmenu {
-  position: absolute;
-  top: 50%;
-  float: left;
-  margin-top: 0px;
-  right: 20px;
-  z-index: 999;
-  overflow: hidden;
-  display: block;
-}
+
 
 .quickmenu img {
   width: 200px
 }
 
-@media screen and (max-width: 599px) {
-  .quickmenu {
-    position: absolute;
-    width: 150px;
-    top: 50%;
-    float: left;
-    margin-top: -20px;
-    right: 20px;
-    background: #fff;
-    z-index: 999;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 1px solid #ddd;
-    box-shadow: 3px 3px 3px #1d1d1d;
-    display: none;
-  }
-}
 
-.quickmenu ul {
-  position: relative;
-  width: 100%;
-  float: left;
-  display: inline-block;
-  display: inline;
-}
 
 .quickmenu ul li a img {
   width: 100%;
@@ -435,7 +587,7 @@ section {
   height: auto;
   display: flex;
   justify-content: center;
-  margin: 30px 0 10px 0px;
+  margin: 10px 0 30px 0px;
 }
 
 .ItemTitle {
@@ -497,25 +649,6 @@ section {
   color: #818181
 }
 
-
-/* 회원가입 css */
-/* .signUpwrap {
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-}
-
-.signUpwrap .form-wrap {
-  width: 460px;
-  height: 730px;
-  position: relative;
-  margin: 2.6% auto;
-  padding: 5px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  background: #fefcfc;
-} */
 
 .signUpwrap .togglebtn {
   padding: 10px 30px;
@@ -654,7 +787,21 @@ section {
   box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
   background: #fefcfc;
   text-align: center;
-  /* width:1100px; */
+
+}
+
+.Price_box {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.price_text {
+  width: 130px;
+}
+
+.price {
+  width: 60px;
 }
 
 .UploadPageWrap .UploadTitle {
@@ -667,7 +814,7 @@ section {
   background: #333436;
   color: #fff;
   padding: 15px;
-  width: 200px;
+  width: 120px;
   height: 40px;
 }
 
@@ -755,7 +902,7 @@ section {
 
 .UploadPageWrap .imagePreview {
   width: 100%;
-  height: 180px;
+  height: 220px;
   background-position: center center;
   background: url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
   background-color: #fff;
@@ -766,18 +913,7 @@ section {
   cursor: pointer
 }
 
-.UploadPageWrap .imagePreviewMain {
-  width: 100%;
-  height: 380px;
-  background-position: center center;
-  background: url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
-  background-color: #fff;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: inline-block;
-  box-shadow: 0px -3px 6px 2px rgba(0, 0, 0, 0.2);
-  cursor: pointer
-}
+
 
 
 .UploadPageWrap .btn-primary {
@@ -787,7 +923,7 @@ section {
 }
 
 .UploadPageWrap .imgUp {
-  margin-bottom: 15px;
+  margin-bottom: 19px;
 }
 
 .UploadPageWrap .del {
@@ -949,6 +1085,14 @@ div.comment-edit>div>form>button {
   padding: 20px;
 }
 
+.fixedBG {
+  width: 100%;
+  height: 300px;
+  background-image: url("../image/main1.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .DetailPage button {
   border: none;
   color: #fff !important;
@@ -968,12 +1112,6 @@ div.comment-edit>div>form>button {
   border-radius: 50%;
 }
 
-.DetailInner .carousel-item {
-  width: 800px;
-  height: 600px;
-  position: relative;
-  background: #fff;
-}
 
 .DetailInner .carousel-item img {
   max-width: 100%;
@@ -998,8 +1136,9 @@ div.comment-edit>div>form>button {
 
 
 .ItemList .ItemCard .container ul {
-  margin-bottom: 30px;
-  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ItemList .nav-pills .nav-link.active,
@@ -1019,22 +1158,26 @@ div.comment-edit>div>form>button {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #818181;
+  color: #ddd;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  color: #818181
+  color: #fff
+}
+
+.headerLogin .nav-link {
+  color: #1d1d1d;
 }
 
 .headerLogin .nav-link:hover {
-  color: #666;
+  color: #000;
 }
 
 .nav-link:hover {
   display: block;
   padding: 0.5rem 1rem;
-  color: #333;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -1073,9 +1216,7 @@ div.comment-edit>div>form>button {
   background: #fff;
 }
 
-.myPagewrap .nav-item {
-  background: #1d1d1d
-}
+
 
 
 
@@ -1086,95 +1227,13 @@ div.comment-edit>div>form>button {
 
 }
 
-/*
-.myPagewrap .profile {
-  padding-left: 0px;
-  padding-top: 20px;
-}
-
-.myPagewrap .profile p {
-  padding-top: 20px;
-}
-
-
-.myPagewrap .profile_Img {
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  border-radius: 50%;
-  border: 1px solid #3b3b3b;
-}
-
-.myPagewrap .profile .profile_Img img {
-  width: 100px;
-}
-
-.myPagewrap .myPageMenu {
-  padding-bottom: 20px;
-}
-
-.myPagewrap .myPageMenu h5 {
-  background: #1F2428;
-  color: #fff;
-  padding: 10px;
-}
-
-.myPagewrap .myPageMenu ul li {
+.myPagewrap .nav-link {
   color: #1d1d1d;
-  padding-top: 5px;
 }
 
-.myPagewrap .myPageMenu ul li a {
-  color: #1d1d1d;
-  padding-left: 10px;
+.myPagewrap .nav-link:hover {
+  color: #000;
 }
-
-.myPagewrap .myPageMenu ul li a:hover {
-  font-weight: bold;
-}
-
-.myPagewrap .myPageList {
-  height: 200px;
-  padding: 0 0 0 10px;
-  margin-left: 30px
-}
-
-.myPagewrap .myPageList p {
-  font-weight: bold;
-  padding: 13px 0 0 10px;
-}
-
-.myPagewrap .myPageList_List {
-  padding-right: 20px;
-}
-
-.myPagewrap .myPageList_List img {
-  width: 130px;
-}
-
-.myPagewrap .myPageList_List p {
-  color: #818181;
-}
-
-
-
-.myPage-lg {
-  display: block;
-}
-
-.myPage-sm {
-  display: none;
-} */
-
-
-
-
-
-
-/* .myPagewrap .nav-link:focus,
-.nav-link:hover {
-  color: #1d1d1d;
-} */
 
 .myPagewrap .pt-3 {
   padding-top: 0rem !important;
@@ -1313,5 +1372,145 @@ div.comment-edit>div>form>button {
 
 .bg-light {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #fff !important;
 }
+
+
+
+
+/* 팔러가기 버튼 스크롤 무빙 css */
+#back_banner {
+  position: relative;
+  clear: both;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  height: 500px;
+  background-image: url(./image/main1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.row .block {
+  float: left;
+  width: 25%;
+}
+
+.hovicon {
+  display: inline-block;
+  font-size: 45px;
+  line-height: 90px;
+  cursor: pointer;
+  margin: 20px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+  color: rgb(32, 110, 255);
+  font-weight: 600;
+}
+
+.hovicon:after {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: '';
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.hovicon:before {
+  speak: none;
+  font-size: 48px;
+  line-height: 90px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.hovicon.effect-8 {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
+  -moz-transition: -moz-transform ease-out 0.1s, background 0.2s;
+  transition: transform ease-out 0.1s, background 0.2s;
+}
+
+.hovicon.effect-8:after {
+  top: 0;
+  left: 0;
+  padding: 0;
+  z-index: -1;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.hovicon.effect-8:hover {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-transform: scale(0.93);
+  -moz-transform: scale(0.93);
+  -ms-transform: scale(0.93);
+  transform: scale(0.93);
+  color: #000;
+}
+
+.hovicon.effect-8:hover i {
+  color: #000;
+}
+
+.hovicon.effect-8:hover:after {
+  -webkit-animation: sonarEffect 1.3s ease-out 75ms;
+  -moz-animation: sonarEffect 1.3s ease-out 75ms;
+  animation: sonarEffect 1.3s ease-out 75ms;
+}
+
+@-webkit-keyframes sonarEffect {
+  0% {
+    opacity: 0.3;
+  }
+
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255, 255, 255, 0.5);
+    -webkit-transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes sonarEffect {
+  0% {
+    opacity: 0.3;
+  }
+
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255, 255, 255, 0.5);
+    -moz-transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* 팔러가기 버튼 스크롤 무빙 css 끝 */

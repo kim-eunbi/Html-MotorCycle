@@ -68,9 +68,35 @@
         user-select: none;
     }
 
+    @media (min-width: 599px) {
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            /* 15% from the top and centered */
+            padding: 10px;
+            border: 1px solid #888;
+            width: 80%;
+            margin-top: 15rem;
+            /* Could be more or less, depending on screen size */
+        }
+    }
+
     @media (min-width: 768px) {
         .bd-placeholder-img-lg {
             font-size: 3.5rem;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            /* 15% from the top and centered */
+            padding: 10px;
+            border: 1px solid #888;
+            width: 20%;
+            margin-top: 15rem;
+            /* Could be more or less, depending on screen size */
         }
     }
 
@@ -96,24 +122,12 @@
         /* Black w/ opacity */
     }
 
-    /* Modal Content/Box */
-    .modal-content {
-        background-color: #fefefe;
-        margin: 10% auto;
-        /* 15% from the top and centered */
-        padding: 10px;
-        border: 1px solid #888;
-        width: 80%;
-        /* Could be more or less, depending on screen size */
-    }
-
     /* The Close Button */
     .close {
         color: #aaa;
         float: right;
         font-size: 28px;
         font-weight: bold;
-        text-align: right;
     }
 
     .close:hover,

@@ -68,7 +68,7 @@
                                 </li>
                             </ul>
                             <form>
-                                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                <input class="form-control" type="text" placeholder="  🏍️  Search" aria-label="Search">
                             </form>
                         </div>
                     </div>
@@ -92,8 +92,12 @@
     </header>
     <!-- 스크롤시 따라오는 박스 -->
     <div class="quickmenu">
-        <div class="aButton shadow rotateY"><a href="./UploadPage.html"><img src="./image/오토바이사진-01.png"
-                    alt="팔러가기 스크롤버튼"></a></div>
+        <div class="row">
+            <div class="block">
+                <a href="./UploadPage.html"><i class="hovicon effect-8 d-flex justify-content-center"
+                        style="font-size:20px; background:rgba(176, 210, 255, 0.6); ">Selling</i></a>
+            </div>
+        </div>
     </div>
 
 
@@ -106,12 +110,13 @@
                     <div class="position-sticky pt-3">
                         <ul class="nav flex-column" style="border-top:4px solid #fff;">
                             <li class="profile nav-item row align-items-center text-center"
-                                style="width:100%; height:auto;background:#1d1d1d; color:#fff; overflow: hidden;">
-                                <h4></h4>
-                                <div class="profile_Img">
-                                    <img style="width:80px;" src="./image/logo-white.png" alt="">
-                                </div>
+                                style="width:100%; height:auto; color:#1d1d1d; overflow: hidden;">
+                                <h3></h3>
                                 <p>회원 아이디</p>
+                                <div class="profile_Img">
+                                    <img style="width:80px;" src="./image/logo-01.png" alt="">
+                                </div>
+                                <h3></h3>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./MyPage.html">
@@ -151,7 +156,7 @@
                         <h4><i class="bi bi-file-lock"></i> 비밀번호 관리</h4>
                     </div>
                     <div class="row">
-                        <div class="myPageList col-lg-9">
+                        <div class="myPageList col-lg-12">
                             <div>
                                 <div class="d-flex flex-column" style="border-top:2px solid #232324">
                                     <br /><span style="color: red; margin-left:10px; font-size:13px;">본인인증 후 비밀번호를 변경하실수
@@ -167,7 +172,7 @@
                                     <div class="form-wrap">
                                         <br />
                                         <div class="IdPwd col-lg-12 d-flex">
-                                            <button type="button" class="btn btn-outline-dark col-lg-12"
+                                            <button type="button" class="Certified btn btn-outline-dark col-lg-12"
                                                 data-bs-toggle="modal" data-bs-target="#exampleModal"><i
                                                     class="bi bi-person-badge"></i>본인인증</button>
                                         </div>
@@ -226,57 +231,6 @@
 
                     #sidebarMenu:not(.show) {
                         display: block !important;
-                    }
-
-                    @media (min-width: 768px) {
-                        .bd-placeholder-img-lg {
-                            font-size: 3.5rem;
-                        }
-                    }
-
-
-                    @media screen and (max-width: 599px) {
-                        .myPage_img {
-                            width: 150px;
-                        }
-
-                        #sidebarMenu:not(.show) {
-                            display: block !important;
-                        }
-
-                        .myPage_menubar {
-                            display: block;
-                        }
-
-                        .myPagewrap {
-                            width: 100%;
-                        }
-
-
-                    }
-
-                    @media screen and (min-width: 600px) {
-                        .myPage_img {
-                            width: 200px;
-                        }
-
-                        .myPage_menubar {
-                            display: block;
-                        }
-                    }
-
-                    @media (min-width: 1200px) {
-                        .myPage_img {
-                            width: 200px;
-                        }
-
-                        .myPage_menubar {
-                            display: none;
-                        }
-
-                        .myPagewrap {
-                            width: 1100px;
-                        }
                     }
                 </style>
 

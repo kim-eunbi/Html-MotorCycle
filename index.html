@@ -22,6 +22,7 @@
     <!-- js 경로 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="./js/moveScroll.js"></script>
+    <script src="./js/scrollTop.js"></script>
 
     <!-- css 경로 -->
     <link rel="stylesheet" href="./css/index.css">
@@ -68,7 +69,8 @@
                                     </li>
                                 </ul>
                                 <form>
-                                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                    <input class="form-control" type="text" placeholder="  🏍️  Search"
+                                        aria-label="Search">
                                 </form>
                             </div>
                         </div>
@@ -93,9 +95,15 @@
         </header>
         <!-- 스크롤시 따라오는 박스 -->
         <div class="quickmenu">
-            <div class="aButton shadow rotateY"><a href="./UploadPage.html"><img src="./image/오토바이사진-01.png"
-                        alt="팔러가기 스크롤버튼"></a></div>
+            <div class="row">
+                <div class="block">
+                    <a href="./UploadPage.html"><i class="hovicon effect-8 d-flex justify-content-center"
+                            style="font-size:20px; background:rgba(176, 210, 255, 0.6); ">Selling</i></a>
+                </div>
+            </div>
         </div>
+
+
 
         <!-- 메인슬라이드 -->
         <div class="slider">
@@ -152,15 +160,18 @@
             </section>
 
 
-            <div class="album py-5 bg-light">
+            <div class="album  bg-light">
                 <div class="container">
-
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                    <div class="MainTitle">
+                        <h1 class="font-weight-bold">Hoooot Item</h1>
+                    </div>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
                         <div class="col">
                             <div class="card shadow-sm">
-                                <a href="./DetailPage.html"><img src="./image/111.PNG" alt="" style="width:100%;"></a>
+                                <a href="./DetailPage.html"><img src="./image/111.PNG" alt=""
+                                        style="background:gold;"></a>
                                 <div class="card-body">
-                                    <p class="card-text">제목: 오토바이 이름</p>
+                                    <p class="card-text">헛개차먹으면서 타는 오토바이</p>
                                     <span>20,000원</span>
                                 </div>
                             </div>
@@ -242,20 +253,23 @@
 
                 </div>
                 <div class="ItemButton">
-                    <button type="button" onclick="location.href='./ItemListPage.html' " class="btn btn-dark">
-                        더 알아보기</button>
+                    <a href="./ItemListPage.html"><button type="button" onclick="location.href='./ItemListPage.html' "
+                            class="btn btn-dark">
+                            더 알아보기</button></a>
                 </div>
             </div>
 
         </main>
+        <div class="fixedBG">
 
+        </div>
         <!-- Footer -->
         <div id="footer">
             <div class="container">
                 <footer class="row row-cols-5 py-5 bg-dark text-center text-white">
                     <div class="col">
                         <a href="/" class=" ">
-                            <p class="text-white">부앙부앙뿡</p>
+                            <p class="text-white">거바</p>
                         </a>
                         <p class="text-muted">&copy; 2022</p>
                     </div>
@@ -298,6 +312,16 @@
             </div>
         </div>
     </div>
+    <!-- 글쓰기,목록,위로올라가기 -->
+    <div class="container" style="margin:0 auto; max-width: 1100px; z-index: 9999;">
+        <div id="stop" class="scrollTop"
+            style="width: 50px; height: 50px; border-radius:50%; display: flex; justify-content: center; align-items: center; background: rgb(51, 52, 54);">
+            <span class="d-flex align-items-center"><a href="" style="font-size:13px;"><i
+                        class="bi bi-chevron-double-up" style="font-size: 13px;  margin:0 0 0 5px;"></i>TOP</a></span>
+        </div>
+    </div>
+
+
 </body>
 
 </html>

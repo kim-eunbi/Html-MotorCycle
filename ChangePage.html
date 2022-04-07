@@ -24,11 +24,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script src="dist/js/bootstrap-imageupload.js"></script>
+    <script src="./js/scrollTop.js"></script>
+    <script src="./js/UploadPage.js"></script>
 
     <!-- css 경로 -->
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/common.css">
-    <script src="./js/UploadPage.js"></script>
+
 
 
     <title>수정페이지</title>
@@ -73,7 +75,7 @@
                                 </li>
                             </ul>
                             <form>
-                                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                <input class="form-control" type="text" placeholder="  🏍️  Search" aria-label="Search">
                             </form>
                         </div>
                     </div>
@@ -100,9 +102,11 @@
     <div class="UploadPageWrap ">
         <div class="form-wrap col-lg-7 col-md-6 col-sm-12 col-xs-12">
             <div class="form-group" style=" background:#fff">
-                <label class="UploadTitle">🏍️바이크판매 등록수정🏍️</label>
+                <div class="MainTitle">
+                    <h1 class="font-weight-bold">🏍️바이크판매등록🏍️</h1>
+                </div>
                 <div class="d-grid row-cols-md-12 d-flex justify-content-end">
-                    <button class="btn btn-dark" style="margin-right: 20px;" type="submit">판매글삭제</button>
+                    <button class="delete btn btn-dark" type="submit">판매글삭제</button>
                 </div>
                 <!-- 이미지업로드 -->
                 <div class="container" style="margin-bottom:35px;">
@@ -123,7 +127,7 @@
                                         </div>
                                     </div>
                                     <p>메인에 표시할 사진을 업로드 해주세요</p>
-                                    <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                    <button type="button" class="btn btn-outline-secondary">사진삭제</button>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6 uploadImg">
@@ -140,7 +144,7 @@
                                             </div>
                                         </div>
                                         <p>앞면</p>
-                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">사진삭제</button>
 
                                     </div>
                                     <div class="col-lg-6 uploadImg">
@@ -157,7 +161,7 @@
                                             </div>
                                         </div>
                                         <p>후면</p>
-                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">사진삭제</button>
                                     </div>
                                     <div class="col-lg-6 uploadImg">
                                         <div class="container">
@@ -173,7 +177,7 @@
                                             </div>
                                         </div>
                                         <p>계기판</p>
-                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">사진삭제</button>
                                     </div>
                                     <div class="col-lg-6 uploadImg">
                                         <div class="container">
@@ -189,7 +193,7 @@
                                             </div>
                                         </div>
                                         <p>머플러</p>
-                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">사진삭제</button>
                                     </div>
                                 </div>
                             </div>
@@ -197,7 +201,7 @@
                             display: flex; flex-direction: column; justify-content: flex-end;">
                                 <div class="row">
                                     <div class="imgtext"
-                                        style="text-align: center; padding-left:15px; margin-bottom:10px; background:#ddd;">
+                                        style="text-align: center;  margin-bottom:10px; background:#ddd;">
                                         <br />
                                         <p style="color:red;">※ 사진 업로드 주의 사항 ※</p>
                                         <p>1. 해당되는 곳에 맞춰 사진을 넣어주세요.</p>
@@ -218,7 +222,7 @@
                                             </div>
                                         </div>
                                         <p>우측면</p>
-                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">사진삭제</button>
                                     </div>
                                     <div class="col-lg-6 uploadImg">
                                         <div class="container">
@@ -234,7 +238,7 @@
                                             </div>
                                         </div>
                                         <p>좌측면</p>
-                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">사진삭제</button>
                                     </div>
                                     <div class="col-lg-6 uploadImg">
                                         <div class="container">
@@ -250,7 +254,7 @@
                                             </div>
                                         </div>
                                         <p>시트</p>
-                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">사진삭제</button>
                                     </div>
                                     <div class="col-lg-6 uploadImg">
                                         <div class="container">
@@ -266,7 +270,7 @@
                                             </div>
                                         </div>
                                         <p>핸들</p>
-                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">사진삭제</button>
                                     </div>
                                     <div class="col-lg-6 uploadImg">
                                         <div class="container">
@@ -282,7 +286,7 @@
                                             </div>
                                         </div>
                                         <p>엔진</p>
-                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">사진삭제</button>
                                     </div>
                                     <div class="col-lg-6 uploadImg">
                                         <div class="container">
@@ -298,7 +302,7 @@
                                             </div>
                                         </div>
                                         <p>타이어</p>
-                                        <button type="button" class="btn btn-outline-secondary">삭제</button>
+                                        <button type="button" class="btn btn-outline-secondary">사진삭제</button>
                                     </div>
                                 </div>
                             </div>
@@ -346,7 +350,7 @@
                                         <td class="table-active">판매지역</td>
                                         <td class="row">
                                             <select class="form-select col" aria-label="Default select example">
-                                                <option selected>시(도)선택</option>
+                                                <option value="" disabled selected>시(도)선택</option>
                                                 <option value="1">서울특별시</option>
                                                 <option value="2">인천광역시</option>
                                                 <option value="3">대전광역시</option>
@@ -366,7 +370,7 @@
                                                 <option value="17">제주도</option>
                                             </select>
                                             <select class="form-select col" aria-label="Default select example">
-                                                <option selected>시,구(군)선택</option>
+                                                <option value="" disabled selected>시,구(군)선택</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
                                                 <option value="3">Three</option>
@@ -377,7 +381,7 @@
                                         <td class="table-active">통화가능시간</td>
                                         <td class="row">
                                             <select class="form-select col">
-                                                <option selected>오전 00시</option>
+                                                <option value="" disabled selected>오전 00시</option>
                                                 <option value="1">06:00</option>
                                                 <option value="2">07:00</option>
                                                 <option value="3">08:00</option>
@@ -399,7 +403,7 @@
                                                 <option value="19">24:00</option>
                                             </select>
                                             <select class="form-select col">
-                                                <option selected>오전 00분</option>
+                                                <option value="" disabled selected>오전 00분</option>
                                                 <option value="1">00분</option>
                                                 <option value="2">10분</option>
                                                 <option value="3">20분</option>
@@ -428,7 +432,7 @@
                                                 <td class="table-active">제조회사</td>
                                                 <td>
                                                     <select class="form-select col">
-                                                        <option selected>제조사선택</option>
+                                                        <option value="" disabled selected>제조사선택</option>
                                                         <option value="1">야마하</option>
                                                         <option value="2">혼다</option>
                                                         <option value="3">가와사키</option>
@@ -451,7 +455,7 @@
                                                 <td class="table-active">모델</td>
                                                 <td>
                                                     <select class="form-select col">
-                                                        <option selected>모델</option>
+                                                        <option value="" disabled selected>모델</option>
                                                         <option value="1">야마하</option>
                                                         <option value="2">혼다</option>
                                                         <option value="3">가와사키</option>
@@ -474,7 +478,7 @@
                                                 <td class="table-active">제조년도</td>
                                                 <td>
                                                     <select class="form-select col">
-                                                        <option selected>제조년도선택</option>
+                                                        <option value="" disabled selected>제조년도선택</option>
                                                         <option value="1">1995</option>
                                                         <option value="2">1996</option>
                                                         <option value="3">1997</option>
@@ -496,7 +500,7 @@
                                                     </div>
                                                     <div class="col-md-4">
                                                         <select class="form-select">
-                                                            <option selected>Km</option>
+                                                            <option value="" disabled selected>Km</option>
                                                             <option>Km</option>
                                                         </select>
                                                     </div>
@@ -506,7 +510,7 @@
                                                 <td class="table-active">색상</td>
                                                 <td>
                                                     <select class="form-select col">
-                                                        <option selected>색상선택</option>
+                                                        <option value="" disabled selected>색상선택</option>
                                                         <option>빨간색</option>
                                                         <option>파란색</option>
                                                         <option>노란색</option>
@@ -518,7 +522,7 @@
                                                 <td class="table-active">기어방식</td>
                                                 <td>
                                                     <select class="form-select col">
-                                                        <option selected>자동</option>
+                                                        <option value="" disabled selected>자동</option>
                                                         <option value="1">자동</option>
                                                     </select>
                                                 </td>
@@ -531,7 +535,7 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th scope="col"><br /></th>
+                                                <th scope="col">🏍️매물정보</th>
                                                 <th scope="col"></th>
                                             </tr>
                                         </thead>
@@ -544,7 +548,7 @@
                                                     </div>
                                                     <div class="col-md-4">
                                                         <select class="form-select">
-                                                            <option selected>cc</option>
+                                                            <option value="" disabled selected>cc</option>
                                                             <option>cc</option>
                                                         </select>
                                                     </div>
@@ -726,7 +730,7 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col">🏍️바이크 서류</th>
+                                            <th scope="col">🏍️서류</th>
                                             <th scope="col"></th>
                                         </tr>
                                     </thead>
@@ -798,12 +802,12 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td class="table-active">판매가격</td>
-                                                <td class="row">
-                                                    <div class="col-md-8">
-                                                        <input type="text" class="form-control">
+                                                <td class=" table-active">판매가격</td>
+                                                <td class="Price_box">
+                                                    <div class="price_text col-md-3">
+                                                        <input type="text" class=" form-control">
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="price col-md-3">
                                                         <label class="input-group-text">원</label>
                                                     </div>
                                                 </td>
@@ -816,14 +820,14 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th scope="col"><br /></th>
+                                                <th scope="col">🏍️판매상태</th>
                                                 <th scope="col"></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td class="table-active">판매상태</td>
-                                                <td>
+                                                <td class="d-flex">
                                                     <div class="form-check form-check-inline">
                                                         <input type="checkbox" class="form-check-input" checked>
                                                         <label class="form-check-label">판매중</label>
@@ -849,6 +853,15 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <!-- 글쓰기,목록,위로올라가기 -->
+            <div class="container" style="margin:0 auto; max-width: 1100px; z-index: 9999;">
+                <div id="stop" class="scrollTop"
+                    style="width: 50px; height: 50px; border-radius:50%; display: flex; justify-content: center; align-items: center; background: rgb(51, 52, 54);">
+                    <span class="d-flex align-items-center"><a href="" style="font-size:13px;"><i
+                                class="bi bi-chevron-double-up"
+                                style="font-size: 13px;  margin:0 0 0 0px;"></i>TOP</a></span>
                 </div>
             </div>
 </body>

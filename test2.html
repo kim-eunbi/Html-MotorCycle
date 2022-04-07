@@ -22,6 +22,7 @@
     <!-- js 경로 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="./js/moveScroll.js"></script>
+    <script src="./js/scrollTop.js"></script>
 
     <!-- css 경로 -->
     <link rel="stylesheet" href="./css/index.css">
@@ -29,63 +30,251 @@
     <title>메인</title>
 </head>
 
+
 <body>
-    <style>
-        .aButton {
-            transition: 1.0s ease all;
-            -moz-transition: 1.0s ease all;
-            -webkit-transition: 1.0s ease all;
-            border: none;
-            border-radius: 3px;
-            padding: 0px 10px 0px 10px;
-            background-image: url("image/오토바이사진-01.png");
-            background: gold;
-            font-size: 14px;
-            text-decoration: none;
-            box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            height: 35px;
-        }
+    <div id="wrap">
+        <!-- 헤더 -->
+        <header>
+            <div class="headerNav">
+                <!-- 로그인 회원가입 마이페이지 -->
+                <div class="headerLogin">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./Login.html">로그인/회원가입</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./MyPage.html">마이페이지</a>
+                        </li>
+                    </ul>
+                </div>
 
-        .aButton:hover {
-            transition: 1.0s ease all;
-            -moz-transition: 1.0s ease all;
-            -webkit-transition: 1.0s ease all;
-            background: red;
-        }
+                <!-- 로고, 검색창 -->
+                <div class="search">
+                    <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="./index.html">motorcycle</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarsExample02" aria-controls="navbarsExample02"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
 
-        .rotateY {
-            cursor: pointer;
-            color: green
-        }
+                            <div class="collapse navbar-collapse" id="navbarsExample02">
+                                <ul class="navbar-nav me-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#"></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"></a>
+                                    </li>
+                                </ul>
+                                <form>
+                                    <input class="form-control" type="text" placeholder="  🏍️  Search"
+                                        aria-label="Search">
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
 
-        .rotateY:hover {
-            transform: rotateY(360deg);
-            -moz-transform: rotateY(360deg);
-            -webkit-transform: rotateY(360deg);
-            transform-origin: center;
-            -moz-transform-origin: center;
-            -webkit-transform-origin: center;
-            transition: transform 1.0s ease all;
-            -moz-transition: -moz-transform 1.0s ease all;
-            -webkit-transition: -webkit-transform 1.0s ease all;
-            background-image: url("image/오토바이사진-02.png");
 
-        }
-    </style>
+            <!-- 메뉴바 -->
+            <ul class="nav headerMenu justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">메뉴1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">메뉴2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+
+            </ul>
+        </header>
+        <!-- 스크롤시 따라오는 박스 -->
+        <div class="quickmenu">
+            <div class="row">
+                <div class="block">
+                    <a href="./UploadPage.html"><i class="hovicon effect-8 d-flex justify-content-center"
+                            style="font-size:20px; background:rgba(176, 210, 255, 0.6); ">Selling</i></a>
+                </div>
+            </div>
+        </div>
 
 
-    <div class="content">
-        <div class="content">
-            <table>
-                <tr>
-                    <td><a>
 
-                        </a></td>
-                </tr>
-            </table>
+        <!-- 메인슬라이드 -->
+        <div class="slider">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./image/main2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./image/main1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./image/main3.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+
+
+        <main>
+            <section class="py-5 text-center container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <h1 class="fw-light">Motorcycle</h1>
+                        <p class="lead text-muted">
+                            안녕하세요 <br />오토바이를 편리하게 사고 팔수 있는 사이트 입니다.
+                        </p>
+                        <p>
+                            <a href="./ItemListPage.html" class="btn btn-primary my-2">사러가기</a>
+                            <a href="./UploadPage.html" class="btn btn-secondary my-2"
+                                style="background:rgb(2, 84, 238); border:none;">팔러가기</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="album  bg-light">
+                <div class="container" style="background:tomato;">
+                    <div class="MainTitle" style="background:gold;">
+                        <h1 class="font-weight-bold">Hoooot Item</h1>
+                    </div>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3" style="background:green;">
+                        <div class="col-3" style="background:cyan; width:200px; height:auto;">
+                            <div class="card col-11">
+                                <a href="./DetailPage.html"><img src="./image/111.PNG" alt=""
+                                        style="width:100%; height:100%;"></a>
+                                <div class="card-body">
+                                    <p class="card-text">제목: 오토바이 이름</p>
+                                    <span>20,000원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3" style="background:violet;">
+                            <div class="card shadow-sm">
+                                <a href="./DetailPage.html"><img src="./image/12.PNG" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">서울시에서 판매가능하신분 연락주세요</p>
+                                    <span>150,000원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card shadow-sm">
+                                <a href="./DetailPage.html"><img src="./image/545454.PNG" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">천사소녀네티를 닮은 내 오토바이 팝니다</p>
+                                    <span>20,000원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card shadow-sm">
+                                <a href="./DetailPage.html"><img src="./image/66.PNG" alt="" style="width:100%;"></a>
+                                <div class="card-body">
+                                    <p class="card-text">제목: 오토바이 이름</p>
+                                    <span>350,000원</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ItemButton">
+                    <a href="./ItemListPage.html"><button type="button" onclick="location.href='./ItemListPage.html' "
+                            class="btn btn-dark">
+                            더 알아보기</button></a>
+                </div>
+            </div>
+
+        </main>
+        <div class="fixedBG">
+            123
+        </div>
+        <!-- Footer -->
+        <div id="footer">
+            <div class="container">
+                <footer class="row row-cols-5 py-5 bg-dark text-center text-white">
+                    <div class="col">
+                        <a href="/" class=" ">
+                            <p class="text-white">거바</p>
+                        </a>
+                        <p class="text-muted">&copy; 2022</p>
+                    </div>
+                    <div class="col">
+
+                    </div>
+
+                    <div class="col">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">콩게임즈</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
         </div>
     </div>
+    <!-- 글쓰기,목록,위로올라가기 -->
+    <div class="container" style="margin:0 auto; max-width: 1100px; z-index: 9999;">
+        <div id="stop" class="scrollTop"
+            style="width: 50px; height: 50px; border-radius:50%; display: flex; justify-content: center; align-items: center; background: rgb(51, 52, 54);">
+            <span class="d-flex align-items-center"><a href="" style="font-size:13px;"><i
+                        class="bi bi-chevron-double-up" style="font-size: 13px;  margin:0 0 0 5px;"></i>TOP</a></span>
+        </div>
+    </div>
+
 
 </body>
 
