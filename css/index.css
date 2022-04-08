@@ -20,7 +20,9 @@ body {
   box-sizing: content-box;
 }
 
-
+.fw-light {
+  font-weight: 600 !important;
+}
 
 .MainTitle h1 {
   padding: 30px 0;
@@ -299,6 +301,19 @@ body {
     padding-bottom: 1.5rem;
   }
 
+  .UploadPageWrap .imagePreview {
+    width: 100%;
+    height: 590px;
+    background-position: center center;
+    background: url(http://cliquecities.com/assets/no-image-e3699ae….jpg);
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    box-shadow: 0px -3px 6px 2px rgb(0 0 0 / 20%);
+    cursor: pointer;
+  }
+
   .row-cols-md-3>* {
     /* flex: 0 0 auto; */
     width: 33.3333333333%;
@@ -309,6 +324,11 @@ body {
 
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
+  }
+
+  .col-md-6 {
+    flex: 0 0 auto;
+    width: 100%;
   }
 }
 
@@ -376,7 +396,7 @@ body {
 
   .UploadPageWrap .imagePreviewMain {
     width: 100%;
-    height: 390px;
+    height: 500px;
     background-position: center center;
     background: url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
     background-color: #fff;
@@ -415,9 +435,20 @@ body {
   .myPagewrap {
     width: 1296px;
   }
+
+  .UploadPageWrap .imagePreview {
+    width: 100%;
+    height: 270px;
+    background-position: center center;
+    background: url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    box-shadow: 0px -3px 6px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer
+  }
 }
-
-
 
 
 
@@ -900,18 +931,7 @@ section {
   color: #363636;
 }
 
-.UploadPageWrap .imagePreview {
-  width: 100%;
-  height: 220px;
-  background-position: center center;
-  background: url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
-  background-color: #fff;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: inline-block;
-  box-shadow: 0px -3px 6px 2px rgba(0, 0, 0, 0.2);
-  cursor: pointer
-}
+
 
 
 
