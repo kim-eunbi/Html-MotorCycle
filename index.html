@@ -39,45 +39,34 @@
                 <!-- 로그인 회원가입 마이페이지 -->
                 <div class="headerLogin">
                     <ul class="nav justify-content-end">
+                        {{^userName}}
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="./Login.html">로그인/회원가입</a>
                         </li>
+                        {{/userName}}
+                        <span class="text-black" id="user"></span>
+                        <span class="text-black mx-2"></span>
+                        {{#userName}}
+                        <span class="mx-3">{{userName}}님 안녕하세요!</span>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/logout" role="button">로그아웃</a>
+                        </li>
+                        {{/userName}}
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="./MyPage.html">마이페이지</a>
                         </li>
                     </ul>
                 </div>
 
-                <!-- 로고, 검색창 -->
+                <!-- 로고 -->
                 <div class="search">
                     <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="./index.html">motorcycle</a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarsExample02" aria-controls="navbarsExample02"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse" id="navbarsExample02">
-                                <ul class="navbar-nav me-auto">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="#"></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#"></a>
-                                    </li>
-                                </ul>
-                                <form>
-                                    <input class="form-control" type="text" placeholder="  🏍️  Search"
-                                        aria-label="Search">
-                                </form>
-                            </div>
+                            <a href="/mainPage" class="navbar-brand">메인페이지</a>
                         </div>
                     </nav>
                 </div>
             </div>
-
 
             <!-- 메뉴바 -->
             <ul class="nav headerMenu justify-content-center">
@@ -85,10 +74,10 @@
                     <a class="nav-link active" aria-current="page" href="guide.html">거래안내</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">판매하기</a>
+                    <a class="nav-link" href="./UploadPage.html">판매하기</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">사러가기</a>
+                    <a class="nav-link" href="./ItemListPage.html">사러가기</a>
                 </li>
             </ul>
         </header>

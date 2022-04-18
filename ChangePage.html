@@ -44,40 +44,30 @@
             <!-- 로그인 회원가입 마이페이지 -->
             <div class="headerLogin">
                 <ul class="nav justify-content-end">
+                    {{^userName}}
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="./Login.html">로그인/회원가입</a>
                     </li>
+                    {{/userName}}
+                    <span class="text-black" id="user"></span>
+                    <span class="text-black mx-2"></span>
+                    {{#userName}}
+                    <span class="mx-3">{{userName}}님 안녕하세요!</span>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/logout" role="button">로그아웃</a>
+                    </li>
+                    {{/userName}}
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="./MyPage.html">마이페이지</a>
                     </li>
                 </ul>
             </div>
 
-
-            <!-- 로고, 검색창 -->
+            <!-- 로고 -->
             <div class="search">
                 <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="./index.html">motorcycle</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse" id="navbarsExample02">
-                            <ul class="navbar-nav me-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#"></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"></a>
-                                </li>
-                            </ul>
-                            <form>
-                                <input class="form-control" type="text" placeholder="  🏍️  Search" aria-label="Search">
-                            </form>
-                        </div>
+                        <a href="/mainPage" class="navbar-brand">메인페이지</a>
                     </div>
                 </nav>
             </div>
@@ -89,19 +79,22 @@
                 <a class="nav-link active" aria-current="page" href="guide.html">거래안내</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">판매하기</a>
+                <a class="nav-link" href="./UploadPage.html">판매하기</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">사러가기</a>
+                <a class="nav-link" href="./ItemListPage.html">사러가기</a>
             </li>
         </ul>
     </header>
     <!-- 업로드페이지 -->
     <div class="UploadPageWrap ">
         <div class="form-wrap col-lg-7 col-md-6 col-sm-12 col-xs-12">
-            <div class="form-group" style=" background:#fff">
-                <div class="MainTitle">
-                    <h1 class="font-weight-bold">🏍️바이크판매등록🏍️</h1>
+            <div class="form-group" style=" background:#fff;">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light" style="font-weight: bold;">🏍️바이크등록수정🏍️</h1>
+                    <p class="lead text-muted">
+                        사진과 오토바이의 정보를 상세하게 입력해주세요.<br />
+                    </p>
                 </div>
                 <div class="d-grid row-cols-md-12 d-flex justify-content-end">
                     <button class="delete btn btn-dark" type="submit">판매글삭제</button>

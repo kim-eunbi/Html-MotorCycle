@@ -23,11 +23,14 @@
     <!-- 업로드페이지사용 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
+
+
     <!-- css 경로 -->
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/common.css">
     <script src="./js/DetailPage.js"></script>
     <script src="./js/scrollTop.js"></script>
+    <script src="./js/moveScroll.js"></script>
 
 
     <title>상세페이지_원본</title>
@@ -40,44 +43,34 @@
             <!-- 로그인 회원가입 마이페이지 -->
             <div class="headerLogin">
                 <ul class="nav justify-content-end">
+                    {{^userName}}
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="./Login.html">로그인/회원가입</a>
                     </li>
+                    {{/userName}}
+                    <span class="text-black" id="user"></span>
+                    <span class="text-black mx-2"></span>
+                    {{#userName}}
+                    <span class="mx-3">{{userName}}님 안녕하세요!</span>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/logout" role="button">로그아웃</a>
+                    </li>
+                    {{/userName}}
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="./MyPage.html">마이페이지</a>
                     </li>
                 </ul>
             </div>
 
-            <!-- 로고, 검색창 -->
+            <!-- 로고 -->
             <div class="search">
                 <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="./index.html">motorcycle</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse" id="navbarsExample02">
-                            <ul class="navbar-nav me-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#"></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"></a>
-                                </li>
-                            </ul>
-                            <form>
-                                <input class="form-control" type="text" placeholder="  🏍️  Search" aria-label="Search">
-                            </form>
-                        </div>
+                        <a href="/mainPage" class="navbar-brand">메인페이지</a>
                     </div>
                 </nav>
             </div>
         </div>
-
 
         <!-- 메뉴바 -->
         <ul class="nav headerMenu justify-content-center">
@@ -85,49 +78,77 @@
                 <a class="nav-link active" aria-current="page" href="guide.html">거래안내</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">판매하기</a>
+                <a class="nav-link" href="./UploadPage.html">판매하기</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">사러가기</a>
+                <a class="nav-link" href="./ItemListPage.html">사러가기</a>
             </li>
         </ul>
     </header>
 
 
+
+
+
+    <!-- 디테일페이지 시작지점 -->
+
+    {{>layout/header}}
+
+    {{#BikeShow}}
+
+    <!-- 스크롤시 따라오는 박스 -->
+    <div class="quickmenu">
+        <div class="row">
+            <div class="block">
+                <a href="./UploadPage.html"><i class="hovicon effect-8 d-flex justify-content-center"
+                        style="font-size:20px; background:rgba(176, 210, 255, 0.6); ">Selling</i></a>
+            </div>
+        </div>
+    </div>
     <div class="container" id="h1" style="margin:0 auto; max-width: 1100px;">
-        <div class="row" style="margin-top:40px;">
+        <div class="DetailTop row">
+
             <div class="col-lg-7 ">
-                <p class="h4"><strong>오토바이 팔거에요</strong></p>
+                <p class="h4"><strong>{{title}}</strong></p>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item">몇년도인지</li>
-                        <li class="breadcrumb-item">주행거리는</li>
-                        <li class="breadcrumb-item">판매지역</li>
+                        <li class="breadcrumb-item">{{year}}</li>
+                        <li class="breadcrumb-item">{{run}}</li>
+                        <li class="breadcrumb-item">{{zone1}}</li>
                     </ol>
                 </nav>
             </div>
             <div class="col-lg-5 d-flex justify-content-between align-items-center">
-                <p class="h2 text-success" style="margin-right:70px;"><strong>2,160만원</strong></p>
+                <p class="h2 text-success" style="margin-right:70px;"><strong>{{prices}}</strong></p>
                 <div class="row">
-                    <div class="d-flex">
+                    <div class="btn3 d-flex">
                         <a href="./index.html"><button type="button" style="border:1px solid #ddd;"
                                 class=" btn btn-primary d-flex flex-column justify-content-center align-items-center">
-                                <p style="margin-top:10px;"><small>판매완료</small></p>
+                                <small>판매완료</small>
                             </button></a>
-                        <a href="./ChangePage.html"><button type="button" style="border:1px solid #ddd;"
+                        <a href="/articles/{{id}}/edit"><button type="button" style="border:1px solid #ddd;"
                                 class=" btn btn-primary d-flex flex-column justify-content-center align-items-center">
-                                <p style="margin-top:10px;"><small>수정</small>
-                                </p>
-                            </button></a>
-                        <button type="button" style="border:1px solid #ddd;"
-                            class="btn btn-primary d-flex flex-column justify-content-center align-items-center">
+                                <small>수정</small>
 
-                            <p style="margin-top:10px;"><small>삭제</small></p>
-                        </button>
+                            </button></a>
+                        <a href="/articles/{{id}}/delete"><button type="button" style="border:1px solid #ddd;"
+                                class="btn btn-primary d-flex flex-column justify-content-center align-items-center">
+
+                                <small>삭제</small>
+                                <style>
+                                    .btn3 {
+                                        margin: 0;
+                                        padding: 0;
+                                    }
+
+                                    small {
+                                        margin: 9px 0;
+                                    }
+                                </style>
+                            </button></a>
                     </div>
                 </div>
             </div>
-
         </div>
 
         <!-- 사진슬라이드 -->
@@ -173,7 +194,10 @@
 
     <div class="col-lg-12" style="background:#ddd; height:auto; padding:50px 0; margin-top:50px;">
         <div class="container " style="margin:0 auto; max-width: 1100px; text-align: center;">
-            <p class="h4"><strong>상세정보</strong></p>
+            <h1 class="fw-light" style="font-weight: bold;">바이크 상세정보</h1>
+            <p class="lead text-muted">
+                사진과 오토바이의 상세정보를 확인해주세요.<br />
+            </p>
         </div>
     </div>
 
@@ -322,445 +346,319 @@
                 </div>
                 <!-- 이미지업로드 끝 -->
                 <div class="container">
-                    <div class="row" style="text-align: left;">
-                        <!-- 설명 및 추가정보 -->
-                        <div class="col-lg-12">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">🏍️설명 및 추가정보</th>
-                                        <th scope="col"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <textarea
-                                                class="form-control d-flex justify-content-center align-items-center col-lg-12"
-                                                rows="12" style="resize:none; border:none;"
-                                                placeholder=" 바이크 제조사, 주행거리 등 상세한 설명을 적어주세요 "></textarea>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="container">
+                        <div class="row" style="text-align: left;">
+                            <!-- 설명 및 추가정보 -->
+                            <div class="col-lg-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">🏍️설명 및 추가정보</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <textarea
+                                                    class="form-control d-flex justify-content-center align-items-center col-lg-12"
+                                                    rows="12" style="resize:none; border:none;"
+                                                    placeholder=" 바이크 제조사, 주행거리 등 상세한 설명을 적어주세요 "></textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 상세사항작성 시작 -->
+                    <div class=" container" style="margin:2.5% auto;">
+                        <div class="row" style="text-align: left;">
+
+                            <!-- 판매자정보 -->
+                            <div class="col-lg-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">🏍️판매자정보</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="table-active">이름</td>
+                                            <td>{{name}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=" table-active">연락처</td>
+                                            <td>{{tel}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-active">판매지역</td>
+                                            <td>{{zone1}} {{zone2}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-active">통화가능시간</td>
+                                            <td>{{coll1}} ~ {{coll2}} </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- 매물정보 -->
+                            <div class="col-lg-6">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">🏍️매물정보</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="table-active">제조회사</td>
+                                            <td>{{company}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-active">모델</td>
+                                            <td>{{type}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-active">제조년도</td>
+                                            <td>{{year}}년식</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-active">주행거리</td>
+                                            <td>{{run}}Km</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-active">색상</td>
+                                            <td>{{color}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-active">A/S</td>
+                                            <td>{{ase}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- 매물정보2 -->
+                            <div class="col-lg-6">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">🏍️매물정보</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="table-active">배기량</td>
+                                            <td>{{cc}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-active">대차/교환</td>
+                                            <td>{{exchange}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-active">가격절충</td>
+                                            <td>{{sale}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-active">기어방식</td>
+                                            <td>{{Gear}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-active">튜닝유무</td>
+                                            <td>{{tuning}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-active">사고유무</td>
+                                            <td>{{accident}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="container">
+                        <div class="row" style="text-align: left;">
+                            <!-- 옵션정보 -->
+                            <div class="col-lg-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">🏍️옵션정보</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="table-active">편의옵션</td>
+                                            <td>
+                                                <div>
+                                                    {{option}}
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-active">성능옵션</td>
+                                            <td>
+                                                <div>
+                                                    {{option1}}
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-active">외관옵션</td>
+                                            <td>
+                                                <div>
+                                                    {{option2}}
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="container">
+                        <div class="row" style="text-align: left;">
+                            <!-- 바이크 서류 -->
+                            <div class="col-lg-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">🏍️서류</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="table-active">서류</td>
+                                            <td>
+                                                <div>
+                                                    {{document}}
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="container">
+                        <div class="row" style="text-align: left;">
+                            <!-- 판매상태 -->
+                            <div class="col-lg-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">🏍️판매상태</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="table-active">🏍️판매상태</td>
+                                            <td>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="checkbox" class="form-check-input" checked>
+                                                    <label class="form-check-label">판매중</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="checkbox" class="form-check-input">
+                                                    <label class="form-check-label">판매완료</label>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- 상세사항작성 시작 -->
-                <div class=" container" style="margin:2.5% auto;">
-                    <!-- <div class="input-group mb-3">
-                        <input type="file" class="form-control">
-                        <label class="input-group-text" for="inputGroupFile02">🏍️동영상업로드</label>
-                    </div> -->
-                    <div class="row" style="text-align: left;">
-
-                        <!-- 판매자정보 -->
-                        <div class="col-lg-12">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">🏍️판매자정보</th>
-                                        <th scope="col"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="table-active">이름</td>
-                                        <td>{{name}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class=" table-active">연락처</td>
-                                        <td>{{tel}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-active">판매지역</td>
-                                        <td>{{zone1}} {{zone2}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-active">통화가능시간</td>
-                                        <td>{{coll1}} ~ {{coll2}} </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- 매물정보 -->
-                        <div class="col-lg-6">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">🏍️매물정보</th>
-                                        <th scope="col"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="table-active">제조회사</td>
-                                        <td>
-
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-active">모델</td>
-                                        <td>
-
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-active">제조년도</td>
-                                        <td>{{Year}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-active">주행거리</td>
-                                        <td>{{run}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-active">색상</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-active">A/S</td>
-                                        <td>
-
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- 매물정보2 -->
-                        <div class="col-lg-6">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">🏍️매물정보</th>
-                                        <th scope="col"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="table-active">배기량</td>
-                                        <td>{{cc}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-active">대차/교환</td>
-                                        <td>
-                                            <!-- <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">가능</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">불가능</label>
-                                            </div> -->
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-active">가격절충</td>
-                                        <td>
-                                            <!-- <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">가능</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">불가능</label>
-                                            </div> -->
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-active">기어방식</td>
-                                        <td>
-                                            <!-- <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">협의</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">착불</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">무료</label>
-                                            </div> -->
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-active">튜닝유무</td>
-                                        <td>
-                                            <!-- <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">무</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">유</label>
-                                            </div> -->
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-active">사고유무</td>
-                                        <td>
-                                            <!-- <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">무</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">유</label>
-                                            </div> -->
-                                        </td>
-                                    </tr>
-
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-                <div class="container">
-                    <div class="row" style="text-align: left;">
-                        <!-- 옵션정보 -->
-                        <div class="col-lg-12">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">🏍️옵션정보</th>
-                                        <th scope="col"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="table-active">편의옵션</td>
-                                        <td>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">열선</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">파워put</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">가방류</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">오디오</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">경보기</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">안개등</label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-active">성능옵션</td>
-                                        <td>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">배기 튜닝</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">흡기 튜닝</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">엔진 튜닝</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">새시 튜닝</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">브레이크 튜닝</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">서스펜션 튜닝</label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-active">외관옵션</td>
-                                        <td>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">크롬파츠</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">카본파츠</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">커스텀도색</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">보호가드</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">LED</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">스크린/페어링</label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="container">
-                    <div class="row" style="text-align: left;">
-                        <!-- 바이크 서류 -->
-                        <div class="col-lg-12">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">🏍️서류</th>
-                                        <th scope="col"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="table-active">서류</td>
-                                        <td>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">사용신고 필증</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">사용폐지 증명서</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">제작증명서</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">서류없음</label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="container">
-                    <div class="row" style="text-align: left;">
-                        <!-- 바이크 서류 -->
-                        <div class="col-lg-12">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">🏍️판매가격</th>
-                                        <th scope="col"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="table-active">🏍️판매상태</td>
-                                        <td>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input" checked>
-                                                <label class="form-check-label">판매중</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">판매완료</label>
-                                            </div>
-
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </div>
+
+        {{/BikeShow}}
+
+        {{>comments/_comments}}
 
 
 
-
-    <div class="container" style="margin:0 auto; max-width: 1100px;">
-        <hr style="background-color: black;">
-        <!-- <button>💬댓글 <span>123</span></button> -->
-        <button type="button" class="btn btn-primary position-relative">
-            ❤️장바구니
-        </button>
-        <button type="button" class="btn btn-primary position-relative">
-            💬댓글
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                99+
-            </span>
-        </button>
-
+        <div class="container" style="margin:0 auto; max-width: 1100px;">
+            <hr style="background-color: black;">
+            <!-- <button>💬댓글 <span>123</span></button> -->
+            <button type="button" class="btn position-relative">
+                ❤️장바구니
+            </button>
+            <button type="button" class="btn position-relative">
+                💬댓글
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    99+
+                </span>
+            </button>
 
 
-        <!-- 댓글 시작부분 -->
-        <div class="comment-add">
-            <textarea></textarea>
-            <button class="addBtn">등록</button>
-        </div> <!-- //댓글등록 -->
 
-        <div class="comment-list">
+            <!-- 댓글 시작부분 -->
+            <div class="comment-add">
+                <textarea></textarea>
+                <button class="addBtn">등록</button>
+            </div> <!-- //댓글등록 -->
 
-        </div> <!-- //댓글 목록 -->
+            <div class="comment-list">
 
-
-        <div class="comment-delete-modal" style="display: none;">
-            <div>
-                <h6>댓글 삭제</h6>
-                <input type="hidden" value="" />
-                <p>
-                    <span></span>
-                    댓글을 삭제?
-                </p>
-                <hr />
-                <button>확인</button>
-                <button>취소</button>
-            </div>
-        </div><!-- //삭제모달 -->
+            </div> <!-- //댓글 목록 -->
 
 
-        <!-- 글쓰기,목록,위로올라가기 -->
-        <div class="container" style="margin:0 auto; max-width: 1100px; z-index: 9999;">
-            <div id="stop" class="scrollTop"
-                style="width: 50px; height: 50px; border-radius:50%; display: flex; justify-content: center; align-items: center; background: rgb(51, 52, 54);">
-                <span class="d-flex align-items-center"><a href="" style="font-size:13px;"><i
-                            class="bi bi-chevron-double-up"
-                            style="font-size: 13px;  margin:0 0 0 5px;"></i>TOP</a></span>
+            <div class="comment-delete-modal" style="display: none;">
+                <div>
+                    <h6>댓글 삭제</h6>
+                    <input type="hidden" value="" />
+                    <p>
+                        <span></span>
+                        댓글을 삭제?
+                    </p>
+                    <hr />
+                    <button>확인</button>
+                    <button>취소</button>
+                </div>
+            </div><!-- //삭제모달 -->
+
+
+            <!-- 글쓰기,목록,위로올라가기 -->
+            <div class="container" style="margin:0 auto; max-width: 1100px;">
+                <button type="button" class="btn btn-primary position-relative">
+                    <a href="/articles/List">판매목록
+                </button>
+
+                <!-- 글쓰기,목록,위로올라가기 -->
+                <div class="container" style="margin:0 auto; max-width: 1100px; z-index: 9999;">
+                    <div id="stop" class="scrollTop"
+                        style="width: 50px; height: 50px; border-radius:50%; display: flex; justify-content: center; align-items: center; background: rgb(51, 52, 54);">
+                        <span class="d-flex align-items-center"><a href="" style="font-size:13px;"><i
+                                    class="bi bi-chevron-double-up"
+                                    style="font-size: 13px;  margin:0 0 0 5px;"></i>TOP</a></span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 </body>
 
 </html>
