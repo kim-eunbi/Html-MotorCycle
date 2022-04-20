@@ -7,7 +7,7 @@
  */
 
 
-;(function ( $, window, document, undefined ) {
+; (function ($, window, document, undefined) {
 
   // Default settings
   var comboTreePlugin = 'comboTree',
@@ -21,16 +21,16 @@
     };
 
   // LIFE CYCLE
-  function ComboTree( element, options ) {
+  function ComboTree(element, options) {
 
-    this.options = $.extend( {}, defaults, options) ;
+    this.options = $.extend({}, defaults, options);
     this._defaults = defaults;
     this._name = comboTreePlugin;
 
     this.constructorFunc(element, options);
   }
 
-  ComboTree.prototype.constructorFunc = function(element, options){
+  ComboTree.prototype.constructorFunc = function (element, options) {
     this.elemInput = element;
     this._elemInput = $(element);
 
@@ -47,8 +47,8 @@
       this._elemInput.attr('id', this.comboTreeId + 'Input');
     this.elemInputId = this._elemInput.attr('id');
 
-    this._elemInput.wrap('<div id="'+ this.comboTreeId + 'Wrapper" class="comboTreeWrapper"></div>');
-    this._elemInput.wrap('<div id="'+ this.comboTreeId + 'InputWrapper" class="comboTreeInputWrapper"></div>');
+    this._elemInput.wrap('<div id="' + this.comboTreeId + 'Wrapper" class="comboTreeWrapper"></div>');
+    this._elemInput.wrap('<div id="' + this.comboTreeId + 'InputWrapper" class="comboTreeInputWrapper"></div>');
     this._elemWrapper = $('#' + this.comboTreeId + 'Wrapper');
 
     this._elemArrowBtn = $('<div id="' + this.comboTreeId + 'ArrowBtn" class="comboTreeArrowBtn" type="button"><span class="mdi mdi-chevron-down comboTreeArrowBtnImg"></span></div>');
@@ -109,13 +109,13 @@
     return sourceHTML;
   };
 
-  ComboTree.prototype.createFilterHTMLForMultiSelect = function (){
+  ComboTree.prototype.createFilterHTMLForMultiSelect = function () {
     return '<input id="' + this.comboTreeId + 'MultiFilter" type="text" class="multiplesFilter" placeholder="Type to filter"/>';
   }
 
-  ComboTree.prototype.createSourceSubItemsHTML = function (subItems, parentId, collapse=false) {
-    var subItemsHtml = '<UL id="' + this.comboTreeId + 'ComboTreeSourceUl' + (parentId ? parentId : 'main' ) + '" style="' + (((this.options.collapse||collapse) && parentId) ? 'display:none;' : '')  + '">';
-    for (var i=0; i<subItems.length; i++){
+  ComboTree.prototype.createSourceSubItemsHTML = function (subItems, parentId, collapse = false) {
+    var subItemsHtml = '<UL id="' + this.comboTreeId + 'ComboTreeSourceUl' + (parentId ? parentId : 'main') + '" style="' + (((this.options.collapse || collapse) && parentId) ? 'display:none;' : '') + '">';
+    for (var i = 0; i < subItems.length; i++) {
       subItemsHtml += this.createSourceItemHTML(subItems[i]);
     }
     subItemsHtml += '</UL>'
@@ -125,12 +125,12 @@
   ComboTree.prototype.createSourceItemHTML = function (sourceItem) {
     var itemHtml = "",
       isThereSubs = sourceItem.hasOwnProperty("subs"),
-        collapse = sourceItem.hasOwnProperty("collapse") ? sourceItem.hasOwnProperty("collapse") : false;
+      collapse = sourceItem.hasOwnProperty("collapse") ? sourceItem.hasOwnProperty("collapse") : false;
     let isSelectable = (sourceItem.isSelectable === undefined ? true : sourceItem.isSelectable),
       selectableClass = (isSelectable || isThereSubs) ? 'selectable' : 'not-selectable',
-      selectableLastNode = (this.options.selectableLastNode!==undefined && isThereSubs) ? this.options.selectableLastNode : false;
+      selectableLastNode = (this.options.selectableLastNode !== undefined && isThereSubs) ? this.options.selectableLastNode : false;
 
-    itemHtml += '<LI id="' + this.comboTreeId + 'Li' + sourceItem.id + '" class="ComboTreeItem' + (isThereSubs?'Parent':'Chlid') + '"> ';
+    itemHtml += '<LI id="' + this.comboTreeId + 'Li' + sourceItem.id + '" class="ComboTreeItem' + (isThereSubs ? 'Parent' : 'Chlid') + '"> ';
 
     if (isThereSubs)
       itemHtml += '<span class="comboTreeParentPlus">' + (this.options.collapse || collapse ? '<span class="mdi mdi-chevron-right-circle-outline"></span>' : '<span class="mdi mdi-chevron-down-circle-outline"></span>') + '</span>'; // itemHtml += '<span class="comboTreeParentPlus">' + (this.options.collapse ? '+' : '&minus;') + '</span>';
@@ -158,22 +158,22 @@
         $(_this._elemDropDownContainer).slideToggle(100);
     });
 
-    this._elemArrowBtn.on('click', function(e){
+    this._elemArrowBtn.on('click', function (e) {
       e.stopPropagation();
       _this.toggleDropDown();
     });
-    this._elemInput.on('click', function(e){
+    this._elemInput.on('click', function (e) {
       e.stopPropagation();
       if (!_this._elemDropDownContainer.is(':visible'))
         _this.toggleDropDown();
     });
-    this._elemItems.on('click', function(e){
+    this._elemItems.on('click', function (e) {
       e.stopPropagation();
-      if ($(this).hasClass('ComboTreeItemParent')){
+      if ($(this).hasClass('ComboTreeItemParent')) {
         _this.toggleSelectionTree(this);
       }
     });
-    this._elemItemsTitle.on('click', function(e){
+    this._elemItemsTitle.on('click', function (e) {
       e.stopPropagation();
       if (_this.options.isMultiple)
         _this.multiItemClick(this);
@@ -186,7 +186,7 @@
     });
 
     // KEY BINDINGS
-    this._elemInput.on('keyup', function(e) {
+    this._elemInput.on('keyup', function (e) {
       e.stopPropagation();
 
       switch (e.keyCode) {
@@ -232,7 +232,7 @@
       }
     });
 
-    this._elemInput.on('keydown', function(e) {
+    this._elemInput.on('keydown', function (e) {
       e.stopPropagation();
 
       switch (e.keyCode) {
@@ -260,7 +260,7 @@
 
 
     // ON FOCUS OUT CLOSE DROPDOWN
-    $(document).on('mouseup.' + _this.comboTreeId, function (e){
+    $(document).on('mouseup.' + _this.comboTreeId, function (e) {
       if (!_this._elemWrapper.is(e.target) && _this._elemWrapper.has(e.target).length === 0 && _this._elemDropDownContainer.is(':visible'))
         _this.closeDropDownMenu();
     });
@@ -288,7 +288,7 @@
   // Selection Tree Open/Close
   ComboTree.prototype.toggleSelectionTree = function (item, direction) {
     var subMenu = $(item).children('ul')[0];
-    if (direction === undefined){
+    if (direction === undefined) {
       if ($(subMenu).is(':visible'))
         $(item).children('span.comboTreeParentPlus').html('<span class="mdi mdi-chevron-right-circle-outline"></span>'); //$(item).children('span.comboTreeParentPlus').html("+");
       else
@@ -296,12 +296,12 @@
 
       $(subMenu).slideToggle(50);
     }
-    else if (direction == 1 && !$(subMenu).is(':visible')){
+    else if (direction == 1 && !$(subMenu).is(':visible')) {
       $(item).children('span.comboTreeParentPlus').html('<span class="mdi mdi-chevron-down-circle-outline"></span>'); //$(item).children('span.comboTreeParentPlus').html("&minus;");
       $(subMenu).slideDown(50);
     }
-    else if (direction == -1){
-      if ($(subMenu).is(':visible')){
+    else if (direction == -1) {
+      if ($(subMenu).is(':visible')) {
         $(item).children('span.comboTreeParentPlus').html('<span class="mdi mdi-chevron-right-circle-outline"></span>'); //$(item).children('span.comboTreeParentPlus').html("+");
         $(subMenu).slideUp(50);
       }
@@ -314,7 +314,7 @@
 
 
   // SELECTION FUNCTIONS
-  ComboTree.prototype.selectMultipleItem = function(ctItem){
+  ComboTree.prototype.selectMultipleItem = function (ctItem) {
 
     if (this.options.selectableLastNode && $(ctItem).parent('li').hasClass('ComboTreeItemParent')) {
 
@@ -361,9 +361,9 @@
     if (this.options.cascadeSelect) {
       if ($(ctItem).parent('li').hasClass('ComboTreeItemParent')) {
         var subMenu = $(ctItem).parent('li').children('ul').first().find('input[type="checkbox"]');
-        subMenu.each(function() {
+        subMenu.each(function () {
           var $input = $(this)
-          if ($(ctItem).children('input[type="checkbox"]').first().prop("checked")!==$input.prop('checked')) {
+          if ($(ctItem).children('input[type="checkbox"]').first().prop("checked") !== $input.prop('checked')) {
             $input.prop('checked', !$(ctItem).children('input[type="checkbox"]').first().prop("checked"));
             $input.trigger('click');
           }
@@ -376,7 +376,7 @@
 
   // recursive search for item in arr
   ComboTree.prototype.isItemInArray = function (item, arr) {
-    for (var i=0; i<arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
       if (item.id == arr[i].id && item.title == arr[i].title)
         return i + "";
 
@@ -393,9 +393,9 @@
     var tmpTitle = "";
 
     if (this.options.isMultiple) {
-      for (var i=0; i<this._selectedItems.length; i++){
+      for (var i = 0; i < this._selectedItems.length; i++) {
         tmpTitle += this._selectedItems[i].title;
-        if (i<this._selectedItems.length-1)
+        if (i < this._selectedItems.length - 1)
           tmpTitle += ", ";
       }
     }
@@ -444,30 +444,30 @@
       this.toggleDropDown();
 
     var list = this._elemItems.find("span.comboTreeItemTitle:visible");
-    i = this._elemHoveredItem?list.index(this._elemHoveredItem) + step:0;
+    i = this._elemHoveredItem ? list.index(this._elemHoveredItem) + step : 0;
     i = (list.length + i) % list.length;
 
     this.dropDownMenuHover(list[i], true);
   },
 
     ComboTree.prototype.filterDropDownMenu = function () {
-      var searchText =  '';
+      var searchText = '';
       if (!this.options.isMultiple)
         searchText = this._elemInput.val();
       else
         searchText = $("#" + this.comboTreeId + "MultiFilter").val();
 
-      if (searchText != ""){
+      if (searchText != "") {
         this._elemItemsTitle.hide();
         this._elemItemsTitle.siblings("span.comboTreeParentPlus").hide();
-        list = this._elemItems.filter(function(index, item){
+        list = this._elemItems.filter(function (index, item) {
           return item.innerHTML.toLowerCase().indexOf(searchText.toLowerCase()) != -1;
         }).each(function (i, elem) {
           $(this.children).show()
           $(this).siblings("span.comboTreeParentPlus").show();
         });
       }
-      else{
+      else {
         this._elemItemsTitle.show();
         this._elemItemsTitle.siblings("span.comboTreeParentPlus").show();
       }
@@ -477,12 +477,12 @@
     let elements = this._elemItemsTitle;
     let selectedItem = this._selectedItem;
     let selectedItems = this._selectedItems;
-    this.options.selected.forEach(function(element) {
-      let selected = $(elements).filter(function(){
+    this.options.selected.forEach(function (element) {
+      let selected = $(elements).filter(function () {
         return $(this).data('id') == element;
       });
 
-      if(selected.length > 0){
+      if (selected.length > 0) {
         $(selected).find('input').attr('checked', true);
 
         selectedItem = {
@@ -503,11 +503,11 @@
   // METHODS
 
 
-  ComboTree.prototype.findItembyId = function(itemId, source) {
+  ComboTree.prototype.findItembyId = function (itemId, source) {
     if (itemId && source) {
-      for (let i=0; i<source.length; i++) {
+      for (let i = 0; i < source.length; i++) {
         if (source[i].id == itemId)
-          return {id: source[i].id, title: source[i].title};
+          return { id: source[i].id, title: source[i].title };
         if (source[i].hasOwnProperty("subs")) {
           let found = this.findItembyId(itemId, source[i].subs);
           if (found)
@@ -520,14 +520,14 @@
 
   // Returns selected id array or null
   ComboTree.prototype.getSelectedIds = function () {
-    if (this.options.isMultiple && this._selectedItems.length>0){
+    if (this.options.isMultiple && this._selectedItems.length > 0) {
       var tmpArr = [];
-      for (i=0; i<this._selectedItems.length; i++)
+      for (i = 0; i < this._selectedItems.length; i++)
         tmpArr.push(this._selectedItems[i].id);
 
       return tmpArr;
     }
-    else if (!this.options.isMultiple && this._selectedItem.hasOwnProperty('id')){
+    else if (!this.options.isMultiple && this._selectedItem.hasOwnProperty('id')) {
       return [this._selectedItem.id];
     }
     return null;
@@ -535,20 +535,20 @@
 
   // Retuns Array (multiple), Integer (single), or False (No choice)
   ComboTree.prototype.getSelectedNames = function () {
-    if (this.options.isMultiple && this._selectedItems.length>0){
+    if (this.options.isMultiple && this._selectedItems.length > 0) {
       var tmpArr = [];
-      for (i=0; i<this._selectedItems.length; i++)
+      for (i = 0; i < this._selectedItems.length; i++)
         tmpArr.push(this._selectedItems[i].title);
 
       return tmpArr;
     }
-    else if (!this.options.isMultiple && this._selectedItem.hasOwnProperty('id')){
+    else if (!this.options.isMultiple && this._selectedItem.hasOwnProperty('id')) {
       return this._selectedItem.title;
     }
     return null;
   };
 
-  ComboTree.prototype.setSource = function(source) {
+  ComboTree.prototype.setSource = function (source) {
     this._selectedItems = [];
 
     this.destroy();
@@ -556,8 +556,8 @@
     this.constructorFunc(this.elemInput, this.options);
   };
 
-  ComboTree.prototype.clearSelection = function() {
-    for (i=0; i<this._selectedItems.length; i++) {
+  ComboTree.prototype.clearSelection = function () {
+    for (i = 0; i < this._selectedItems.length; i++) {
       let itemElem = $("#" + this.comboTreeId + 'Li' + this._selectedItems[i].id);
       $(itemElem).find("input").prop('checked', false);
     }
@@ -592,7 +592,7 @@
 
   // EVENTS
 
-  ComboTree.prototype.onChange = function(callBack) {
+  ComboTree.prototype.onChange = function (callBack) {
     if (callBack && typeof callBack === "function")
       this.changeHandler = callBack;
   };
@@ -605,7 +605,7 @@
     var ctArr = [];
     this.each(function () {
       if (!$.data(this, 'plugin_' + comboTreePlugin)) {
-        $.data(this, 'plugin_' + comboTreePlugin, new ComboTree( this, options));
+        $.data(this, 'plugin_' + comboTreePlugin, new ComboTree(this, options));
         ctArr.push($(this).data()['plugin_' + comboTreePlugin]);
       }
     });
@@ -616,4 +616,4 @@
       return ctArr;
   }
 
-})( jQuery, window, document );
+})(jQuery, window, document);

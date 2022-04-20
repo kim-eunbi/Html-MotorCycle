@@ -124,6 +124,12 @@ span.comboTreeItemTitle {
     cursor: pointer;
 }
 
+.UploadPageWrap .form-check {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 0;
+    margin-bottom: 0.125rem;
+}
 
 .comboTreeInputBox {
     padding: var(--ct-padding);
@@ -131,7 +137,6 @@ span.comboTreeItemTitle {
     border: 1px solid var(--ct-border-color);
     width: 100%;
     box-sizing: border-box;
-    padding-right: 300px;
 }
 
 .comboTreeInputBox:focus {

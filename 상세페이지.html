@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
     <!-- 부트스트랩 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -23,75 +21,17 @@
     <!-- 업로드페이지사용 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-
-
     <!-- css 경로 -->
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/common.css">
     <script src="./js/DetailPage.js"></script>
     <script src="./js/scrollTop.js"></script>
     <script src="./js/moveScroll.js"></script>
-
-
     <title>상세페이지_원본</title>
+
 </head>
 
-<body class="DetailPage" id="section1">
-    <!-- 헤더 -->
-    <header>
-        <div class="headerNav">
-            <!-- 로그인 회원가입 마이페이지 -->
-            <div class="headerLogin">
-                <ul class="nav justify-content-end">
-                    {{^userName}}
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./Login.html">로그인/회원가입</a>
-                    </li>
-                    {{/userName}}
-                    <span class="text-black" id="user"></span>
-                    <span class="text-black mx-2"></span>
-                    {{#userName}}
-                    <span class="mx-3">{{userName}}님 안녕하세요!</span>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/logout" role="button">로그아웃</a>
-                    </li>
-                    {{/userName}}
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./MyPage.html">마이페이지</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- 로고 -->
-            <div class="search">
-                <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
-                    <div class="container-fluid">
-                        <a href="/mainPage" class="navbar-brand">메인페이지</a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-
-        <!-- 메뉴바 -->
-        <ul class="nav headerMenu justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="guide.html">거래안내</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./UploadPage.html">판매하기</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./ItemListPage.html">사러가기</a>
-            </li>
-        </ul>
-    </header>
-
-
-
-
-
-    <!-- 디테일페이지 시작지점 -->
-
+<body>
     {{>layout/header}}
 
     {{#BikeShow}}
@@ -105,10 +45,19 @@
             </div>
         </div>
     </div>
-    <div class="container" id="h1" style="margin:55px auto; max-width: 1100px;">
-        <div class="DetailTop row">
 
-            <div class="col-lg-7 ">
+    <!-- 글쓰기,목록,위로올라가기 -->
+    <div class="container" style="margin:0 auto; max-width: 1100px; z-index: 9999;">
+        <div id="stop" class="scrollTop"
+            style="width: 50px; height: 50px; border-radius:50%; display: flex; z-index: 999; justify-content: center; align-items: center; background: rgb(51, 52, 54);">
+            <span class="d-flex align-items-center"><a href="" style="font-size:13px;"><i
+                        class="bi bi-chevron-double-up" style="font-size: 13px;  margin:0 0 0 5px;"></i>TOP</a></span>
+        </div>
+    </div>
+
+    <div class="container" style="margin:0 auto; max-width: 1100px;">
+        <div class="row" style="margin-top:40px;">
+            <div class="col-lg-7 " style=" padding-top:20px;">
                 <p class="h4"><strong>{{title}}</strong></p>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
@@ -118,21 +67,18 @@
                     </ol>
                 </nav>
             </div>
+
             <div class="col-lg-5 d-flex justify-content-between align-items-center">
                 <p class="h2 text-success" style="margin-right:70px;"><strong>{{prices}}</strong></p>
                 <div class="row">
                     <div class="btn3 d-flex">
-                        <a href="./index.html"><button type="button" style="border:1px solid #ddd;"
-                                class=" btn btn-primary d-flex flex-column justify-content-center align-items-center">
-                                <small>판매완료</small>
-                            </button></a>
                         <a href="/articles/{{id}}/edit"><button type="button" style="border:1px solid #ddd;"
                                 class=" btn btn-primary d-flex flex-column justify-content-center align-items-center">
                                 <small>수정</small>
 
                             </button></a>
                         <a href="/articles/{{id}}/delete"><button type="button" style="border:1px solid #ddd;"
-                                class="btn btn-primary d-flex flex-column justify-content-center align-items-center">
+                                class="btn btn-danger d-flex flex-column justify-content-center align-items-center">
 
                                 <small>삭제</small>
                                 <style>
@@ -163,17 +109,17 @@
             </div>
             <div class="DetailInner carousel-inner" style="margin-top:20px;">
                 <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="./image/22.PNG" class="d-block w-100" alt="오토바이사진">
+                    <img src="" class="d-block w-100" alt="사진">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                    <img src="./image/34.PNG" class="d-block w-100" alt="오토바이사진">
+                    <img src="" class="d-block w-100" alt="오토바이사진">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./image/6.PNG" class="d-block w-100" alt="오토바이사진">
+                    <img src="" class="d-block w-100" alt="오토바이사진">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
@@ -222,7 +168,6 @@
                                     </div>
                                 </div>
                                 <div class="row">
-
                                     <div class="col-lg-6 uploadImg">
                                         <div class="container">
                                             <div class="row">
@@ -231,7 +176,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p>머플러</p>
+                                        <p>앞면</p>
                                     </div>
                                     <div class="col-lg-6 uploadImg">
                                         <div class="container">
@@ -241,7 +186,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p>시트</p>
+                                        <p>후면</p>
                                     </div>
                                     <div class="col-lg-6 uploadImg">
                                         <div class="container">
@@ -261,12 +206,12 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p>앞면</p>
+                                        <p>머플러</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6" style="
-                            display: flex; flex-direction: column; justify-content: flex-end; ">
+                        display: flex; flex-direction: column; justify-content: flex-end; ">
                                 <div class="row">
                                     <div class="imgtext"
                                         style="text-align: center; padding-left:15px; margin-bottom:10px; background:#ddd;">
@@ -278,7 +223,6 @@
                                         <p></p>
                                         <br />
                                     </div>
-
                                     <div class="col-lg-6 uploadImg">
                                         <div class="container">
                                             <div class="row">
@@ -307,7 +251,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p>후면</p>
+                                        <p>시트</p>
                                     </div>
                                     <div class="col-lg-6 uploadImg">
                                         <div class="container">
@@ -363,7 +307,7 @@
                                                 <textarea
                                                     class="form-control d-flex justify-content-center align-items-center col-lg-12"
                                                     rows="12" style="resize:none; border:none;"
-                                                    placeholder=" 바이크 제조사, 주행거리 등 상세한 설명을 적어주세요 "></textarea>
+                                                    readonly>{{content}}</textarea>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -404,7 +348,6 @@
                                     </tbody>
                                 </table>
                             </div>
-
                             <!-- 매물정보 -->
                             <div class="col-lg-6">
                                 <table class="table">
@@ -436,9 +379,10 @@
                                             <td>{{color}}</td>
                                         </tr>
                                         <tr>
-                                            <td class="table-active">A/S</td>
-                                            <td>{{ase}}</td>
+                                            <td class="table-active">기어방식</td>
+                                            <td>{{Gear}}</td>
                                         </tr>
+
                                     </tbody>
                                 </table>
                             </div>
@@ -466,8 +410,8 @@
                                             <td>{{sale}}</td>
                                         </tr>
                                         <tr>
-                                            <td class="table-active">기어방식</td>
-                                            <td>{{Gear}}</td>
+                                            <td class="table-active">A/S</td>
+                                            <td>{{ase}}</td>
                                         </tr>
                                         <tr>
                                             <td class="table-active">튜닝유무</td>
@@ -482,10 +426,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
 
                     <div class="container">
                         <div class="row" style="text-align: left;">
@@ -594,27 +534,25 @@
                 </div>
             </div>
         </div>
-
         {{/BikeShow}}
 
         {{>comments/_comments}}
 
 
 
+
         <div class="container" style="margin:0 auto; max-width: 1100px;">
             <hr style="background-color: black;">
             <!-- <button>💬댓글 <span>123</span></button> -->
-            <button type="button" class="btn position-relative">
-                ❤️장바구니
+            <button type="button" class="btn btn-primary position-relative" style="display:block !important;">
+                ❤️좋아요
             </button>
-            <button type="button" class="btn position-relative">
+            <button type="button" class="btn btn-primary position-relative" style="display:block !important;">
                 💬댓글
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                     99+
                 </span>
             </button>
-
-
 
             <!-- 댓글 시작부분 -->
             <div class="comment-add">
@@ -623,9 +561,7 @@
             </div> <!-- //댓글등록 -->
 
             <div class="comment-list">
-
             </div> <!-- //댓글 목록 -->
-
 
             <div class="comment-delete-modal" style="display: none;">
                 <div>
@@ -639,26 +575,9 @@
                     <button>확인</button>
                     <button>취소</button>
                 </div>
-            </div><!-- //삭제모달 -->
-
-
-            <!-- 글쓰기,목록,위로올라가기 -->
-            <div class="container" style="margin:0 auto; max-width: 1100px;">
-                <button type="button" class="btn btn-primary position-relative">
-                    <a href="/articles/List">판매목록
-                </button>
-
-                <!-- 글쓰기,목록,위로올라가기 -->
-                <div class="container" style="margin:0 auto; max-width: 1100px; z-index: 9999;">
-                    <div id="stop" class="scrollTop"
-                        style="width: 50px; height: 50px; border-radius:50%; display: flex; justify-content: center; align-items: center; background: rgb(51, 52, 54);">
-                        <span class="d-flex align-items-center"><a href="" style="font-size:13px;"><i
-                                    class="bi bi-chevron-double-up"
-                                    style="font-size: 13px;  margin:0 0 0 5px;"></i>TOP</a></span>
-                    </div>
-                </div>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
